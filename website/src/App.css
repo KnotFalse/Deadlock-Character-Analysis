@@ -133,6 +133,35 @@ select {
   background: #c7d2fe;
 }
 
+.path-controls {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.path-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+button.secondary {
+  border: none;
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  background: #dbeafe;
+  cursor: pointer;
+  color: #1e293b;
+}
+
+button.secondary:hover:not(:disabled) {
+  background: #bfdbfe;
+}
+
+button.secondary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .graph-panel {
   min-height: 640px;
   display: grid;
@@ -152,6 +181,191 @@ select {
   padding: 0.75rem;
   max-height: 220px;
   overflow: auto;
+}
+
+.path-summary,
+.neighbor-summary {
+  margin-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.relationship-summary {
+  margin-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.relationship-group ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.path-list {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.neighbor-summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.link-button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  text-decoration: underline;
+}
+
+.link-button.relationship {
+  width: 100%;
+  text-align: left;
+}
+
+.link-button.relationship.active {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.analytics-panel {
+  margin-top: 1.25rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1.25rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.analytics-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.metric-toggle {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.toggle-button {
+  border: 1px solid #cbd5f5;
+  border-radius: 6px;
+  background: #f8fafc;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #1e293b;
+}
+
+.toggle-button:hover {
+  background: #e0e7ff;
+}
+
+.toggle-button.active {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  color: #fff;
+}
+
+.analytics-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.analytics-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.analytics-card h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.analytics-card ol {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  margin: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metric-value {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.metric-caption {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.muted.small {
+  font-size: 0.85rem;
+}
+
+.edge-summary {
+  margin-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 1rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.edge-summary__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.edge-meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 1rem;
+  margin: 0;
+}
+
+.edge-meta dt {
+  font-weight: 600;
+  color: #475569;
+}
+
+.edge-meta dd {
+  margin: 0;
 }
 
 .error {

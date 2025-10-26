@@ -27,6 +27,12 @@ export interface GraphMeta {
 export interface GraphIndexes {
   degrees_in: Record<string, number>;
   degrees_out: Record<string, number>;
+  neighbors: Record<string, string[]>;
+  strong_against: Record<string, string[]>;
+  weak_against: Record<string, string[]>;
+  even_against: Record<string, string[]>;
+  mechanic_usage: Record<string, number>;
+  mechanic_counter: Record<string, number>;
 }
 
 export interface GraphData {

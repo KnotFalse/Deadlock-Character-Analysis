@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from typing import Optional
 
+import networkx as nx
 import typer
 
 from .config import get_settings
@@ -265,8 +266,8 @@ def export_static(
     # Character nodes
     for name, profile in sorted(character_profiles.items()):
         archetype = archetype_lookup.get(name)
-    add_node(
-        node_id=f"character:{name}",
+        add_node(
+            node_id=f"character:{name}",
         label="Character",
         props={
             "name": name,
@@ -377,33 +378,47 @@ def export_static(
     else:
         typer.echo("matchups.csv not found; skipping matchup edges.", err=True)
 
-    # Generate deterministic layout positions
-    import math
-
-    label_radii = {
-        "Archetype": 1.0,
-        "Character": 2.5,
-        "Ability": 4.0,
-        "Mechanic": 5.5,
-    }
-    grouped: dict[str, list[dict]] = {}
+    # Build networkx graph for layout and neighborhood indexes
+    g = nx.Graph()
     for node in nodes:
-        grouped.setdefault(node["label"], []).append(node)
+        g.add_node(node["id"])
+    for edge in edges:
+        g.add_edge(edge["source"], edge["target"])
 
-    for label, group in grouped.items():
-        radius = label_radii.get(label, 3.0)
-        count = len(group)
-        for idx, node in enumerate(sorted(group, key=lambda n: n["id"])):
-            angle = 2 * math.pi * idx / max(count, 1)
-            node["x"] = radius * math.cos(angle)
-            node["y"] = radius * math.sin(angle)
+    layout = nx.spring_layout(g, seed=42, k=None, iterations=100)
+    for node in nodes:
+        coords = layout.get(node["id"], (0.0, 0.0))
+        node["x"], node["y"] = float(coords[0]), float(coords[1])
 
     # Degree metrics
-    degrees_in = {}
-    degrees_out = {}
+    degrees_in: dict[str, int] = {}
+    degrees_out: dict[str, int] = {}
     for edge in edges:
         degrees_out[edge["source"]] = degrees_out.get(edge["source"], 0) + 1
         degrees_in[edge["target"]] = degrees_in.get(edge["target"], 0) + 1
+
+    # Indexes
+    neighbors = {node: sorted(g.neighbors(node)) for node in g.nodes}
+    strong_map: dict[str, list[str]] = {}
+    weak_map: dict[str, list[str]] = {}
+    even_map: dict[str, list[str]] = {}
+    for edge in edges:
+        rel = edge["type"]
+        if rel == "STRONG_AGAINST":
+            strong_map.setdefault(edge["source"], []).append(edge["target"])
+        elif rel == "WEAK_AGAINST":
+            weak_map.setdefault(edge["source"], []).append(edge["target"])
+        elif rel == "EVEN_AGAINST":
+            even_map.setdefault(edge["source"], []).append(edge["target"])
+
+    mechanic_usage: dict[str, int] = {}
+    mechanic_counter: dict[str, int] = {}
+    for node in nodes:
+        if node["label"] == "Character":
+            for mech in node["properties"].get("mechanics_used", []):
+                mechanic_usage[mech] = mechanic_usage.get(mech, 0) + 1
+            for mech in node["properties"].get("mechanics_countered", []):
+                mechanic_counter[mech] = mechanic_counter.get(mech, 0) + 1
 
     # Metadata summary
     label_distribution = {}
@@ -438,6 +453,12 @@ def export_static(
         "indexes": {
             "degrees_in": degrees_in,
             "degrees_out": degrees_out,
+            "neighbors": neighbors,
+            "strong_against": strong_map,
+            "weak_against": weak_map,
+            "even_against": even_map,
+            "mechanic_usage": mechanic_usage,
+            "mechanic_counter": mechanic_counter,
         },
     }
 
