@@ -1,0 +1,66 @@
+character:
+  name: Vyper
+  archetype: Assassin
+  description: >
+    A venomous striker who stacks poisons with rapid daggers, siphons health from marked prey,
+    and petrifies targets to secure picks.
+  source_url: https://www.deadlocktips.com/hero/vyper
+  last_updated: 2025-10-26
+abilities:
+  - name: Screwjab Dagger
+    slot: Q
+    type: active
+    description: >
+      Throw a dagger that marks enemies, slowing them and amplifying follow-up damage while
+      draining stamina at higher ranks.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Damage Ramp
+        - Stamina Burn
+      counters: []
+    notes: >
+      Updated ability notes confirm the level-five upgrade adds stamina burn, crippling escape
+      options.
+  - name: Lethal Venom
+    slot: E
+    type: active
+    description: >
+      Inject a target with venom that deals spirit damage over time and reduces healing, enabling
+      Vyper to execute weakened foes.
+    mechanics:
+      uses:
+        - Damage Over Time
+        - Healing Reduction
+      counters:
+        - Self Heal
+        - Area Heal
+    notes: >
+      Deadlock hero guides specify Lethal Venom applies a heavy anti-heal, cutting sustain effects
+      and directly countering self/area healing on afflicted targets.
+  - name: Slither
+    slot: Shift
+    type: active
+    description: >
+      Dash forward while phasing through enemies; Vyper gains a barrier on cast and bonus move
+      speed when exiting the slide.
+    mechanics:
+      uses:
+        - Haste
+        - Barrier
+        - Dash
+      counters: []
+  - name: Petrifying Bola
+    slot: R
+    type: ultimate
+    description: >
+      Hurl a bola that petrifies the first enemy hero hit, stunning them in place before shattering
+      for heavy damage.
+    mechanics:
+      uses:
+        - Petrify
+      counters:
+        - Channeling
+    notes: >
+      The petrification completely freezes targets, cutting off channelled abilities and leaving
+      them exposed for Vyper's kill combo.

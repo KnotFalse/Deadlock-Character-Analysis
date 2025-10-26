@@ -1,0 +1,64 @@
+character:
+  name: Pocket
+  archetype: Mystic
+  description: >
+    A support mage who tosses cursed cards, warps across the map with her cloak, and
+    imprisons enemies inside an explosive briefcase.
+  source_url: https://www.deadlocktips.com/hero/pocket
+  last_updated: 2025-10-26
+abilities:
+  - name: Barrage
+    slot: Q
+    type: active
+    description: >
+      Unleash a flurry of cards that rend enemies, slowing them while Pocket gains a
+      stacking damage buff.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Damage Ramp
+      counters: []
+    notes: >
+      Deadlock hero breakdowns call out Barrage's 50% slow and escalating damage stacks,
+      making it a signature pick setup tool.
+  - name: Flying Cloak
+    slot: E
+    type: active
+    description: >
+      Throw Pocket's cloak forward and blink to it on reactivation, enabling quick
+      repositioning or rescue plays.
+    mechanics:
+      uses:
+        - Teleport
+      counters: []
+  - name: Enchanter's Satchel
+    slot: Shift
+    type: active
+    description: >
+      Pocket dives into her satchel to become untargetable before bursting out with an
+      explosion that slows fire rate and damages foes nearby.
+    mechanics:
+      uses:
+        - Untargetable
+        - Fire Rate Slow
+        - Explosive
+      counters: []
+    notes: >
+      Ability previews emphasize Satchel's invulnerability window and the 60% fire-rate
+      slow applied once Pocket re-emerges.
+  - name: Affliction
+    slot: R
+    type: ultimate
+    description: >
+      Curse a target area with lingering spirit damage; afflicted enemies suffer severe
+      healing reduction while allies heal for a portion of the damage dealt.
+    mechanics:
+      uses:
+        - Damage Over Time
+        - Healing Reduction
+      counters:
+        - Self Heal
+        - Area Heal
+    notes: >
+      Patch notes highlight the ultimate's 60% anti-heal, providing a reliable answer to
+      sustain-heavy compositions by cutting personal or team healing in the zone.

@@ -1,0 +1,40 @@
+Metadata-Version: 2.4
+Name: deadlock-graph-tools
+Version: 0.1.0
+Summary: Tooling and datasets for maintaining a Deadlock character matchup graph in Neo4j.
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: neo4j>=5.20
+Requires-Dist: pydantic>=2.7
+Requires-Dist: pydantic-settings>=2.7
+Requires-Dist: typer>=0.12
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: pyyaml>=6.0
+
+# Deadlock Character Graph
+
+Tools and datasets for modeling Valve's *Deadlock* character roster in Neo4j. The repository follows the workflow described in `plan.md`, providing scripts to define schema, ingest researched data, synthesize matchup relationships, and run validation checks.
+
+## Quick Start
+
+1. Provision Neo4j via `docker-compose up -d` (see `plan.md` for configuration).
+2. Create a Python virtual environment and install dependencies:
+   ```bash
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   pip install -e .
+   ```
+3. Configure Neo4j connection settings (see `config.example.env`) and run the CLI:
+   ```bash
+   python -m deadlock_graph.cli --help
+   ```
+
+## Repository Layout
+
+- `plan.md` – canonical implementation plan.
+- `data/` – curated YAML/JSON sources for archetypes, mechanics, and characters.
+- `src/deadlock_graph/` – Python package with ingestion and synthesis tooling.
+- `agent-logs/` – session transcripts for agent activity (per `AGENTS.md`).

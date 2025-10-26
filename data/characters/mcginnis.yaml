@@ -1,0 +1,59 @@
+character:
+  name: McGinnis
+  archetype: Mystic
+  description: >
+    A battlefield engineer who locks down space with turrets, spectral walls, and healing drones
+    while calling in devastating rocket barrages.
+  source_url: https://deadlockwiki.org/w/McGinnis
+  last_updated: 2025-10-26
+abilities:
+  - name: Mini Turret
+    slot: Q
+    type: active
+    description: >
+      Deploy a mini turret that automatically attacks enemies; turrets inherit a portion of
+      McGinnis' durability and apply a slow when upgraded.
+    mechanics:
+      uses:
+        - Summoned Assistant
+        - Damage Ramp
+        - Movement Slow
+      counters: []
+    notes: >
+      Turrets gain 20% of McGinnis' health and 60% spirit resist and can apply a +25% movement slow
+      after upgrades.
+  - name: Medicinal Specter
+    slot: E
+    type: active
+    description: >
+      Deploy a healing specter that regenerates nearby allies and increases their fire rate when
+      upgraded.
+    mechanics:
+      uses:
+        - Area Heal
+        - Summoned Assistant
+        - Fire Rate Buff
+      counters: []
+  - name: Spectral Wall
+    slot: Shift
+    type: active
+    description: >
+      Raise a spectral barrier that damages and slows enemies on cast; reactivating detonates the
+      wall early and high upgrades add a stun.
+    mechanics:
+      uses:
+        - Barrier
+        - Movement Slow
+        - Stun
+      counters: []
+  - name: Heavy Barrage
+    slot: R
+    type: ultimate
+    description: >
+      Channel a guided rocket barrage that blankets a target area, slowing enemies as missiles land.
+    mechanics:
+      uses:
+        - Channeling
+        - Damage Over Time
+        - Movement Slow
+      counters: []

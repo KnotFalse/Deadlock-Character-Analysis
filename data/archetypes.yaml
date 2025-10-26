@@ -1,0 +1,58 @@
+last_checked: 2025-10-26
+archetypes:
+  - name: Assassin
+    description: >
+      Fast, high-burst heroes that specialize in isolating and eliminating priority targets before
+      repositioning.
+    signature_traits:
+      - burst_damage
+      - mobility
+      - pick_initiation
+    notes: >
+      Classification surfaced from the heroes.vdata role tags discovered by data miners; Valve has
+      not formally documented the system yet, so treat the roster mapping as provisional.
+    sources:
+      - https://deadlock.ru/ams/v-fajlax-deadlock-nashli-sistemu-rolej-geroev.510/
+      - https://www.reddit.com/r/DeadlockTheGame/comments/1n52a5b
+  - name: Brawler
+    description: >
+      Durable, close-range disruptors that thrive on sustained fights and soak or redirect incoming
+      pressure while enabling their squad to follow up.
+    signature_traits:
+      - durability
+      - frontline_control
+      - crowd_control
+    notes: >
+      Same datamined source as other archetypes; overlaps with community usage of "tank" or
+      "frontliner" roles.
+    sources:
+      - https://deadlock.ru/ams/v-fajlax-deadlock-nashli-sistemu-rolej-geroev.510/
+      - https://www.reddit.com/r/DeadlockTheGame/comments/1n52a5b
+  - name: Marksman
+    description: >
+      Precision ranged damage dealers that scale with items and excel at shredding objectives and
+      enemy carries from distance.
+    signature_traits:
+      - ranged_damage
+      - late_game_scaling
+      - positioning_dependency
+    notes: >
+      Datamined role tag; aligns with the community's "DPS/backline" shorthand but may shift as Valve
+      iterates on hero labels.
+    sources:
+      - https://deadlock.ru/ams/v-fajlax-deadlock-nashli-sistemu-rolej-geroev.510/
+      - https://www.reddit.com/r/DeadlockTheGame/comments/1n52a5b
+  - name: Mystic
+    description: >
+      Spirit-focused casters or support hybrids that control space, enable allies, or apply persistent
+      debuffs through ability-centric kits.
+    signature_traits:
+      - spirit_damage
+      - utility
+      - zone_control
+    notes: >
+      Datamined role tag; includes several hybrid playstyles that the community sometimes labels as
+      "support" despite their offensive scaling.
+    sources:
+      - https://deadlock.ru/ams/v-fajlax-deadlock-nashli-sistemu-rolej-geroev.510/
+      - https://www.reddit.com/r/DeadlockTheGame/comments/1n52a5b

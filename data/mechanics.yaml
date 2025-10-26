@@ -1,0 +1,504 @@
+last_checked: 2025-10-26
+mechanics:
+  - name: Stun
+    category: crowd_control
+    description: >
+      Completely immobilizes a hero, preventing movement, weapon usage, abilities,
+      and item activations until the duration ends.
+    archetype_implications:
+      - burst_combo_setup
+      - channel_interrupt
+    sources:
+      - https://deadlock.wiki/Status_Effects
+      - https://deadlock.wiki/Crowd_Control
+  - name: Sleep
+    category: crowd_control
+    description: >
+      Disables targets similarly to stun but breaks early when they take damage.
+      Applies a brief groggy slow before full sleep.
+    archetype_implications:
+      - pick_initiation
+      - anti_channel
+    sources:
+      - https://deadlock.wiki/Status_Effects
+  - name: Immobilize
+    category: crowd_control
+    description: >
+      Roots the target in place while still allowing most non-movement actions.
+    archetype_implications:
+      - zone_control
+      - objective_lockdown
+    sources:
+      - https://deadlock.wiki/Crowd_Control
+  - name: Movement Slow
+    category: crowd_control
+    description: >
+      Reduces movement speed (and sometimes fire rate) without fully preventing
+      actions; cannot reduce speed below 2 m/s.
+    archetype_implications:
+      - kiting
+      - peel_support
+    sources:
+      - https://deadlock.wiki/Crowd_Control
+  - name: Silence
+    category: crowd_control
+    description: >
+      Blocks the use of abilities (and in some cases movement items) while active.
+    archetype_implications:
+      - anti_caster
+      - fight_initiation
+    sources:
+      - https://deadlock.wiki/Status_Effects
+      - https://deadlock.wiki/Crowd_Control
+  - name: Disarm
+    category: crowd_control
+    description: >
+      Prevents weapon firing but allows ability usage, forcing targets to rely on kits.
+    archetype_implications:
+      - anti_marksman
+    sources:
+      - https://deadlock.wiki/Status_Effects
+      - https://deadlock.wiki/Crowd_Control
+  - name: Tether
+    category: crowd_control
+    description: >
+      Binds afflicted heroes to a point or radius; they can move but are pulled
+      back if they exceed the leash distance.
+    archetype_implications:
+      - area_denial
+      - trap_setup
+    sources:
+      - https://deadlock.wiki/Status_Effects
+  - name: Petrify
+    category: crowd_control
+    description: >
+      Locks targets in place and prevents actions while nullifying incoming damage.
+    archetype_implications:
+      - defensive_convert
+      - counter_burst
+    sources:
+      - https://deadlock.wiki/Status_Effects
+  - name: Hex
+    category: crowd_control
+    description: >
+      Transforms targets, altering hitboxes, amplifying damage taken, and disabling
+      all actions.
+    archetype_implications:
+      - target_isolation
+    sources:
+      - https://deadlock.wiki/Crowd_Control
+  - name: Damage Output Reduction
+    category: debuff
+    description: >
+      Reduces inflicted damage from affected targets; can apply to all damage or
+      specific damage types depending on the source.
+    archetype_implications:
+      - sustain_brawler
+      - anti_carry
+    sources:
+      - https://deadlock.wiki/Status_Effects
+  - name: Barrier
+    category: mitigation
+    description: >
+      Temporary extra health layer that absorbs incoming damage before standard
+      health; can apply to bullet and/or spirit damage.
+    archetype_implications:
+      - frontline_survivability
+      - peel_support
+    sources:
+      - https://deadlock.wiki/Warden
+      - https://deadlock.wiki/Guardian_Ward
+  - name: Channeling
+    category: ability_state
+    description: >
+      Requires the caster to remain stationary or maintain the effect while an
+      ability is active; often grants defensive bonuses but is interruptible by CC.
+    archetype_implications:
+      - positioning_risk
+      - counterplay_window
+    sources:
+      - https://deadlock.wiki/Warden
+  - name: Crowd-Control Immunity
+    category: mitigation
+    description: >
+      Temporarily prevents new stuns, sleeps, roots, silences, and disarms from
+      applying, often via active items.
+    archetype_implications:
+      - engage_security
+      - escape_tool
+    sources:
+      - https://deadlock.wiki/Unstoppable
+  - name: Invisibility
+    category: ability_state
+    description: >
+      Removes a hero from enemy vision and targeting while permitting repositioning.
+      Typically granted by smoke fields or temporary phases that still allow limited
+      detection within a radius.
+    archetype_implications:
+      - ambush_setup
+      - disengage_tool
+    sources:
+      - https://deadlock.wiki/Haze
+  - name: Damage Ramp
+    category: buff
+    description: >
+      Grants stacking increases to outgoing damage on a specific target or weapon as
+      successive hits land. Use for single-target scaling or combo stacking rather than
+      area-based chaining effects.
+    archetype_implications:
+      - sustained_duel
+      - objective_burn
+    sources:
+      - https://deadlock.wiki/Haze
+  - name: Bullet Evasion
+    category: mitigation
+    description: >
+      Provides a chance to ignore incoming bullet damage during the effect window,
+      allowing aggressive plays in dense firefights.
+    archetype_implications:
+      - dive_survivability
+      - anti_focus
+    sources:
+      - https://deadlock.wiki/Haze
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Stamina Burn
+    category: debuff
+    description: >
+      Reduces the target's stamina pool or regeneration, limiting follow-up dodges and
+      mobility responses.
+    archetype_implications:
+      - anti_escape
+      - engage_followup
+    sources:
+      - https://deadlock.wiki/Warden
+  - name: Haste
+    category: buff
+    description: >
+      Temporarily increases movement speed, improving chase potential and rotation tempo.
+    archetype_implications:
+      - engage_alignment
+      - rotation_control
+    sources:
+      - https://deadlock.wiki/Warden
+  - name: Lifesteal
+    category: sustain
+    description: >
+      Converts a portion of damage dealt into healing, sustaining the caster during extended
+      brawls.
+    archetype_implications:
+      - frontline_longevity
+      - solo_duel
+    sources:
+      - https://deadlock.wiki/Warden
+  - name: Dash
+    category: mobility
+    description: >
+      Provides an instant burst of movement in a chosen direction, letting heroes close gaps,
+      reposition, or trigger follow-up abilities.
+    archetype_implications:
+      - engage_initiation
+      - escape_tool
+    sources:
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Self Heal
+    category: sustain
+    description: >
+      Restores the user's health through ability effects rather than external healing sources,
+      including regeneration and on-hit heals. Applies only to the caster; pair with Area Heal
+      when allies are also restored.
+    archetype_implications:
+      - frontline_survivability
+      - sustain_skirmish
+    sources:
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Untargetable
+    category: mitigation
+    description: >
+      Temporarily removes the hero from enemy targeting and damage, allowing them to avoid
+      incoming abilities while the effect lasts.
+    archetype_implications:
+      - disengage_tool
+      - counter_burst
+    sources:
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Bleed
+    category: damage_over_time
+    description: >
+      Applies a stacking damage-over-time effect that persists for the bleed duration and
+      increases with additional applications.
+    archetype_implications:
+      - attrition
+      - execute_setup
+    sources:
+      - https://deadlock.wiki/Shiv
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Execute
+    category: finisher
+    description: >
+      Executes or deals amplified damage to targets below a specified health threshold, instantly
+      finishing weakened enemies.
+    archetype_implications:
+      - pick_finisher
+      - dive_cleanup
+    sources:
+      - https://deadlock.wiki/Shiv
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Damage Deferral
+    category: mitigation
+    description: >
+      Converts a portion of incoming burst damage into delayed ticks, allowing partial cleansing or
+      staggered application over time.
+    archetype_implications:
+      - sustain_skirmish
+      - anti_burst
+    sources:
+      - https://deadlock.wiki/Shiv
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Fire Rate Slow
+    category: debuff
+    description: >
+      Reduces the target's weapon fire rate, damping their sustained DPS output while the debuff is
+      active.
+    archetype_implications:
+      - anti_marksman
+      - teamfight_control
+    sources:
+      - https://deadlock.wiki/Kelvin
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Area Heal
+    category: sustain
+    description: >
+      Provides a healing aura or pulse that restores health to allies within an area of effect.
+      Use for multi-target or team-oriented sustain.
+    archetype_implications:
+      - frontline_support
+      - defensive_anchor
+    sources:
+      - https://deadlock.wiki/Kelvin
+      - https://deadlock.wiki/Warden
+  - name: Knockup
+    category: crowd_control
+    description: >
+      Launches targets into the air, interrupting actions and creating follow-up windows as they
+      fall back down.
+    archetype_implications:
+      - initiation
+      - combo_setup
+    sources:
+      - https://esports.gg/news/deadlock/deadlock-hero-abilities/
+  - name: Ability Suppression
+    category: debuff
+    description: >
+      Temporarily prevents or delays the use of movement or escape abilities, limiting the target's
+      defensive options.
+    archetype_implications:
+      - lockdown
+      - anti_escape
+    sources:
+      - https://esports.gg/news/deadlock/deadlock-hero-abilities/
+  - name: Accuracy Reduction
+    category: debuff
+    description: >
+      Lowers the target's weapon accuracy, causing shots to deviate and reducing effective ranged
+      pressure until the effect ends.
+    archetype_implications:
+      - anti_marksman
+      - teamfight_disruption
+    sources:
+      - https://www.shacknews.com/article/145633/the-doorman-abilities-deadlock
+  - name: Portal
+    category: mobility
+    description: >
+      Creates linked entry and exit points that allow instantaneous travel for heroes and projectiles
+      between distant locations.
+    archetype_implications:
+      - macro_rotation
+      - ambush_setup
+    sources:
+      - https://www.pcgamer.com/games/third-person-shooter/deadlocks-latest-character-basically-gets-a-portal-gun-and-his-ult-teleports-enemies-to-a-void-hotel-where-they-have-to-do-a-platforming-challenge/
+  - name: Knockback
+    category: crowd_control
+    description: >
+      Pushes targets away from the caster, often disrupting positioning and setting up wall-impact
+      stuns or displacements.
+    archetype_implications:
+      - peel_support
+      - zone_control
+    sources:
+      - https://www.pcgamer.com/games/third-person-shooter/deadlocks-latest-character-basically-gets-a-portal-gun-and-his-ult-teleports-enemies-to-a-void-hotel-where-they-have-to-do-a-platforming-challenge/
+  - name: Banish
+    category: crowd_control
+    description: >
+      Temporarily removes a target from the main battlefield, forcing them into a separate arena or
+      state before they can rejoin the fight.
+    archetype_implications:
+      - pick_isolation
+      - tempo_disruption
+    sources:
+      - https://www.pcgamer.com/games/third-person-shooter/deadlocks-latest-character-basically-gets-a-portal-gun-and-his-ult-teleports-enemies-to-a-void-hotel-where-they-have-to-do-a-platforming-challenge/
+  - name: Fire Rate Buff
+    category: buff
+    description: >
+      Increases the rate of fire for the target's weapons, boosting sustained DPS for the duration.
+    archetype_implications:
+      - burst_followup
+      - sustained_pressure
+    sources:
+      - https://www.deadlocktips.com/hero/wraith
+  - name: Damage Amplification
+    category: debuff
+    description: >
+      Causes affected enemies to take additional damage from specific sources while the effect is active.
+    archetype_implications:
+      - pick_finisher
+      - focus_target
+    sources:
+      - https://www.deadlocktips.com/hero/lady-geist
+  - name: Damage Over Time
+    category: damage_over_time
+    description: >
+      Applies lingering damage each second to targets caught in the effect, pressuring positioning and healing.
+    archetype_implications:
+      - zone_control
+      - attrition
+    sources:
+      - https://www.deadlocktips.com/hero/lady-geist
+  - name: Stasis
+    category: crowd_control
+    description: >
+      Temporarily suspends the target in place, preventing them from taking actions while protected from new damage sources.
+    archetype_implications:
+      - defensive_reset
+      - peel_support
+    sources:
+      - https://deadlock.wiki/Viscous
+  - name: Health Swap
+    category: special
+    description: >
+      Exchanges current health totals between two heroes, allowing dramatic swings in survivability.
+    archetype_implications:
+      - comeback_tool
+      - finisher
+    sources:
+      - https://www.deadlocktips.com/hero/lady-geist
+  - name: Healing Reduction
+    category: debuff
+    description: >
+      Reduces or blocks incoming healing on affected heroes for the duration of the effect.
+    archetype_implications:
+      - anti_sustain
+      - focus_fire
+    sources:
+      - https://www.deadlocktips.com/hero/pocket
+  - name: Pull
+    category: crowd_control
+    description: >
+      Applies a gravitational force that drags enemies toward a point, disrupting positioning
+      and setting up follow-up crowd control.
+    archetype_implications:
+      - initiation
+      - combo_setup
+    sources:
+      - https://www.pcgamer.com/games/moba/deadlock-characters-heroes-abilities/
+  - name: Chain Lightning
+    category: damage
+    description: >
+      Causes attacks to arc between nearby enemies, distributing damage across clustered targets.
+      Use when the damage propagates between multiple foes instead of stacking on one target.
+    archetype_implications:
+      - aoe_pressure
+      - wave_clear
+    sources:
+      - https://blix.gg/news/deadlock/deadlock-meta-breakdown-hero-win-rates-and-pick-rates/
+  - name: Summoned Assistant
+    category: support
+    description: >
+      Creates an allied entity that mirrors attacks or provides utility while tethered to the caster.
+    archetype_implications:
+      - zone_control
+      - sustained_pressure
+    sources:
+      - https://deadlock.wiki/Sinclair
+  - name: Ultimate Copy
+    category: special
+    description: >
+      Temporarily steals or replicates an enemy ultimate ability for the caster to use.
+    archetype_implications:
+      - strategic_flex
+      - power_spike
+    sources:
+      - https://www.sportskeeda.com/esports/all-deadlock-characters-abilities
+  - name: Fear
+    category: crowd_control
+    description: >
+      Forces affected enemies to flee in a set direction, stripping weapon control and ability usage
+      while the effect persists.
+    archetype_implications:
+      - disengage
+      - anti_initiation
+    sources:
+      - https://blix.gg/news/deadlock/deadlock-meta-breakdown-hero-win-rates-and-pick-rates/
+  - name: Explosive
+    category: damage
+    description: >
+      Deals area-of-effect damage after a fuse or contact detonation, enabling heroes to
+      pressure grouped targets and zone objectives.
+    archetype_implications:
+      - area_control
+      - burst_damage
+    sources:
+      - https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  - name: Teleport
+    category: mobility
+    description: >
+      Instantly relocates the caster to a target location or ally, bypassing terrain and
+      most displacement effects.
+    archetype_implications:
+      - engage_angle
+      - escape_tool
+    sources:
+      - https://deadlock.wiki/Haze
+      - https://www.gamesradar.com/deadlock-billy-abilities-ultimate/
+  - name: Barrier Pierce
+    category: counter
+    description: >
+      Allows attacks to ignore or bypass temporary barrier shields, dealing damage directly
+      to health or armor underneath.
+    archetype_implications:
+      - anti_brawler
+      - finisher
+    sources:
+      - https://deadlock.wiki/Haze
+  - name: Stealth Reveal
+    category: utility
+    description: >
+      Exposes hidden or cloaked enemies, preventing them from remaining invisible while the effect
+      persists.
+    archetype_implications:
+      - anti_assassin
+      - vision_control
+    sources:
+      - https://www.sportskeeda.com/esports/all-deadlock-characters-abilities
+  - name: Projectile
+    category: damage
+    description: >
+      Represents abilities that travel as physical or spirit projectiles, interacting with shields,
+      reflections, and projectile-based counters. Combine with Explosive when the projectile
+      detonates on impact.
+    archetype_implications:
+      - ranged_damage
+      - counterplay_via_reflection
+    sources:
+      - https://deadlock.wiki/Billy
+      - https://deadlock.wiki/Haze
+  - name: Stealth
+    category: ability_state
+    description: >
+      Grants true or near-total invisibility that persists until a reveal effect triggers.
+      Use for kits where the caster themselves becomes cloaked independent of a zone.
+    archetype_implications:
+      - ambush_setup
+      - disengage_tool
+    sources:
+      - https://deadlock.wiki/Haze
+      - https://deadlock.wiki/Vyper

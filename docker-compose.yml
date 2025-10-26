@@ -1,0 +1,11 @@
+services:
+  neo4j:
+    image: neo4j:latest
+    container_name: deadlock_graph_db
+    ports:
+      - "8474:7474"
+      - "8687:7687"
+    volumes:
+      - ./neo4j_data:/data
+    environment:
+      - NEO4J_AUTH=none

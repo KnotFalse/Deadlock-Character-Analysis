@@ -1,0 +1,60 @@
+character:
+  name: Kelvin
+  archetype: Mystic
+  description: >
+    A frosty controller who slows fronts, parts terrain with Ice Path, and
+    protects his squad inside Frozen Shelter's regenerative dome.
+  source_url: https://deadlockwiki.org/w/Kelvin
+  last_updated: 2025-10-26
+abilities:
+  - name: Frost Grenade
+    slot: Q
+    type: active
+    description: >
+      Lob a spirit grenade that explodes into a freezing cloud, dealing damage
+      and heavily slowing enemies; upgraded charges also pulse healing to allies.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Area Heal
+      counters: []
+    notes: >
+      Ability traits confirm a 40% slow and ally heal when upgraded, making it
+      a flexible engage or sustain tool.
+  - name: Ice Path
+    slot: E
+    type: active
+    description: >
+      Create a floating trail that grants allies significant movement speed and
+      lets Kelvin surf vertically with 60% slow resistance.
+    mechanics:
+      uses:
+        - Haste
+      counters:
+        - Movement Slow
+    notes: >
+      Deadlock wiki documents Ice Path granting slow resistance to Kelvin and allies,
+      enabling it to purge Movement Slow effects on traversal.
+  - name: Arctic Beam
+    slot: Shift
+    type: active
+    description: >
+      Channel a frigid beam that ramps up movement and fire rate slow on targets
+      the longer it is sustained.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Fire Rate Slow
+      counters: []
+  - name: Frozen Shelter
+    slot: R
+    type: ultimate
+    description: >
+      Freeze the air into an impenetrable dome that rapidly regenerates ally
+      health while slowing and dampening the fire rate of enemies inside.
+    mechanics:
+      uses:
+        - Area Heal
+        - Movement Slow
+        - Fire Rate Slow
+      counters: []

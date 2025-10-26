@@ -1,0 +1,71 @@
+character:
+  name: Haze
+  archetype: Assassin
+  description: >
+    A void-slinging infiltrator who manipulates vision and positioning to isolate
+    high-value targets before finishing them with Voidstrike.
+  source_url: https://deadlock.wiki/Haze
+  last_updated: 2025-10-26
+abilities:
+  - name: Fixation
+    slot: Passive
+    type: passive
+    description: >
+      Landing continuous shots on the same enemy applies Fixation stacks, boosting
+      Haze's bullet damage to that specific target until she swaps focus.
+    mechanics:
+      uses:
+        - Damage Ramp
+      counters: []
+  - name: Smoke Bomb
+    slot: Q
+    type: active
+    description: >
+      Drops a smoke canister that expands into a vision-blocking cloud. Haze gains
+      bonus movement speed and bullet evasion while inside, whereas enemies caught
+      within are slowed.
+    mechanics:
+      uses:
+        - Invisibility
+        - Bullet Evasion
+        - Movement Slow
+      counters: []
+  - name: Sleep Dagger
+    slot: E
+    type: active
+    description: >
+      Throws a dagger that slows and marks enemies; after a brief delay the mark
+      detonates to put victims to sleep unless cleansed.
+    mechanics:
+      uses:
+        - Sleep
+        - Movement Slow
+      counters: []
+    notes: >
+      The ability text explicitly states that Sleep Dagger does not interrupt channeling,
+      so it should not be treated as a hard counter to channelled ultimates.
+  - name: Shadowstep
+    slot: Shift
+    type: mobility
+    description: >
+      Teleports to a target location and leaves behind a firing illusion that mimics
+      Haze's primary weapon. Haze can optionally swap positions with the clone shortly
+      after casting.
+    mechanics:
+      uses:
+        - Teleport
+      counters: []
+  - name: Voidstrike
+    slot: R
+    type: ultimate
+    description: >
+      Haze phases into the void, charging a massive beam for up to four seconds while
+      gaining bullet evasion and stealth. Releasing the shot deals escalating bullet
+      damage that ignores enemy barriers.
+    mechanics:
+      uses:
+        - Bullet Evasion
+        - Invisibility
+        - Barrier Pierce
+      counters:
+        - Barrier

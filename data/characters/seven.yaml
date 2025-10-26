@@ -1,0 +1,56 @@
+character:
+  name: Seven
+  archetype: Mystic
+  description: >
+    A storm-bending support who empowers allies with chain lightning and anchors team fights in
+    a roaring storm cloud.
+  source_url: https://esports.gg/news/deadlock/deadlock-seven-abilities-explained/
+  last_updated: 2025-10-26
+abilities:
+  - name: Lightning Ball
+    slot: Q
+    type: active
+    description: >
+      Launch an orb of electricity that detonates on impact, dealing area damage and slowing
+      enemies caught in the blast.
+    mechanics:
+      uses:
+        - Explosive
+        - Movement Slow
+      counters: []
+  - name: Static Charge
+    slot: E
+    type: active
+    description: >
+      Mark an enemy with accumulating static; after a short delay the charge detonates, stunning
+      the target and nearby foes.
+    mechanics:
+      uses:
+        - Stun
+      counters:
+        - Channeling
+    notes: >
+      The delayed stun can disrupt channelled abilities, providing Seven with a ranged anti-caster
+      tool once the charge pops.
+  - name: Power Surge
+    slot: Shift
+    type: active
+    description: >
+      Empower Seven's weapon with chain lightning, causing shots to arc between enemies while
+      granting bonus spirit damage and brief self-healing.
+    mechanics:
+      uses:
+        - Chain Lightning
+        - Lifesteal
+      counters: []
+  - name: Storm Cloud
+    slot: R
+    type: ultimate
+    description: >
+      Channel a stationary thunderstorm that rains bolts over a wide area, damaging enemies and
+      bolstering allies inside the cloud.
+    mechanics:
+      uses:
+        - Channeling
+        - Damage Over Time
+      counters: []

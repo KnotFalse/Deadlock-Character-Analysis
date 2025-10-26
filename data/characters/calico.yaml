@@ -1,0 +1,51 @@
+character:
+  name: Calico
+  archetype: Assassin
+  description: >
+    A contract killer who flows through the shadows with Ava, weaving burst damage
+    and evasion to dismantle targets before they can react.
+  source_url: https://deadlock.wiki/Calico
+  last_updated: 2025-10-26
+abilities:
+  - name: Gloom Bombs
+    slot: Q
+    type: active
+    description: >
+      Throw a cluster of spirit-charged bombs that stick briefly before detonating,
+      striking enemies caught in the radius.
+    mechanics:
+      uses:
+        - Explosive
+      counters: []
+  - name: Leaping Slash
+    slot: E
+    type: active
+    description: >
+      Dash forward and carve a circular slash, healing Calico if the strike hits
+      at least one enemy hero.
+    mechanics:
+      uses:
+        - Dash
+        - Self Heal
+      counters: []
+  - name: Ava
+    slot: Shift
+    type: active
+    description: >
+      Possess Ava to slip into the shadows, gaining bonus movement speed while
+      hidden on the minimap at the cost of weapon and ability use.
+    mechanics:
+      uses:
+        - Haste
+      counters: []
+  - name: Return to Shadows
+    slot: R
+    type: ultimate
+    description: >
+      Instantly meld into shadow, becoming untargetable and faster; after a short
+      delay, reappear with a damaging pulse that can re-engage or disengage fights.
+    mechanics:
+      uses:
+        - Untargetable
+        - Haste
+      counters: []

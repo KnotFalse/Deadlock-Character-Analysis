@@ -1,0 +1,56 @@
+character:
+  name: Wraith
+  archetype: Assassin
+  description: >
+    A card-slinging kingpin who charges homing blasts, boosts allied fire rates,
+    and locks priority targets in mid-air with telekinetic force.
+  source_url: https://deadlockwiki.org/w/Wraith
+  last_updated: 2025-10-26
+abilities:
+  - name: Card Trick
+    slot: Q
+    type: active
+    description: >
+      Dealing weapon damage generates cards that can be thrown to explode on impact,
+      with upgrades adding extra charges and a brief slow.
+    mechanics:
+      uses:
+        - Explosive
+        - Movement Slow
+      counters: []
+    notes: >
+      Tier-5 talent applies a 30% slow for one second, establishing the Movement Slow tag.
+  - name: Project Mind
+    slot: E
+    type: active
+    description: >
+      Teleport to the targeted location; higher upgrades extend range and grant a
+      barrier on arrival.
+    mechanics:
+      uses:
+        - Teleport
+        - Barrier
+      counters: []
+  - name: Full Auto
+    slot: Shift
+    type: active
+    description: >
+      Temporarily boosts Wraith's fire rate and grants half the bonus to nearby
+      allies, with high-rank upgrades adding spirit damage and lifesteal.
+    mechanics:
+      uses:
+        - Fire Rate Buff
+        - Lifesteal
+      counters: []
+  - name: Telekinesis
+    slot: R
+    type: ultimate
+    description: >
+      Lift an enemy hero into the air, stunning, silencing, and disarming them
+      before slamming them back down.
+    mechanics:
+      uses:
+        - Stun
+        - Silence
+      counters:
+        - Channeling

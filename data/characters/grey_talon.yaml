@@ -1,0 +1,56 @@
+character:
+  name: Grey Talon
+  archetype: Marksman
+  description: >
+    A precision archer who glides through the battlefield, pinning foes with Spirit Snare traps
+    before calling down a stunning owl strike.
+  source_url: https://www.sportskeeda.com/esports/all-deadlock-character-abilities-ultimates
+  last_updated: 2025-10-26
+abilities:
+  - name: Spirit Shot
+    slot: Q
+    type: active
+    description: >
+      Charge a deadly arrow that pierces through enemies, dealing high single-target damage at
+      long range.
+    mechanics:
+      uses:
+        - Damage Ramp
+      counters: []
+  - name: Rain of Arrows
+    slot: E
+    type: active
+    description: >
+      Glide and fire a volley of arrows that slow enemies caught below while giving Grey Talon
+      aerial repositioning.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Haste
+      counters: []
+  - name: Spirit Snare
+    slot: Shift
+    type: active
+    description: >
+      Deploy a trap that immobilizes any enemy who steps on it, leaving them vulnerable to
+      follow-up shots.
+    mechanics:
+      uses:
+        - Immobilize
+        - Silence
+        - Disarm
+      counters:
+        - Channeling
+    notes: >
+      Deadlock ability breakdowns specify Spirit Snare interrupts channeling targets while
+      applying Silence and Disarm effects, so trapped enemies cannot maintain channelled abilities.
+  - name: Guided Owl
+    slot: R
+    type: ultimate
+    description: >
+      Send a spectral owl that locks on to a target, diving onto them for heavy damage and a
+      momentary stun.
+    mechanics:
+      uses:
+        - Stun
+      counters: []

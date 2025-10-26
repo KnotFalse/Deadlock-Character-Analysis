@@ -1,0 +1,58 @@
+character:
+  name: Ivy
+  archetype: Marksman
+  description: >
+    A venomous sniper who tags targets with toxic darts, fear effects, and a lethal execution
+    beam that scales with debuff stacks.
+  source_url: https://www.sportskeeda.com/esports/all-deadlock-characters-abilities
+  last_updated: 2025-10-26
+abilities:
+  - name: Toxic Bolt
+    slot: Q
+    type: active
+    description: >
+      Fire a bolt that applies stacking poison, slowing the target and amplifying Ivy's subsequent
+      damage against them.
+    mechanics:
+      uses:
+        - Damage Over Time
+        - Movement Slow
+        - Damage Ramp
+      counters: []
+  - name: Venom Trap
+    slot: E
+    type: active
+    description: >
+      Place a concealed trap that poisons the first enemy to trigger it, reducing their accuracy
+      and revealing them even through stealth.
+    mechanics:
+      uses:
+        - Damage Over Time
+        - Accuracy Reduction
+        - Stealth Reveal
+      counters:
+        - Stealth
+    notes: >
+      Sportskeeda notes Venom Trap exposes cloaked enemies, making it a direct counter to stealth
+      mechanics.
+  - name: Fear Toxin
+    slot: Shift
+    type: active
+    description: >
+      Inject fear into nearby foes, forcing them to flee briefly while taking poison damage.
+    mechanics:
+      uses:
+        - Fear
+        - Damage Over Time
+      counters: []
+  - name: Execution Beam
+    slot: R
+    type: ultimate
+    description: >
+      Channel a high-powered beam that executes targets below a health threshold, dealing massive
+      spirit damage proportional to poison stacks.
+    mechanics:
+      uses:
+        - Execute
+        - Channeling
+      counters: []

@@ -1,0 +1,62 @@
+character:
+  name: Abrams
+  archetype: Brawler
+  description: >
+    A front-line bruiser who dives headfirst into fights, draining foes with Siphon Life
+    and locking them down with punishing crowd control.
+  source_url: https://deadlockwiki.org/w/Abrams
+  last_updated: 2025-10-26
+abilities:
+  - name: Siphon Life
+    slot: Q
+    type: active
+    description: >
+      Drain spirit damage from enemies in a frontal cone, healing Abrams proportionally
+      while the beam persists.
+    mechanics:
+      uses:
+        - Lifesteal
+      counters: []
+    notes: >
+      The ability heals at 100% effectiveness against heroes for the duration of the drain.
+  - name: Shoulder Charge
+    slot: E
+    type: active
+    description: >
+      Surge forward, grabbing enemies and dragging them along; colliding with terrain
+      stuns them briefly.
+    mechanics:
+      uses:
+        - Dash
+        - Stun
+      counters:
+        - Channeling
+    notes: >
+      Charge speed increases after hitting an enemy, making it a reliable engage tool.
+      Deadlock status-effect documentation notes stuns interrupt channeling abilities,
+      so the wall-impact stun can break enemy channels mid-cast.
+  - name: Infernal Resilience
+    slot: Passive
+    type: passive
+    description: >
+      Regenerate a portion of incoming damage over time, granting persistent sustain
+      and bonus health regeneration.
+    mechanics:
+      uses:
+        - Self Heal
+      counters: []
+  - name: Seismic Impact
+    slot: R
+    type: ultimate
+    description: >
+      Leap into the air and slam into a targeted location, dealing spirit damage and
+      stunning enemies caught in the impact radius.
+    mechanics:
+      uses:
+        - Dash
+        - Stun
+      counters:
+        - Channeling
+    notes: >
+      Impact stun interrupts channelled abilities per Deadlock crowd-control guidance,
+      making Seismic Impact a reliable way to break ultimates with channel requirements.

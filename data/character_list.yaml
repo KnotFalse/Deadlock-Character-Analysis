@@ -1,0 +1,102 @@
+meta:
+  last_checked: 2025-10-26
+  roster_source: https://www.sportskeeda.com/esports/list-deadlock-characters-october-2025
+  role_source: https://www.reddit.com/r/DeadlockTheGame/comments/1n52a5b
+characters:
+  - name: Abrams
+    archetype: Brawler
+    status: active
+  - name: Bebop
+    archetype: Brawler
+    status: active
+  - name: Billy
+    archetype: Brawler
+    status: active
+  - name: Calico
+    archetype: Assassin
+    status: active
+  - name: Drifter
+    archetype: Assassin
+    status: active
+  - name: Doorman
+    aliases: ["The Doorman"]
+    archetype: Mystic
+    status: active
+  - name: Dynamo
+    archetype: Mystic
+    status: active
+  - name: Grey Talon
+    archetype: Marksman
+    status: active
+  - name: Haze
+    archetype: Assassin
+    status: active
+  - name: Holliday
+    archetype: Marksman
+    status: active
+  - name: Infernus
+    archetype: Marksman
+    status: active
+  - name: Ivy
+    archetype: Marksman
+    status: active
+  - name: Kelvin
+    archetype: Brawler
+    status: active
+  - name: Lady Geist
+    archetype: Mystic
+    status: active
+  - name: Lash
+    archetype: Assassin
+    status: active
+  - name: McGinnis
+    archetype: Mystic
+    status: active
+  - name: Mina
+    archetype: Marksman
+    status: active
+  - name: Mirage
+    archetype: Assassin
+    status: active
+  - name: Mo & Krill
+    archetype: Brawler
+    status: active
+  - name: Paige
+    archetype: Mystic
+    status: active
+  - name: Paradox
+    archetype: Marksman
+    status: active
+  - name: Pocket
+    archetype: Assassin
+    status: active
+  - name: Seven
+    archetype: Mystic
+    status: active
+  - name: Shiv
+    archetype: Brawler
+    status: active
+  - name: Sinclair
+    archetype: Mystic
+    status: active
+  - name: Vindicta
+    archetype: Marksman
+    status: active
+  - name: Viscous
+    archetype: Mystic
+    status: active
+  - name: Victor
+    archetype: Brawler
+    status: active
+  - name: Vyper
+    archetype: Assassin
+    status: active
+  - name: Warden
+    archetype: Brawler
+    status: active
+  - name: Wraith
+    archetype: Marksman
+    status: active
+  - name: Yamato
+    archetype: Assassin
+    status: active

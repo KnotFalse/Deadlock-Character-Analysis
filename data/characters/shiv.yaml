@@ -1,0 +1,54 @@
+character:
+  name: Shiv
+  archetype: Assassin
+  description: >
+    A relentless duelist who stacks bleeds with serrated blades, converts burst
+    damage into delayed wounds, and executes weakened foes with Killing Blow.
+  source_url: https://deadlockwiki.org/w/Shiv
+  last_updated: 2025-10-26
+abilities:
+  - name: Serrated Knives
+    slot: Passive
+    type: passive
+    description: >
+      Basic attacks inflict stacking bleed damage that can be detonated when Shiv
+      enters Frenzy, slowing victims while the stacks persist.
+    mechanics:
+      uses:
+        - Bleed
+        - Movement Slow
+      counters: []
+    notes: >
+      Frenzy tiers add a 25% slow, turning the bleeds into potent chase control.
+  - name: Slice and Dice
+    slot: Q
+    type: active
+    description: >
+      Dash through enemies with twin blades, applying additional bleed stacks as
+      Shiv cuts across the battlefield.
+    mechanics:
+      uses:
+        - Dash
+        - Bleed
+      counters: []
+  - name: Bloodletting
+    slot: E
+    type: active
+    description: >
+      Convert incoming damage into a deferred wound that bleeds over time while
+      granting movement speed to reposition during the effect.
+    mechanics:
+      uses:
+        - Damage Deferral
+        - Haste
+      counters: []
+  - name: Killing Blow
+    slot: R
+    type: ultimate
+    description: >
+      Blink to a target and deliver an execution strike that instantly kills if
+      the enemy is below the finish threshold, otherwise dealing heavy spirit damage.
+    mechanics:
+      uses:
+        - Execute
+      counters: []

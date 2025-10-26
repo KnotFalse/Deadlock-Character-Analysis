@@ -1,0 +1,60 @@
+character:
+  name: Viscous
+  archetype: Mystic
+  description: >
+    A gelatinous controller who drenches choke points in goo, immobilises foes inside
+    a stasis cube, and belly-flops stragglers with Puddle Punch.
+  source_url: https://deadlockwiki.org/w/Viscous
+  last_updated: 2025-10-26
+abilities:
+  - name: Splatter
+    slot: Q
+    type: active
+    description: >
+      Lob a glob of goo that explodes, knocking enemies back before leaving a slowing,
+      damaging puddle.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Damage Over Time
+        - Knockback
+      counters: []
+  - name: The Cube
+    slot: E
+    type: active
+    description: >
+      Encapsulate Viscous and nearby allies in a cube of goo, cleansing debuffs while
+      granting shielded protection and gradual healing.
+    mechanics:
+      uses:
+        - Stasis
+        - Barrier
+        - Area Heal
+      counters:
+        - Movement Slow
+        - Fire Rate Slow
+        - Damage Output Reduction
+        - Bleed
+        - Ability Suppression
+  - name: Puddle Punch
+    slot: Shift
+    type: active
+    description: >
+      Leap forward and crash to the ground, creating a shockwave that slows and knocks
+      up enemies caught in the impact.
+    mechanics:
+      uses:
+        - Knockup
+        - Movement Slow
+      counters: []
+  - name: Goo Ball
+    slot: R
+    type: ultimate
+    description: >
+      Wind up and hurl a massive ball of goo that detonates on contact, stunning enemies
+      and leaving behind a damaging puddle.
+    mechanics:
+      uses:
+        - Stun
+        - Damage Over Time
+      counters: []

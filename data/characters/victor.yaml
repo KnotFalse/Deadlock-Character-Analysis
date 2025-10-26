@@ -1,0 +1,56 @@
+character:
+  name: Victor
+  archetype: Brawler
+  description: >
+    A self-inflicted powerhouse who converts pain into damage, sprinting into fights with
+    Jumpstart before detonating Pain Battery and reviving through sheer stubbornness.
+  source_url: https://gamedaily.com/news/deadlock-victor-abilities-revealed
+  last_updated: 2025-10-26
+abilities:
+  - name: Pain Battery
+    slot: Q
+    type: active
+    description: >
+      Taking damage charges an electrical blast that Victor unleashes in a frontal cone once
+      full, punishing opponents who focus him.
+    mechanics:
+      uses:
+        - Explosive
+      counters: []
+  - name: Jumpstart
+    slot: E
+    type: active
+    description: >
+      Sacrifice a slice of current health to gain a burst of regeneration and move speed that
+      decays over time; higher upgrade tiers purge non-ultimate debuffs on cast.
+    mechanics:
+      uses:
+        - Self Heal
+        - Haste
+      counters:
+        - Movement Slow
+        - Fire Rate Slow
+    notes: >
+      The debuff cleanse unlocks at Ability Point 5 but is widely relied on to shrug off
+      slows and similar non-ultimate effects mid-fight.
+  - name: Aura of Suffering
+    slot: Shift
+    type: active
+    description: >
+      Emit a damaging aura around Victor that ramps its spirit damage the longer it is active,
+      draining both foes and Victor himself.
+    mechanics:
+      uses:
+        - Damage Ramp
+        - Movement Slow
+      counters: []
+  - name: Shocking Reanimation
+    slot: R
+    type: ultimate
+    description: >
+      Upon lethal damage Victor surges back to life, exploding with spirit energy that stuns
+      nearby enemies before he returns to battle.
+    mechanics:
+      uses:
+        - Stun
+      counters: []

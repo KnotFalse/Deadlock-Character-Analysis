@@ -1,0 +1,54 @@
+character:
+  name: Infernus
+  archetype: Mystic
+  description: >
+    A pyromancer who drenches zones in burning oil, lunges with flaming strikes, and rains down
+    meteors to finish fights.
+  source_url: https://www.sportskeeda.com/esports/all-deadlock-character-abilities-ultimates
+  last_updated: 2025-10-26
+abilities:
+  - name: Flame Shot
+    slot: Q
+    type: active
+    description: >
+      Launch a fireball that explodes on impact, igniting enemies with damage over time.
+    mechanics:
+      uses:
+        - Explosive
+        - Damage Over Time
+      counters: []
+  - name: Blazing Advance
+    slot: E
+    type: active
+    description: >
+      Lunge forward in a wave of fire, leaving a burning trail that slows and damages enemies.
+    mechanics:
+      uses:
+        - Dash
+        - Damage Over Time
+        - Movement Slow
+      counters: []
+  - name: Fire Wells
+    slot: Shift
+    type: active
+    description: >
+      Summon two fire wells that spew flames, creating a denial zone that ramps damage and reduces
+      enemy healing inside.
+    mechanics:
+      uses:
+        - Damage Over Time
+        - Healing Reduction
+      counters:
+        - Area Heal
+        - Self Heal
+  - name: Meteor Swarm
+    slot: R
+    type: ultimate
+    description: >
+      Call down a barrage of meteors over a targeted area, dealing massive explosive damage and
+      knockback.
+    mechanics:
+      uses:
+        - Explosive
+        - Knockback
+      counters: []

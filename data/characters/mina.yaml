@@ -1,0 +1,53 @@
+character:
+  name: Mina
+  archetype: Marksman
+  description: >
+    A ghostly gunslinger who summons spectral daggers, drains life at range, and chains kills to
+    keep the pressure on.
+  source_url: https://www.deadlocktips.com/hero/mina
+  last_updated: 2025-10-26
+abilities:
+  - name: Spectral Dagger
+    slot: Q
+    type: active
+    description: >
+      Throw a dagger that detonates on impact, dealing spirit damage over time while slowing the
+      target.
+    mechanics:
+      uses:
+        - Damage Over Time
+        - Movement Slow
+      counters: []
+  - name: Blood Pact
+    slot: E
+    type: active
+    description: >
+      Link to an ally, sharing lifesteal between Mina and the partner while amplifying both heroes'
+      damage.
+    mechanics:
+      uses:
+        - Lifesteal
+        - Damage Amplification
+      counters: []
+  - name: Specter Step
+    slot: Shift
+    type: mobility
+    description: >
+      Blink a short distance with bonus move speed; if Mina scores a kill shortly after, the
+      cooldown resets.
+    mechanics:
+      uses:
+        - Teleport
+        - Haste
+      counters: []
+  - name: Requiem
+    slot: R
+    type: ultimate
+    description: >
+      Channel a beam that damages enemies and converts a portion of the damage into healing for
+      nearby allies.
+    mechanics:
+      uses:
+        - Channeling
+        - Area Heal
+      counters: []

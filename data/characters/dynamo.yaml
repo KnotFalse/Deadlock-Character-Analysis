@@ -1,0 +1,61 @@
+character:
+  name: Dynamo
+  archetype: Mystic
+  description: >
+    A battlefield tactician who manipulates gravity, empowering allies with teleports and heals
+    before collapsing foes into devastating singularities.
+  source_url: https://www.pcgamer.com/games/moba/deadlock-characters-heroes-abilities/
+  last_updated: 2025-10-26
+abilities:
+  - name: Kinetic Pulse
+    slot: Q
+    type: active
+    description: >
+      Emit a shockwave that damages and knocks enemies upward while slowing anyone caught near
+      the epicenter.
+    mechanics:
+      uses:
+        - Knockup
+        - Movement Slow
+      counters:
+        - Channeling
+    notes: >
+      PC Gamer previews highlight Kinetic Pulse's knockup; Deadlock status-effect guidance notes
+      that knockups interrupt channelled abilities, enabling it to break enemy casts mid-flight.
+  - name: Quantum Entanglement
+    slot: E
+    type: active
+    description: >
+      Blink to a targeted ally, instantly reloading their weapon and boosting fire rate while
+      restoring Dynamo's cooldown for rapid redeployments.
+    mechanics:
+      uses:
+        - Teleport
+        - Fire Rate Buff
+      counters: []
+  - name: Rejuvenating Aurora
+    slot: Shift
+    type: active
+    description: >
+      Channel a field of radiant energy that rapidly heals Dynamo and nearby allies, granting
+      lingering regeneration after the cast completes.
+    mechanics:
+      uses:
+        - Channeling
+        - Area Heal
+      counters: []
+  - name: Singularity
+    slot: R
+    type: ultimate
+    description: >
+      Collapse gravity at a target location, pulling enemies inward before detonating in a massive
+      explosion that launches them skyward.
+    mechanics:
+      uses:
+        - Pull
+        - Knockup
+      counters:
+        - Channeling
+    notes: >
+      The ultimate's vacuum effect suspends foes and ends channelled abilities immediately, making
+      Singularity a premier anti-caster tool in team fights.

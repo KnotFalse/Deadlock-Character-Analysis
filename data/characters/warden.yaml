@@ -1,0 +1,57 @@
+character:
+  name: Warden
+  archetype: Brawler
+  description: >
+    A frontline alchemist who disrupts enemy offenses with crippling flasks, binding curses,
+    and a self-sustaining Last Stand that anchors team fights.
+  source_url: https://deadlockwiki.org/w/Warden
+  last_updated: 2025-10-26
+abilities:
+  - name: Alchemical Flask
+    slot: Q
+    type: active
+    description: >
+      Throws a spirit-charged flask that damages enemies in a small radius, slows their
+      movement, reduces their weapon damage, and drains stamina on impact.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Damage Output Reduction
+        - Stamina Burn
+      counters: []
+  - name: Willpower
+    slot: E
+    type: active
+    description: >
+      Fortifies Warden with a sizable spirit barrier and a burst of movement speed for seven
+      seconds, scaling further with upgrades.
+    mechanics:
+      uses:
+        - Barrier
+        - Haste
+      counters:
+        - Movement Slow
+    notes: >
+      Warden guide sources highlight Willpower's significant movement speed burst,
+      making it an on-demand cleanse for Movement Slow debuffs.
+  - name: Binding Word
+    slot: Shift
+    type: active
+    description: >
+      Curses an enemy hero, forcing them to leave their starting spot within the escape timer
+      or suffer spirit damage and an immobilizing root that sets up follow-up fire.
+    mechanics:
+      uses:
+        - Immobilize
+      counters: []
+  - name: Last Stand
+    slot: R
+    type: ultimate
+    description: >
+      Channels for two seconds then emits repeated spirit pulses that damage foes in front of
+      Warden and heal him based on the damage dealt while granting heavy bullet resistance.
+    mechanics:
+      uses:
+        - Channeling
+        - Lifesteal
+      counters: []

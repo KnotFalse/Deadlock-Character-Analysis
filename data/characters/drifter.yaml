@@ -1,0 +1,56 @@
+character:
+  name: Drifter
+  archetype: Marksman
+  description: >
+    A gunslinger whose warped bullets bend around terrain, deploy tripwire traps, and unleash
+    a ricochet ultimate that punishes clustered foes.
+  source_url: https://www.sportskeeda.com/esports/all-deadlock-characters-abilities
+  last_updated: 2025-10-26
+abilities:
+  - name: Warp Shot
+    slot: Q
+    type: active
+    description: >
+      Fire a bullet that bends toward nearby enemies, dealing spirit damage and gaining speed
+      after each ricochet.
+    mechanics:
+      uses:
+        - Damage Ramp
+        - Projectile
+      counters: []
+  - name: Tripwire
+    slot: E
+    type: active
+    description: >
+      Toss a tripwire mine that snares the first enemy who triggers it, immobilizing and revealing
+      them briefly.
+    mechanics:
+      uses:
+        - Immobilize
+        - Stealth Reveal
+      counters:
+        - Stealth
+  - name: Smoke Hustle
+    slot: Shift
+    type: mobility
+    description: >
+      Dash forward with a burst of speed, dropping a smoke field that cloaks Drifter until he
+      attacks or exits.
+    mechanics:
+      uses:
+        - Dash
+        - Stealth
+      counters: []
+  - name: Ricochet Rhapsody
+    slot: R
+    type: ultimate
+    description: >
+      Channel a barrage of shots that ricochet between enemies, dealing escalating damage and
+      revealing targets hit multiple times.
+    mechanics:
+      uses:
+        - Damage Ramp
+        - Projectile
+        - Stealth Reveal
+      counters:
+        - Stealth

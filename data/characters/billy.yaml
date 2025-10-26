@@ -1,0 +1,56 @@
+character:
+  name: Billy
+  archetype: Marksman
+  description: >
+    A dimensional gunfighter who leaps through portals, deploys force fields, and traps enemies
+    under a spinning storm of bullets.
+  source_url: https://www.gamesradar.com/deadlock-billy-abilities-ultimate/
+  last_updated: 2025-10-26
+abilities:
+  - name: Ricochet Shot
+    slot: Q
+    type: active
+    description: >
+      Fire a bullet that bounces between enemies, gaining damage with each successive hit.
+    mechanics:
+      uses:
+        - Damage Ramp
+      counters: []
+  - name: Force Field
+    slot: E
+    type: active
+    description: >
+      Deploy a stationary barrier that blocks enemy fire while granting Billy partial projectile
+      immunity when shooting through it.
+    mechanics:
+      uses:
+        - Barrier
+        - Projectile
+      counters:
+        - Projectile
+    notes: >
+      GamesRadar's ability breakdown emphasizes Force Field's projectile immunity, letting Billy
+      counter bullet-focused assaults.
+  - name: Portal Dive
+    slot: Shift
+    type: active
+    description: >
+      Dive through a portal to a target location, reappearing with a burst of movement speed and
+      brief crowd-control immunity.
+    mechanics:
+      uses:
+        - Teleport
+        - Haste
+        - Crowd-Control Immunity
+      counters: []
+  - name: Bullet Storm
+    slot: R
+    type: ultimate
+    description: >
+      Spin up dual weapons and unleash a torrent of bullets while hovering; incoming CC slows the
+      barrage but cannot fully stop it.
+    mechanics:
+      uses:
+        - Channeling
+        - Damage Output Reduction
+      counters: []

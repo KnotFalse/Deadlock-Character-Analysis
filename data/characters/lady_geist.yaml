@@ -1,0 +1,53 @@
+character:
+  name: Lady Geist
+  archetype: Mystic
+  description: >
+    A spectral huntress who flings toxic essences, siphons life through spectral tethers,
+    and weaponises stolen health with devastating soul trades.
+  source_url: https://www.deadlocktips.com/hero/lady-geist
+  last_updated: 2025-10-26
+abilities:
+  - name: Essence Bomb
+    slot: Q
+    type: active
+    description: >
+      Throw a volatile bezoar that explodes in a small radius, leaving a noxious pool
+      that damages enemies standing within it.
+    mechanics:
+      uses:
+        - Explosive
+        - Damage Over Time
+      counters: []
+  - name: Life Drain
+    slot: E
+    type: active
+    description: >
+      Tether to a target, siphoning health while applying stacking movement slows; at
+      high ranks the tether silences foes when fully stacked.
+    mechanics:
+      uses:
+        - Tether
+        - Lifesteal
+        - Movement Slow
+        - Silence
+      counters: []
+  - name: Malice
+    slot: Shift
+    type: active
+    description: >
+      Mark an enemy to take increased damage from Lady Geist and her team, scaling
+      further with upgrades.
+    mechanics:
+      uses:
+        - Damage Amplification
+      counters: []
+  - name: Soul Exchange
+    slot: R
+    type: ultimate
+    description: >
+      Link Lady Geist to an enemy hero, swapping remaining health totals after a brief
+      delay while dealing a burst of spirit damage.
+    mechanics:
+      uses:
+        - Health Swap
+      counters: []

@@ -1,0 +1,58 @@
+character:
+  name: Yamato
+  archetype: Assassin
+  description: >
+    A high-mobility swordsman who chains slashes, deflects bullets, and becomes an unstoppable
+    whirlwind during his ultimate.
+  source_url: https://deadlockwiki.org/w/Yamato
+  last_updated: 2025-10-26
+abilities:
+  - name: Crescent Slash
+    slot: Q
+    type: active
+    description: >
+      Slash in an arc with Yamato's katana, dealing bullet damage and layering potency for the
+      next strike.
+    mechanics:
+      uses:
+        - Damage Ramp
+      counters: []
+  - name: Gale Step
+    slot: E
+    type: active
+    description: >
+      Dash in the targeted direction, gaining a brief burst of movement speed and evasion.
+    mechanics:
+      uses:
+        - Dash
+        - Haste
+        - Bullet Evasion
+      counters: []
+  - name: Windguard
+    slot: Shift
+    type: active
+    description: >
+      Raise Yamato's blade to deflect incoming projectiles, reflecting bullets back at attackers.
+    mechanics:
+      uses:
+        - Projectile
+      counters:
+        - Projectile
+    notes: >
+      Windguard reflects bullets for its duration, functioning as a projectile counter per hero
+      ability descriptions.
+  - name: Storm's Reach
+    slot: R
+    type: ultimate
+    description: >
+      Enter a living storm, gaining immunity to negative status effects while slashing rapidly and
+      pulling enemies inward.
+    mechanics:
+      uses:
+        - Crowd-Control Immunity
+        - Pull
+        - Damage Ramp
+      counters:
+        - Movement Slow
+        - Fire Rate Slow
+        - Damage Output Reduction

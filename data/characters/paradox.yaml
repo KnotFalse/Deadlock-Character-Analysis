@@ -1,0 +1,57 @@
+character:
+  name: Paradox
+  archetype: Mystic
+  description: >
+    A time-bending caster who rewinds allies, slows enemies, and steals momentum with future-sight
+    bursts.
+  source_url: https://www.sportskeeda.com/esports/all-deadlock-character-abilities-ultimates
+  last_updated: 2025-10-26
+abilities:
+  - name: Chrono Burst
+    slot: Q
+    type: active
+    description: >
+      Fire an orb that detonates after a delay, slowing enemies caught inside and accelerating allies.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Haste
+      counters: []
+  - name: Rewind
+    slot: E
+    type: active
+    description: >
+      Return an ally to a previous location with restored health and cleansed debuffs.
+    mechanics:
+      uses:
+        - Teleport
+        - Area Heal
+      counters:
+        - Damage Over Time
+        - Movement Slow
+        - Healing Reduction
+    notes: >
+      Rewind removes most damage-over-time and slow effects when relocating an ally, functioning as
+      a cleanse.
+  - name: Event Horizon
+    slot: Shift
+    type: active
+    description: >
+      Project a field that freezes enemies in place while decreasing their fire rate.
+    mechanics:
+      uses:
+        - Immobilize
+        - Fire Rate Slow
+      counters: []
+  - name: Temporal Collapse
+    slot: R
+    type: ultimate
+    description: >
+      Channel a massive time rift that suspends enemies, then snaps them back with amplified damage.
+    mechanics:
+      uses:
+        - Channeling
+        - Stun
+        - Damage Amplification
+      counters:
+        - Channeling

@@ -1,0 +1,1133 @@
+source,relationship,target,evidence,reason
+Abrams,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Kelvin,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Victor,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Viscous,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Abrams,EVEN_AGAINST,Yamato,0,No direct ability or mechanic counters found.
+Abrams,STRONG_AGAINST,Billy,2,[Shoulder Charge] counters [Bullet Storm via Channeling]. [Seismic Impact] counters [Bullet Storm via Channeling]. 
+Abrams,STRONG_AGAINST,Dynamo,2,[Shoulder Charge] counters [Rejuvenating Aurora via Channeling]. [Seismic Impact] counters [Rejuvenating Aurora via Channeling]. 
+Abrams,STRONG_AGAINST,Ivy,2,[Shoulder Charge] counters [Execution Beam via Channeling]. [Seismic Impact] counters [Execution Beam via Channeling]. 
+Abrams,STRONG_AGAINST,Lash,2,[Shoulder Charge] counters [Guillotine Frenzy via Channeling]. [Seismic Impact] counters [Guillotine Frenzy via Channeling]. 
+Abrams,STRONG_AGAINST,McGinnis,2,[Shoulder Charge] counters [Heavy Barrage via Channeling]. [Seismic Impact] counters [Heavy Barrage via Channeling]. 
+Abrams,STRONG_AGAINST,Mina,2,[Shoulder Charge] counters [Requiem via Channeling]. [Seismic Impact] counters [Requiem via Channeling]. 
+Abrams,STRONG_AGAINST,Paige,2,[Shoulder Charge] counters [Final Chapter via Channeling]. [Seismic Impact] counters [Final Chapter via Channeling]. 
+Abrams,STRONG_AGAINST,Paradox,2,[Shoulder Charge] counters [Temporal Collapse via Channeling]. [Seismic Impact] counters [Temporal Collapse via Channeling]. 
+Abrams,STRONG_AGAINST,Seven,2,[Shoulder Charge] counters [Storm Cloud via Channeling]. [Seismic Impact] counters [Storm Cloud via Channeling]. 
+Abrams,STRONG_AGAINST,Warden,2,[Shoulder Charge] counters [Last Stand via Channeling]. [Seismic Impact] counters [Last Stand via Channeling]. 
+Abrams,WEAK_AGAINST,Holliday,2,[Seismic Impact] is countered by [Crackshot via Dash]. [Shoulder Charge] is countered by [Crackshot via Dash]. 
+Abrams,WEAK_AGAINST,Infernus,1,[Infernal Resilience] is countered by [Fire Wells via Self Heal]. 
+Abrams,WEAK_AGAINST,Lash,2,[Seismic Impact] is countered by [Grappling Whip via Dash]. [Shoulder Charge] is countered by [Grappling Whip via Dash]. 
+Abrams,WEAK_AGAINST,Pocket,1,[Infernal Resilience] is countered by [Affliction via Self Heal]. 
+Abrams,WEAK_AGAINST,Vyper,1,[Infernal Resilience] is countered by [Lethal Venom via Self Heal]. 
+Bebop,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Kelvin,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Lash,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Paradox,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Bebop,EVEN_AGAINST,Victor,0,No direct ability or mechanic counters found.
+Bebop,STRONG_AGAINST,Billy,2,[Drop the Beat] counters [Force Field via Projectile]. [Sound Barrier] counters [Force Field via Barrier]. 
+Bebop,STRONG_AGAINST,Drifter,2,[Drop the Beat] counters [Warp Shot via Projectile]. [Drop the Beat] counters [Ricochet Rhapsody via Projectile]. 
+Bebop,STRONG_AGAINST,McGinnis,1,[Sound Barrier] counters [Spectral Wall via Barrier]. 
+Bebop,STRONG_AGAINST,Mirage,1,[Drop the Beat] counters [Holo Shot via Projectile]. 
+Bebop,STRONG_AGAINST,Paige,3,[Drop the Beat] counters [Guardian Page via Projectile]. [Sound Barrier] counters [Guardian Page via Barrier]. [Sound Barrier] counters [Final Chapter via Barrier]. 
+Bebop,STRONG_AGAINST,Vindicta,1,[Drop the Beat] counters [Ballistic Volley via Projectile]. 
+Bebop,STRONG_AGAINST,Viscous,1,[Sound Barrier] counters [The Cube via Barrier]. 
+Bebop,STRONG_AGAINST,Vyper,1,[Sound Barrier] counters [Slither via Barrier]. 
+Bebop,STRONG_AGAINST,Warden,1,[Sound Barrier] counters [Willpower via Barrier]. 
+Bebop,STRONG_AGAINST,Wraith,1,[Sound Barrier] counters [Project Mind via Barrier]. 
+Bebop,STRONG_AGAINST,Yamato,1,[Drop the Beat] counters [Windguard via Projectile]. 
+Bebop,WEAK_AGAINST,Haze,1,[Bass Blast] is countered by [Voidstrike via Barrier]. 
+Bebop,WEAK_AGAINST,Vindicta,2,[Bass Blast] is countered by [Ballistic Volley via Barrier]. [Bass Blast] is countered by [Execution Shot via Barrier]. 
+Billy,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Kelvin,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Victor,0,No direct ability or mechanic counters found.
+Billy,EVEN_AGAINST,Warden,0,No direct ability or mechanic counters found.
+Billy,STRONG_AGAINST,Drifter,2,[Force Field] counters [Warp Shot via Projectile]. [Force Field] counters [Ricochet Rhapsody via Projectile]. 
+Billy,STRONG_AGAINST,Mirage,1,[Force Field] counters [Holo Shot via Projectile]. 
+Billy,STRONG_AGAINST,Paige,1,[Force Field] counters [Guardian Page via Projectile]. 
+Billy,STRONG_AGAINST,Vindicta,1,[Force Field] counters [Ballistic Volley via Projectile]. 
+Billy,STRONG_AGAINST,Yamato,1,[Force Field] counters [Windguard via Projectile]. 
+Billy,WEAK_AGAINST,Abrams,2,[Bullet Storm] is countered by [Shoulder Charge via Channeling]. [Bullet Storm] is countered by [Seismic Impact via Channeling]. 
+Billy,WEAK_AGAINST,Bebop,2,[Force Field] is countered by [Drop the Beat via Projectile]. [Force Field] is countered by [Sound Barrier via Barrier]. 
+Billy,WEAK_AGAINST,Doorman,1,[Bullet Storm] is countered by [Luggage Cart via Channeling]. 
+Billy,WEAK_AGAINST,Dynamo,2,[Bullet Storm] is countered by [Kinetic Pulse via Channeling]. [Bullet Storm] is countered by [Singularity via Channeling]. 
+Billy,WEAK_AGAINST,Grey Talon,1,[Bullet Storm] is countered by [Spirit Snare via Channeling]. 
+Billy,WEAK_AGAINST,Haze,1,[Force Field] is countered by [Voidstrike via Barrier]. 
+Billy,WEAK_AGAINST,Holliday,1,[Portal Dive] is countered by [Crackshot via Teleport]. 
+Billy,WEAK_AGAINST,Lash,1,[Portal Dive] is countered by [Grappling Whip via Teleport]. 
+Billy,WEAK_AGAINST,Mo & Krill,1,[Bullet Storm] is countered by [Combo via Channeling]. 
+Billy,WEAK_AGAINST,Paige,1,[Force Field] is countered by [Guardian Page via Projectile]. 
+Billy,WEAK_AGAINST,Paradox,1,[Bullet Storm] is countered by [Temporal Collapse via Channeling]. 
+Billy,WEAK_AGAINST,Seven,1,[Bullet Storm] is countered by [Static Charge via Channeling]. 
+Billy,WEAK_AGAINST,Vindicta,2,[Force Field] is countered by [Ballistic Volley via Barrier]. [Force Field] is countered by [Execution Shot via Barrier]. 
+Billy,WEAK_AGAINST,Viscous,1,[Bullet Storm] is countered by [The Cube via Damage Output Reduction]. 
+Billy,WEAK_AGAINST,Vyper,1,[Bullet Storm] is countered by [Petrifying Bola via Channeling]. 
+Billy,WEAK_AGAINST,Wraith,1,[Bullet Storm] is countered by [Telekinesis via Channeling]. 
+Billy,WEAK_AGAINST,Yamato,2,[Force Field] is countered by [Windguard via Projectile]. [Bullet Storm] is countered by [Storm's Reach via Damage Output Reduction]. 
+Calico,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Kelvin,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Paige,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Paradox,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Victor,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Viscous,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Warden,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Calico,EVEN_AGAINST,Yamato,0,No direct ability or mechanic counters found.
+Calico,WEAK_AGAINST,Holliday,1,[Leaping Slash] is countered by [Crackshot via Dash]. 
+Calico,WEAK_AGAINST,Infernus,1,[Leaping Slash] is countered by [Fire Wells via Self Heal]. 
+Calico,WEAK_AGAINST,Lash,1,[Leaping Slash] is countered by [Grappling Whip via Dash]. 
+Calico,WEAK_AGAINST,Pocket,1,[Leaping Slash] is countered by [Affliction via Self Heal]. 
+Calico,WEAK_AGAINST,Vyper,1,[Leaping Slash] is countered by [Lethal Venom via Self Heal]. 
+Doorman,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Doorman,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Doorman,STRONG_AGAINST,Billy,1,[Luggage Cart] counters [Bullet Storm via Channeling]. 
+Doorman,STRONG_AGAINST,Dynamo,1,[Luggage Cart] counters [Rejuvenating Aurora via Channeling]. 
+Doorman,STRONG_AGAINST,Ivy,1,[Luggage Cart] counters [Execution Beam via Channeling]. 
+Doorman,STRONG_AGAINST,Lash,1,[Luggage Cart] counters [Guillotine Frenzy via Channeling]. 
+Doorman,STRONG_AGAINST,McGinnis,1,[Luggage Cart] counters [Heavy Barrage via Channeling]. 
+Doorman,STRONG_AGAINST,Mina,1,[Luggage Cart] counters [Requiem via Channeling]. 
+Doorman,STRONG_AGAINST,Paige,1,[Luggage Cart] counters [Final Chapter via Channeling]. 
+Doorman,STRONG_AGAINST,Paradox,1,[Luggage Cart] counters [Temporal Collapse via Channeling]. 
+Doorman,STRONG_AGAINST,Seven,1,[Luggage Cart] counters [Storm Cloud via Channeling]. 
+Doorman,STRONG_AGAINST,Warden,1,[Luggage Cart] counters [Last Stand via Channeling]. 
+Doorman,WEAK_AGAINST,Kelvin,1,[Call Bell] is countered by [Ice Path via Movement Slow]. 
+Doorman,WEAK_AGAINST,Lash,1,[Call Bell] is countered by [Blood Rush via Movement Slow]. 
+Doorman,WEAK_AGAINST,Paige,1,[Call Bell] is countered by [Restoration Quill via Movement Slow]. 
+Doorman,WEAK_AGAINST,Paradox,1,[Call Bell] is countered by [Rewind via Movement Slow]. 
+Doorman,WEAK_AGAINST,Victor,1,[Call Bell] is countered by [Jumpstart via Movement Slow]. 
+Doorman,WEAK_AGAINST,Viscous,1,[Call Bell] is countered by [The Cube via Movement Slow]. 
+Doorman,WEAK_AGAINST,Warden,1,[Call Bell] is countered by [Willpower via Movement Slow]. 
+Doorman,WEAK_AGAINST,Yamato,1,[Call Bell] is countered by [Storm's Reach via Movement Slow]. 
+Drifter,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Kelvin,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Paradox,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Victor,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Viscous,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Warden,0,No direct ability or mechanic counters found.
+Drifter,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Drifter,STRONG_AGAINST,Mirage,2,[Tripwire] counters [Phase Shift via Stealth]. [Ricochet Rhapsody] counters [Phase Shift via Stealth]. 
+Drifter,WEAK_AGAINST,Bebop,2,[Warp Shot] is countered by [Drop the Beat via Projectile]. [Ricochet Rhapsody] is countered by [Drop the Beat via Projectile]. 
+Drifter,WEAK_AGAINST,Billy,2,[Warp Shot] is countered by [Force Field via Projectile]. [Ricochet Rhapsody] is countered by [Force Field via Projectile]. 
+Drifter,WEAK_AGAINST,Holliday,1,[Smoke Hustle] is countered by [Crackshot via Dash]. 
+Drifter,WEAK_AGAINST,Ivy,1,[Smoke Hustle] is countered by [Venom Trap via Stealth]. 
+Drifter,WEAK_AGAINST,Lash,1,[Smoke Hustle] is countered by [Grappling Whip via Dash]. 
+Drifter,WEAK_AGAINST,Mirage,2,[Smoke Hustle] is countered by [Mirror Trap via Stealth]. [Smoke Hustle] is countered by [Hall of Mirrors via Stealth]. 
+Drifter,WEAK_AGAINST,Paige,2,[Warp Shot] is countered by [Guardian Page via Projectile]. [Ricochet Rhapsody] is countered by [Guardian Page via Projectile]. 
+Drifter,WEAK_AGAINST,Vindicta,1,[Smoke Hustle] is countered by [Lock-On Round via Stealth]. 
+Drifter,WEAK_AGAINST,Yamato,2,[Warp Shot] is countered by [Windguard via Projectile]. [Ricochet Rhapsody] is countered by [Windguard via Projectile]. 
+Dynamo,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Dynamo,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Dynamo,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Dynamo,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Dynamo,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Dynamo,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Dynamo,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Dynamo,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Dynamo,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Dynamo,STRONG_AGAINST,Billy,2,[Kinetic Pulse] counters [Bullet Storm via Channeling]. [Singularity] counters [Bullet Storm via Channeling]. 
+Dynamo,STRONG_AGAINST,Ivy,2,[Kinetic Pulse] counters [Execution Beam via Channeling]. [Singularity] counters [Execution Beam via Channeling]. 
+Dynamo,STRONG_AGAINST,Lash,2,[Kinetic Pulse] counters [Guillotine Frenzy via Channeling]. [Singularity] counters [Guillotine Frenzy via Channeling]. 
+Dynamo,STRONG_AGAINST,McGinnis,2,[Kinetic Pulse] counters [Heavy Barrage via Channeling]. [Singularity] counters [Heavy Barrage via Channeling]. 
+Dynamo,STRONG_AGAINST,Mina,2,[Kinetic Pulse] counters [Requiem via Channeling]. [Singularity] counters [Requiem via Channeling]. 
+Dynamo,STRONG_AGAINST,Paige,2,[Kinetic Pulse] counters [Final Chapter via Channeling]. [Singularity] counters [Final Chapter via Channeling]. 
+Dynamo,STRONG_AGAINST,Paradox,2,[Kinetic Pulse] counters [Temporal Collapse via Channeling]. [Singularity] counters [Temporal Collapse via Channeling]. 
+Dynamo,STRONG_AGAINST,Seven,2,[Kinetic Pulse] counters [Storm Cloud via Channeling]. [Singularity] counters [Storm Cloud via Channeling]. 
+Dynamo,STRONG_AGAINST,Warden,2,[Kinetic Pulse] counters [Last Stand via Channeling]. [Singularity] counters [Last Stand via Channeling]. 
+Dynamo,WEAK_AGAINST,Abrams,2,[Rejuvenating Aurora] is countered by [Shoulder Charge via Channeling]. [Rejuvenating Aurora] is countered by [Seismic Impact via Channeling]. 
+Dynamo,WEAK_AGAINST,Doorman,1,[Rejuvenating Aurora] is countered by [Luggage Cart via Channeling]. 
+Dynamo,WEAK_AGAINST,Grey Talon,1,[Rejuvenating Aurora] is countered by [Spirit Snare via Channeling]. 
+Dynamo,WEAK_AGAINST,Holliday,1,[Quantum Entanglement] is countered by [Crackshot via Teleport]. 
+Dynamo,WEAK_AGAINST,Infernus,1,[Rejuvenating Aurora] is countered by [Fire Wells via Area Heal]. 
+Dynamo,WEAK_AGAINST,Kelvin,1,[Kinetic Pulse] is countered by [Ice Path via Movement Slow]. 
+Dynamo,WEAK_AGAINST,Lash,2,[Quantum Entanglement] is countered by [Grappling Whip via Teleport]. [Kinetic Pulse] is countered by [Blood Rush via Movement Slow]. 
+Dynamo,WEAK_AGAINST,Mo & Krill,1,[Rejuvenating Aurora] is countered by [Combo via Channeling]. 
+Dynamo,WEAK_AGAINST,Paige,1,[Kinetic Pulse] is countered by [Restoration Quill via Movement Slow]. 
+Dynamo,WEAK_AGAINST,Paradox,2,[Kinetic Pulse] is countered by [Rewind via Movement Slow]. [Rejuvenating Aurora] is countered by [Temporal Collapse via Channeling]. 
+Dynamo,WEAK_AGAINST,Pocket,1,[Rejuvenating Aurora] is countered by [Affliction via Area Heal]. 
+Dynamo,WEAK_AGAINST,Seven,1,[Rejuvenating Aurora] is countered by [Static Charge via Channeling]. 
+Dynamo,WEAK_AGAINST,Victor,1,[Kinetic Pulse] is countered by [Jumpstart via Movement Slow]. 
+Dynamo,WEAK_AGAINST,Viscous,1,[Kinetic Pulse] is countered by [The Cube via Movement Slow]. 
+Dynamo,WEAK_AGAINST,Vyper,2,[Rejuvenating Aurora] is countered by [Petrifying Bola via Channeling]. [Rejuvenating Aurora] is countered by [Lethal Venom via Area Heal]. 
+Dynamo,WEAK_AGAINST,Warden,1,[Kinetic Pulse] is countered by [Willpower via Movement Slow]. 
+Dynamo,WEAK_AGAINST,Wraith,1,[Rejuvenating Aurora] is countered by [Telekinesis via Channeling]. 
+Dynamo,WEAK_AGAINST,Yamato,1,[Kinetic Pulse] is countered by [Storm's Reach via Movement Slow]. 
+Grey Talon,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Grey Talon,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Grey Talon,STRONG_AGAINST,Billy,1,[Spirit Snare] counters [Bullet Storm via Channeling]. 
+Grey Talon,STRONG_AGAINST,Dynamo,1,[Spirit Snare] counters [Rejuvenating Aurora via Channeling]. 
+Grey Talon,STRONG_AGAINST,Ivy,1,[Spirit Snare] counters [Execution Beam via Channeling]. 
+Grey Talon,STRONG_AGAINST,Lash,1,[Spirit Snare] counters [Guillotine Frenzy via Channeling]. 
+Grey Talon,STRONG_AGAINST,McGinnis,1,[Spirit Snare] counters [Heavy Barrage via Channeling]. 
+Grey Talon,STRONG_AGAINST,Mina,1,[Spirit Snare] counters [Requiem via Channeling]. 
+Grey Talon,STRONG_AGAINST,Paige,1,[Spirit Snare] counters [Final Chapter via Channeling]. 
+Grey Talon,STRONG_AGAINST,Paradox,1,[Spirit Snare] counters [Temporal Collapse via Channeling]. 
+Grey Talon,STRONG_AGAINST,Seven,1,[Spirit Snare] counters [Storm Cloud via Channeling]. 
+Grey Talon,STRONG_AGAINST,Warden,1,[Spirit Snare] counters [Last Stand via Channeling]. 
+Grey Talon,WEAK_AGAINST,Kelvin,1,[Rain of Arrows] is countered by [Ice Path via Movement Slow]. 
+Grey Talon,WEAK_AGAINST,Lash,1,[Rain of Arrows] is countered by [Blood Rush via Movement Slow]. 
+Grey Talon,WEAK_AGAINST,Paige,1,[Rain of Arrows] is countered by [Restoration Quill via Movement Slow]. 
+Grey Talon,WEAK_AGAINST,Paradox,1,[Rain of Arrows] is countered by [Rewind via Movement Slow]. 
+Grey Talon,WEAK_AGAINST,Victor,1,[Rain of Arrows] is countered by [Jumpstart via Movement Slow]. 
+Grey Talon,WEAK_AGAINST,Viscous,1,[Rain of Arrows] is countered by [The Cube via Movement Slow]. 
+Grey Talon,WEAK_AGAINST,Warden,1,[Rain of Arrows] is countered by [Willpower via Movement Slow]. 
+Grey Talon,WEAK_AGAINST,Yamato,1,[Rain of Arrows] is countered by [Storm's Reach via Movement Slow]. 
+Haze,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Haze,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Haze,STRONG_AGAINST,Bebop,1,[Voidstrike] counters [Bass Blast via Barrier]. 
+Haze,STRONG_AGAINST,Billy,1,[Voidstrike] counters [Force Field via Barrier]. 
+Haze,STRONG_AGAINST,McGinnis,1,[Voidstrike] counters [Spectral Wall via Barrier]. 
+Haze,STRONG_AGAINST,Paige,2,[Voidstrike] counters [Guardian Page via Barrier]. [Voidstrike] counters [Final Chapter via Barrier]. 
+Haze,STRONG_AGAINST,Viscous,1,[Voidstrike] counters [The Cube via Barrier]. 
+Haze,STRONG_AGAINST,Vyper,1,[Voidstrike] counters [Slither via Barrier]. 
+Haze,STRONG_AGAINST,Warden,1,[Voidstrike] counters [Willpower via Barrier]. 
+Haze,STRONG_AGAINST,Wraith,1,[Voidstrike] counters [Project Mind via Barrier]. 
+Haze,WEAK_AGAINST,Holliday,1,[Shadowstep] is countered by [Crackshot via Teleport]. 
+Haze,WEAK_AGAINST,Kelvin,2,[Smoke Bomb] is countered by [Ice Path via Movement Slow]. [Sleep Dagger] is countered by [Ice Path via Movement Slow]. 
+Haze,WEAK_AGAINST,Lash,3,[Shadowstep] is countered by [Grappling Whip via Teleport]. [Smoke Bomb] is countered by [Blood Rush via Movement Slow]. [Sleep Dagger] is countered by [Blood Rush via Movement Slow]. 
+Haze,WEAK_AGAINST,Paige,2,[Smoke Bomb] is countered by [Restoration Quill via Movement Slow]. [Sleep Dagger] is countered by [Restoration Quill via Movement Slow]. 
+Haze,WEAK_AGAINST,Paradox,2,[Smoke Bomb] is countered by [Rewind via Movement Slow]. [Sleep Dagger] is countered by [Rewind via Movement Slow]. 
+Haze,WEAK_AGAINST,Victor,2,[Smoke Bomb] is countered by [Jumpstart via Movement Slow]. [Sleep Dagger] is countered by [Jumpstart via Movement Slow]. 
+Haze,WEAK_AGAINST,Viscous,2,[Smoke Bomb] is countered by [The Cube via Movement Slow]. [Sleep Dagger] is countered by [The Cube via Movement Slow]. 
+Haze,WEAK_AGAINST,Warden,2,[Smoke Bomb] is countered by [Willpower via Movement Slow]. [Sleep Dagger] is countered by [Willpower via Movement Slow]. 
+Haze,WEAK_AGAINST,Yamato,2,[Smoke Bomb] is countered by [Storm's Reach via Movement Slow]. [Sleep Dagger] is countered by [Storm's Reach via Movement Slow]. 
+Holliday,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Holliday,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Holliday,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Holliday,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Holliday,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Holliday,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Holliday,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Holliday,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Holliday,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Holliday,STRONG_AGAINST,Abrams,2,[Crackshot] counters [Seismic Impact via Dash]. [Crackshot] counters [Shoulder Charge via Dash]. 
+Holliday,STRONG_AGAINST,Billy,1,[Crackshot] counters [Portal Dive via Teleport]. 
+Holliday,STRONG_AGAINST,Calico,1,[Crackshot] counters [Leaping Slash via Dash]. 
+Holliday,STRONG_AGAINST,Drifter,1,[Crackshot] counters [Smoke Hustle via Dash]. 
+Holliday,STRONG_AGAINST,Dynamo,1,[Crackshot] counters [Quantum Entanglement via Teleport]. 
+Holliday,STRONG_AGAINST,Haze,1,[Crackshot] counters [Shadowstep via Teleport]. 
+Holliday,STRONG_AGAINST,Infernus,1,[Crackshot] counters [Blazing Advance via Dash]. 
+Holliday,STRONG_AGAINST,Mina,1,[Crackshot] counters [Specter Step via Teleport]. 
+Holliday,STRONG_AGAINST,Mirage,1,[Crackshot] counters [Holo Shot via Teleport]. 
+Holliday,STRONG_AGAINST,Paradox,1,[Crackshot] counters [Rewind via Teleport]. 
+Holliday,STRONG_AGAINST,Pocket,1,[Crackshot] counters [Flying Cloak via Teleport]. 
+Holliday,STRONG_AGAINST,Shiv,1,[Crackshot] counters [Slice and Dice via Dash]. 
+Holliday,STRONG_AGAINST,Sinclair,1,[Crackshot] counters [Spectral Assistant via Teleport]. 
+Holliday,STRONG_AGAINST,Vyper,1,[Crackshot] counters [Slither via Dash]. 
+Holliday,STRONG_AGAINST,Wraith,1,[Crackshot] counters [Project Mind via Teleport]. 
+Holliday,STRONG_AGAINST,Yamato,1,[Crackshot] counters [Gale Step via Dash]. 
+Holliday,WEAK_AGAINST,Kelvin,1,[Crackshot] is countered by [Ice Path via Movement Slow]. 
+Holliday,WEAK_AGAINST,Lash,1,[Crackshot] is countered by [Blood Rush via Movement Slow]. 
+Holliday,WEAK_AGAINST,Paige,1,[Crackshot] is countered by [Restoration Quill via Movement Slow]. 
+Holliday,WEAK_AGAINST,Paradox,1,[Crackshot] is countered by [Rewind via Movement Slow]. 
+Holliday,WEAK_AGAINST,Victor,1,[Crackshot] is countered by [Jumpstart via Movement Slow]. 
+Holliday,WEAK_AGAINST,Viscous,2,[Crackshot] is countered by [The Cube via Movement Slow]. [Crackshot] is countered by [The Cube via Ability Suppression]. 
+Holliday,WEAK_AGAINST,Warden,1,[Crackshot] is countered by [Willpower via Movement Slow]. 
+Holliday,WEAK_AGAINST,Yamato,1,[Crackshot] is countered by [Storm's Reach via Movement Slow]. 
+Infernus,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Infernus,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Infernus,STRONG_AGAINST,Abrams,1,[Fire Wells] counters [Infernal Resilience via Self Heal]. 
+Infernus,STRONG_AGAINST,Calico,1,[Fire Wells] counters [Leaping Slash via Self Heal]. 
+Infernus,STRONG_AGAINST,Dynamo,1,[Fire Wells] counters [Rejuvenating Aurora via Area Heal]. 
+Infernus,STRONG_AGAINST,Kelvin,2,[Fire Wells] counters [Frost Grenade via Area Heal]. [Fire Wells] counters [Frozen Shelter via Area Heal]. 
+Infernus,STRONG_AGAINST,Lash,1,[Fire Wells] counters [Guillotine Frenzy via Self Heal]. 
+Infernus,STRONG_AGAINST,McGinnis,1,[Fire Wells] counters [Medicinal Specter via Area Heal]. 
+Infernus,STRONG_AGAINST,Mina,1,[Fire Wells] counters [Requiem via Area Heal]. 
+Infernus,STRONG_AGAINST,Paige,2,[Fire Wells] counters [Final Chapter via Area Heal]. [Fire Wells] counters [Restoration Quill via Area Heal]. 
+Infernus,STRONG_AGAINST,Paradox,1,[Fire Wells] counters [Rewind via Area Heal]. 
+Infernus,STRONG_AGAINST,Victor,1,[Fire Wells] counters [Jumpstart via Self Heal]. 
+Infernus,STRONG_AGAINST,Viscous,1,[Fire Wells] counters [The Cube via Area Heal]. 
+Infernus,WEAK_AGAINST,Holliday,1,[Blazing Advance] is countered by [Crackshot via Dash]. 
+Infernus,WEAK_AGAINST,Kelvin,1,[Blazing Advance] is countered by [Ice Path via Movement Slow]. 
+Infernus,WEAK_AGAINST,Lash,2,[Blazing Advance] is countered by [Grappling Whip via Dash]. [Blazing Advance] is countered by [Blood Rush via Movement Slow]. 
+Infernus,WEAK_AGAINST,Paige,4,[Blazing Advance] is countered by [Restoration Quill via Damage Over Time]. [Flame Shot] is countered by [Restoration Quill via Damage Over Time]. [Fire Wells] is countered by [Restoration Quill via Damage Over Time]. [Blazing Advance] is countered by [Restoration Quill via Movement Slow]. 
+Infernus,WEAK_AGAINST,Paradox,5,[Blazing Advance] is countered by [Rewind via Damage Over Time]. [Flame Shot] is countered by [Rewind via Damage Over Time]. [Fire Wells] is countered by [Rewind via Damage Over Time]. [Blazing Advance] is countered by [Rewind via Movement Slow]. [Fire Wells] is countered by [Rewind via Healing Reduction]. 
+Infernus,WEAK_AGAINST,Victor,1,[Blazing Advance] is countered by [Jumpstart via Movement Slow]. 
+Infernus,WEAK_AGAINST,Viscous,1,[Blazing Advance] is countered by [The Cube via Movement Slow]. 
+Infernus,WEAK_AGAINST,Warden,1,[Blazing Advance] is countered by [Willpower via Movement Slow]. 
+Infernus,WEAK_AGAINST,Yamato,1,[Blazing Advance] is countered by [Storm's Reach via Movement Slow]. 
+Ivy,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Ivy,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Ivy,STRONG_AGAINST,Drifter,1,[Venom Trap] counters [Smoke Hustle via Stealth]. 
+Ivy,STRONG_AGAINST,Mirage,1,[Venom Trap] counters [Phase Shift via Stealth]. 
+Ivy,WEAK_AGAINST,Abrams,2,[Execution Beam] is countered by [Shoulder Charge via Channeling]. [Execution Beam] is countered by [Seismic Impact via Channeling]. 
+Ivy,WEAK_AGAINST,Doorman,1,[Execution Beam] is countered by [Luggage Cart via Channeling]. 
+Ivy,WEAK_AGAINST,Dynamo,2,[Execution Beam] is countered by [Kinetic Pulse via Channeling]. [Execution Beam] is countered by [Singularity via Channeling]. 
+Ivy,WEAK_AGAINST,Grey Talon,1,[Execution Beam] is countered by [Spirit Snare via Channeling]. 
+Ivy,WEAK_AGAINST,Kelvin,1,[Toxic Bolt] is countered by [Ice Path via Movement Slow]. 
+Ivy,WEAK_AGAINST,Lash,1,[Toxic Bolt] is countered by [Blood Rush via Movement Slow]. 
+Ivy,WEAK_AGAINST,Mo & Krill,1,[Execution Beam] is countered by [Combo via Channeling]. 
+Ivy,WEAK_AGAINST,Paige,4,[Fear Toxin] is countered by [Restoration Quill via Damage Over Time]. [Venom Trap] is countered by [Restoration Quill via Damage Over Time]. [Toxic Bolt] is countered by [Restoration Quill via Damage Over Time]. [Toxic Bolt] is countered by [Restoration Quill via Movement Slow]. 
+Ivy,WEAK_AGAINST,Paradox,5,[Fear Toxin] is countered by [Rewind via Damage Over Time]. [Venom Trap] is countered by [Rewind via Damage Over Time]. [Toxic Bolt] is countered by [Rewind via Damage Over Time]. [Toxic Bolt] is countered by [Rewind via Movement Slow]. [Execution Beam] is countered by [Temporal Collapse via Channeling]. 
+Ivy,WEAK_AGAINST,Seven,1,[Execution Beam] is countered by [Static Charge via Channeling]. 
+Ivy,WEAK_AGAINST,Victor,1,[Toxic Bolt] is countered by [Jumpstart via Movement Slow]. 
+Ivy,WEAK_AGAINST,Viscous,1,[Toxic Bolt] is countered by [The Cube via Movement Slow]. 
+Ivy,WEAK_AGAINST,Vyper,1,[Execution Beam] is countered by [Petrifying Bola via Channeling]. 
+Ivy,WEAK_AGAINST,Warden,1,[Toxic Bolt] is countered by [Willpower via Movement Slow]. 
+Ivy,WEAK_AGAINST,Wraith,1,[Execution Beam] is countered by [Telekinesis via Channeling]. 
+Ivy,WEAK_AGAINST,Yamato,1,[Toxic Bolt] is countered by [Storm's Reach via Movement Slow]. 
+Kelvin,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Kelvin,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Kelvin,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Kelvin,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Kelvin,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Kelvin,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Kelvin,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Kelvin,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Kelvin,STRONG_AGAINST,Doorman,1,[Ice Path] counters [Call Bell via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Dynamo,1,[Ice Path] counters [Kinetic Pulse via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Grey Talon,1,[Ice Path] counters [Rain of Arrows via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Haze,2,[Ice Path] counters [Smoke Bomb via Movement Slow]. [Ice Path] counters [Sleep Dagger via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Holliday,1,[Ice Path] counters [Crackshot via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Infernus,1,[Ice Path] counters [Blazing Advance via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Ivy,1,[Ice Path] counters [Toxic Bolt via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Lady Geist,1,[Ice Path] counters [Life Drain via Movement Slow]. 
+Kelvin,STRONG_AGAINST,McGinnis,3,[Ice Path] counters [Heavy Barrage via Movement Slow]. [Ice Path] counters [Mini Turret via Movement Slow]. [Ice Path] counters [Spectral Wall via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Mina,1,[Ice Path] counters [Spectral Dagger via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Mirage,1,[Ice Path] counters [Mirror Trap via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Paige,1,[Ice Path] counters [Page Turner via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Paradox,1,[Ice Path] counters [Chrono Burst via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Pocket,1,[Ice Path] counters [Barrage via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Seven,1,[Ice Path] counters [Lightning Ball via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Shiv,1,[Ice Path] counters [Serrated Knives via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Victor,1,[Ice Path] counters [Aura of Suffering via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Viscous,2,[Ice Path] counters [Splatter via Movement Slow]. [Ice Path] counters [Puddle Punch via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Vyper,1,[Ice Path] counters [Screwjab Dagger via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Warden,1,[Ice Path] counters [Alchemical Flask via Movement Slow]. 
+Kelvin,STRONG_AGAINST,Wraith,1,[Ice Path] counters [Card Trick via Movement Slow]. 
+Kelvin,WEAK_AGAINST,Infernus,2,[Frost Grenade] is countered by [Fire Wells via Area Heal]. [Frozen Shelter] is countered by [Fire Wells via Area Heal]. 
+Kelvin,WEAK_AGAINST,Lash,3,[Frozen Shelter] is countered by [Blood Rush via Movement Slow]. [Arctic Beam] is countered by [Blood Rush via Movement Slow]. [Frost Grenade] is countered by [Blood Rush via Movement Slow]. 
+Kelvin,WEAK_AGAINST,Paige,3,[Frozen Shelter] is countered by [Restoration Quill via Movement Slow]. [Arctic Beam] is countered by [Restoration Quill via Movement Slow]. [Frost Grenade] is countered by [Restoration Quill via Movement Slow]. 
+Kelvin,WEAK_AGAINST,Paradox,3,[Frozen Shelter] is countered by [Rewind via Movement Slow]. [Arctic Beam] is countered by [Rewind via Movement Slow]. [Frost Grenade] is countered by [Rewind via Movement Slow]. 
+Kelvin,WEAK_AGAINST,Pocket,2,[Frost Grenade] is countered by [Affliction via Area Heal]. [Frozen Shelter] is countered by [Affliction via Area Heal]. 
+Kelvin,WEAK_AGAINST,Victor,5,[Frozen Shelter] is countered by [Jumpstart via Movement Slow]. [Arctic Beam] is countered by [Jumpstart via Movement Slow]. [Frost Grenade] is countered by [Jumpstart via Movement Slow]. [Arctic Beam] is countered by [Jumpstart via Fire Rate Slow]. [Frozen Shelter] is countered by [Jumpstart via Fire Rate Slow]. 
+Kelvin,WEAK_AGAINST,Viscous,5,[Frozen Shelter] is countered by [The Cube via Movement Slow]. [Arctic Beam] is countered by [The Cube via Movement Slow]. [Frost Grenade] is countered by [The Cube via Movement Slow]. [Arctic Beam] is countered by [The Cube via Fire Rate Slow]. [Frozen Shelter] is countered by [The Cube via Fire Rate Slow]. 
+Kelvin,WEAK_AGAINST,Vyper,2,[Frost Grenade] is countered by [Lethal Venom via Area Heal]. [Frozen Shelter] is countered by [Lethal Venom via Area Heal]. 
+Kelvin,WEAK_AGAINST,Warden,3,[Frozen Shelter] is countered by [Willpower via Movement Slow]. [Arctic Beam] is countered by [Willpower via Movement Slow]. [Frost Grenade] is countered by [Willpower via Movement Slow]. 
+Kelvin,WEAK_AGAINST,Yamato,5,[Frozen Shelter] is countered by [Storm's Reach via Movement Slow]. [Arctic Beam] is countered by [Storm's Reach via Movement Slow]. [Frost Grenade] is countered by [Storm's Reach via Movement Slow]. [Arctic Beam] is countered by [Storm's Reach via Fire Rate Slow]. [Frozen Shelter] is countered by [Storm's Reach via Fire Rate Slow]. 
+Lady Geist,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Lady Geist,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Lady Geist,WEAK_AGAINST,Kelvin,1,[Life Drain] is countered by [Ice Path via Movement Slow]. 
+Lady Geist,WEAK_AGAINST,Lash,1,[Life Drain] is countered by [Blood Rush via Movement Slow]. 
+Lady Geist,WEAK_AGAINST,Paige,2,[Essence Bomb] is countered by [Restoration Quill via Damage Over Time]. [Life Drain] is countered by [Restoration Quill via Movement Slow]. 
+Lady Geist,WEAK_AGAINST,Paradox,2,[Essence Bomb] is countered by [Rewind via Damage Over Time]. [Life Drain] is countered by [Rewind via Movement Slow]. 
+Lady Geist,WEAK_AGAINST,Victor,1,[Life Drain] is countered by [Jumpstart via Movement Slow]. 
+Lady Geist,WEAK_AGAINST,Viscous,1,[Life Drain] is countered by [The Cube via Movement Slow]. 
+Lady Geist,WEAK_AGAINST,Warden,1,[Life Drain] is countered by [Willpower via Movement Slow]. 
+Lady Geist,WEAK_AGAINST,Yamato,1,[Life Drain] is countered by [Storm's Reach via Movement Slow]. 
+Lash,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Lash,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Lash,STRONG_AGAINST,Abrams,2,[Grappling Whip] counters [Seismic Impact via Dash]. [Grappling Whip] counters [Shoulder Charge via Dash]. 
+Lash,STRONG_AGAINST,Billy,1,[Grappling Whip] counters [Portal Dive via Teleport]. 
+Lash,STRONG_AGAINST,Calico,1,[Grappling Whip] counters [Leaping Slash via Dash]. 
+Lash,STRONG_AGAINST,Doorman,1,[Blood Rush] counters [Call Bell via Movement Slow]. 
+Lash,STRONG_AGAINST,Drifter,1,[Grappling Whip] counters [Smoke Hustle via Dash]. 
+Lash,STRONG_AGAINST,Dynamo,2,[Grappling Whip] counters [Quantum Entanglement via Teleport]. [Blood Rush] counters [Kinetic Pulse via Movement Slow]. 
+Lash,STRONG_AGAINST,Grey Talon,1,[Blood Rush] counters [Rain of Arrows via Movement Slow]. 
+Lash,STRONG_AGAINST,Haze,3,[Grappling Whip] counters [Shadowstep via Teleport]. [Blood Rush] counters [Smoke Bomb via Movement Slow]. [Blood Rush] counters [Sleep Dagger via Movement Slow]. 
+Lash,STRONG_AGAINST,Holliday,1,[Blood Rush] counters [Crackshot via Movement Slow]. 
+Lash,STRONG_AGAINST,Infernus,2,[Grappling Whip] counters [Blazing Advance via Dash]. [Blood Rush] counters [Blazing Advance via Movement Slow]. 
+Lash,STRONG_AGAINST,Ivy,1,[Blood Rush] counters [Toxic Bolt via Movement Slow]. 
+Lash,STRONG_AGAINST,Kelvin,3,[Blood Rush] counters [Frozen Shelter via Movement Slow]. [Blood Rush] counters [Arctic Beam via Movement Slow]. [Blood Rush] counters [Frost Grenade via Movement Slow]. 
+Lash,STRONG_AGAINST,Lady Geist,1,[Blood Rush] counters [Life Drain via Movement Slow]. 
+Lash,STRONG_AGAINST,McGinnis,3,[Blood Rush] counters [Heavy Barrage via Movement Slow]. [Blood Rush] counters [Mini Turret via Movement Slow]. [Blood Rush] counters [Spectral Wall via Movement Slow]. 
+Lash,STRONG_AGAINST,Mina,2,[Grappling Whip] counters [Specter Step via Teleport]. [Blood Rush] counters [Spectral Dagger via Movement Slow]. 
+Lash,STRONG_AGAINST,Mirage,2,[Grappling Whip] counters [Holo Shot via Teleport]. [Blood Rush] counters [Mirror Trap via Movement Slow]. 
+Lash,STRONG_AGAINST,Paige,1,[Blood Rush] counters [Page Turner via Movement Slow]. 
+Lash,STRONG_AGAINST,Paradox,2,[Grappling Whip] counters [Rewind via Teleport]. [Blood Rush] counters [Chrono Burst via Movement Slow]. 
+Lash,STRONG_AGAINST,Pocket,2,[Grappling Whip] counters [Flying Cloak via Teleport]. [Blood Rush] counters [Barrage via Movement Slow]. 
+Lash,STRONG_AGAINST,Seven,1,[Blood Rush] counters [Lightning Ball via Movement Slow]. 
+Lash,STRONG_AGAINST,Shiv,2,[Grappling Whip] counters [Slice and Dice via Dash]. [Blood Rush] counters [Serrated Knives via Movement Slow]. 
+Lash,STRONG_AGAINST,Sinclair,1,[Grappling Whip] counters [Spectral Assistant via Teleport]. 
+Lash,STRONG_AGAINST,Victor,1,[Blood Rush] counters [Aura of Suffering via Movement Slow]. 
+Lash,STRONG_AGAINST,Viscous,2,[Blood Rush] counters [Splatter via Movement Slow]. [Blood Rush] counters [Puddle Punch via Movement Slow]. 
+Lash,STRONG_AGAINST,Vyper,2,[Grappling Whip] counters [Slither via Dash]. [Blood Rush] counters [Screwjab Dagger via Movement Slow]. 
+Lash,STRONG_AGAINST,Warden,1,[Blood Rush] counters [Alchemical Flask via Movement Slow]. 
+Lash,STRONG_AGAINST,Wraith,2,[Grappling Whip] counters [Project Mind via Teleport]. [Blood Rush] counters [Card Trick via Movement Slow]. 
+Lash,STRONG_AGAINST,Yamato,1,[Grappling Whip] counters [Gale Step via Dash]. 
+Lash,WEAK_AGAINST,Abrams,2,[Guillotine Frenzy] is countered by [Shoulder Charge via Channeling]. [Guillotine Frenzy] is countered by [Seismic Impact via Channeling]. 
+Lash,WEAK_AGAINST,Doorman,1,[Guillotine Frenzy] is countered by [Luggage Cart via Channeling]. 
+Lash,WEAK_AGAINST,Dynamo,2,[Guillotine Frenzy] is countered by [Kinetic Pulse via Channeling]. [Guillotine Frenzy] is countered by [Singularity via Channeling]. 
+Lash,WEAK_AGAINST,Grey Talon,1,[Guillotine Frenzy] is countered by [Spirit Snare via Channeling]. 
+Lash,WEAK_AGAINST,Infernus,1,[Guillotine Frenzy] is countered by [Fire Wells via Self Heal]. 
+Lash,WEAK_AGAINST,Mo & Krill,1,[Guillotine Frenzy] is countered by [Combo via Channeling]. 
+Lash,WEAK_AGAINST,Paradox,1,[Guillotine Frenzy] is countered by [Temporal Collapse via Channeling]. 
+Lash,WEAK_AGAINST,Pocket,1,[Guillotine Frenzy] is countered by [Affliction via Self Heal]. 
+Lash,WEAK_AGAINST,Seven,1,[Guillotine Frenzy] is countered by [Static Charge via Channeling]. 
+Lash,WEAK_AGAINST,Viscous,1,[Razor Lash] is countered by [The Cube via Bleed]. 
+Lash,WEAK_AGAINST,Vyper,2,[Guillotine Frenzy] is countered by [Petrifying Bola via Channeling]. [Guillotine Frenzy] is countered by [Lethal Venom via Self Heal]. 
+Lash,WEAK_AGAINST,Wraith,1,[Guillotine Frenzy] is countered by [Telekinesis via Channeling]. 
+McGinnis,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+McGinnis,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+McGinnis,WEAK_AGAINST,Abrams,2,[Heavy Barrage] is countered by [Shoulder Charge via Channeling]. [Heavy Barrage] is countered by [Seismic Impact via Channeling]. 
+McGinnis,WEAK_AGAINST,Bebop,1,[Spectral Wall] is countered by [Sound Barrier via Barrier]. 
+McGinnis,WEAK_AGAINST,Doorman,1,[Heavy Barrage] is countered by [Luggage Cart via Channeling]. 
+McGinnis,WEAK_AGAINST,Dynamo,2,[Heavy Barrage] is countered by [Kinetic Pulse via Channeling]. [Heavy Barrage] is countered by [Singularity via Channeling]. 
+McGinnis,WEAK_AGAINST,Grey Talon,1,[Heavy Barrage] is countered by [Spirit Snare via Channeling]. 
+McGinnis,WEAK_AGAINST,Haze,1,[Spectral Wall] is countered by [Voidstrike via Barrier]. 
+McGinnis,WEAK_AGAINST,Infernus,1,[Medicinal Specter] is countered by [Fire Wells via Area Heal]. 
+McGinnis,WEAK_AGAINST,Kelvin,3,[Heavy Barrage] is countered by [Ice Path via Movement Slow]. [Mini Turret] is countered by [Ice Path via Movement Slow]. [Spectral Wall] is countered by [Ice Path via Movement Slow]. 
+McGinnis,WEAK_AGAINST,Lash,3,[Heavy Barrage] is countered by [Blood Rush via Movement Slow]. [Mini Turret] is countered by [Blood Rush via Movement Slow]. [Spectral Wall] is countered by [Blood Rush via Movement Slow]. 
+McGinnis,WEAK_AGAINST,Mo & Krill,1,[Heavy Barrage] is countered by [Combo via Channeling]. 
+McGinnis,WEAK_AGAINST,Paige,4,[Heavy Barrage] is countered by [Restoration Quill via Damage Over Time]. [Heavy Barrage] is countered by [Restoration Quill via Movement Slow]. [Mini Turret] is countered by [Restoration Quill via Movement Slow]. [Spectral Wall] is countered by [Restoration Quill via Movement Slow]. 
+McGinnis,WEAK_AGAINST,Paradox,5,[Heavy Barrage] is countered by [Rewind via Damage Over Time]. [Heavy Barrage] is countered by [Rewind via Movement Slow]. [Mini Turret] is countered by [Rewind via Movement Slow]. [Spectral Wall] is countered by [Rewind via Movement Slow]. [Heavy Barrage] is countered by [Temporal Collapse via Channeling]. 
+McGinnis,WEAK_AGAINST,Pocket,1,[Medicinal Specter] is countered by [Affliction via Area Heal]. 
+McGinnis,WEAK_AGAINST,Seven,1,[Heavy Barrage] is countered by [Static Charge via Channeling]. 
+McGinnis,WEAK_AGAINST,Victor,3,[Heavy Barrage] is countered by [Jumpstart via Movement Slow]. [Mini Turret] is countered by [Jumpstart via Movement Slow]. [Spectral Wall] is countered by [Jumpstart via Movement Slow]. 
+McGinnis,WEAK_AGAINST,Vindicta,2,[Spectral Wall] is countered by [Ballistic Volley via Barrier]. [Spectral Wall] is countered by [Execution Shot via Barrier]. 
+McGinnis,WEAK_AGAINST,Viscous,3,[Heavy Barrage] is countered by [The Cube via Movement Slow]. [Mini Turret] is countered by [The Cube via Movement Slow]. [Spectral Wall] is countered by [The Cube via Movement Slow]. 
+McGinnis,WEAK_AGAINST,Vyper,2,[Heavy Barrage] is countered by [Petrifying Bola via Channeling]. [Medicinal Specter] is countered by [Lethal Venom via Area Heal]. 
+McGinnis,WEAK_AGAINST,Warden,3,[Heavy Barrage] is countered by [Willpower via Movement Slow]. [Mini Turret] is countered by [Willpower via Movement Slow]. [Spectral Wall] is countered by [Willpower via Movement Slow]. 
+McGinnis,WEAK_AGAINST,Wraith,1,[Heavy Barrage] is countered by [Telekinesis via Channeling]. 
+McGinnis,WEAK_AGAINST,Yamato,3,[Heavy Barrage] is countered by [Storm's Reach via Movement Slow]. [Mini Turret] is countered by [Storm's Reach via Movement Slow]. [Spectral Wall] is countered by [Storm's Reach via Movement Slow]. 
+Mina,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Mina,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Mina,WEAK_AGAINST,Abrams,2,[Requiem] is countered by [Shoulder Charge via Channeling]. [Requiem] is countered by [Seismic Impact via Channeling]. 
+Mina,WEAK_AGAINST,Doorman,1,[Requiem] is countered by [Luggage Cart via Channeling]. 
+Mina,WEAK_AGAINST,Dynamo,2,[Requiem] is countered by [Kinetic Pulse via Channeling]. [Requiem] is countered by [Singularity via Channeling]. 
+Mina,WEAK_AGAINST,Grey Talon,1,[Requiem] is countered by [Spirit Snare via Channeling]. 
+Mina,WEAK_AGAINST,Holliday,1,[Specter Step] is countered by [Crackshot via Teleport]. 
+Mina,WEAK_AGAINST,Infernus,1,[Requiem] is countered by [Fire Wells via Area Heal]. 
+Mina,WEAK_AGAINST,Kelvin,1,[Spectral Dagger] is countered by [Ice Path via Movement Slow]. 
+Mina,WEAK_AGAINST,Lash,2,[Specter Step] is countered by [Grappling Whip via Teleport]. [Spectral Dagger] is countered by [Blood Rush via Movement Slow]. 
+Mina,WEAK_AGAINST,Mo & Krill,1,[Requiem] is countered by [Combo via Channeling]. 
+Mina,WEAK_AGAINST,Paige,2,[Spectral Dagger] is countered by [Restoration Quill via Damage Over Time]. [Spectral Dagger] is countered by [Restoration Quill via Movement Slow]. 
+Mina,WEAK_AGAINST,Paradox,3,[Spectral Dagger] is countered by [Rewind via Damage Over Time]. [Spectral Dagger] is countered by [Rewind via Movement Slow]. [Requiem] is countered by [Temporal Collapse via Channeling]. 
+Mina,WEAK_AGAINST,Pocket,1,[Requiem] is countered by [Affliction via Area Heal]. 
+Mina,WEAK_AGAINST,Seven,1,[Requiem] is countered by [Static Charge via Channeling]. 
+Mina,WEAK_AGAINST,Victor,1,[Spectral Dagger] is countered by [Jumpstart via Movement Slow]. 
+Mina,WEAK_AGAINST,Viscous,1,[Spectral Dagger] is countered by [The Cube via Movement Slow]. 
+Mina,WEAK_AGAINST,Vyper,2,[Requiem] is countered by [Petrifying Bola via Channeling]. [Requiem] is countered by [Lethal Venom via Area Heal]. 
+Mina,WEAK_AGAINST,Warden,1,[Spectral Dagger] is countered by [Willpower via Movement Slow]. 
+Mina,WEAK_AGAINST,Wraith,1,[Requiem] is countered by [Telekinesis via Channeling]. 
+Mina,WEAK_AGAINST,Yamato,1,[Spectral Dagger] is countered by [Storm's Reach via Movement Slow]. 
+Mirage,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Mirage,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Mirage,STRONG_AGAINST,Drifter,2,[Mirror Trap] counters [Smoke Hustle via Stealth]. [Hall of Mirrors] counters [Smoke Hustle via Stealth]. 
+Mirage,WEAK_AGAINST,Bebop,1,[Holo Shot] is countered by [Drop the Beat via Projectile]. 
+Mirage,WEAK_AGAINST,Billy,1,[Holo Shot] is countered by [Force Field via Projectile]. 
+Mirage,WEAK_AGAINST,Drifter,2,[Phase Shift] is countered by [Tripwire via Stealth]. [Phase Shift] is countered by [Ricochet Rhapsody via Stealth]. 
+Mirage,WEAK_AGAINST,Holliday,1,[Holo Shot] is countered by [Crackshot via Teleport]. 
+Mirage,WEAK_AGAINST,Ivy,1,[Phase Shift] is countered by [Venom Trap via Stealth]. 
+Mirage,WEAK_AGAINST,Kelvin,1,[Mirror Trap] is countered by [Ice Path via Movement Slow]. 
+Mirage,WEAK_AGAINST,Lash,2,[Holo Shot] is countered by [Grappling Whip via Teleport]. [Mirror Trap] is countered by [Blood Rush via Movement Slow]. 
+Mirage,WEAK_AGAINST,Paige,3,[Holo Shot] is countered by [Guardian Page via Projectile]. [Hall of Mirrors] is countered by [Restoration Quill via Damage Over Time]. [Mirror Trap] is countered by [Restoration Quill via Movement Slow]. 
+Mirage,WEAK_AGAINST,Paradox,2,[Hall of Mirrors] is countered by [Rewind via Damage Over Time]. [Mirror Trap] is countered by [Rewind via Movement Slow]. 
+Mirage,WEAK_AGAINST,Victor,1,[Mirror Trap] is countered by [Jumpstart via Movement Slow]. 
+Mirage,WEAK_AGAINST,Vindicta,1,[Phase Shift] is countered by [Lock-On Round via Stealth]. 
+Mirage,WEAK_AGAINST,Viscous,1,[Mirror Trap] is countered by [The Cube via Movement Slow]. 
+Mirage,WEAK_AGAINST,Warden,1,[Mirror Trap] is countered by [Willpower via Movement Slow]. 
+Mirage,WEAK_AGAINST,Yamato,2,[Holo Shot] is countered by [Windguard via Projectile]. [Mirror Trap] is countered by [Storm's Reach via Movement Slow]. 
+Mo & Krill,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Kelvin,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Victor,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Mo & Krill,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Mo & Krill,STRONG_AGAINST,Billy,1,[Combo] counters [Bullet Storm via Channeling]. 
+Mo & Krill,STRONG_AGAINST,Dynamo,1,[Combo] counters [Rejuvenating Aurora via Channeling]. 
+Mo & Krill,STRONG_AGAINST,Ivy,1,[Combo] counters [Execution Beam via Channeling]. 
+Mo & Krill,STRONG_AGAINST,Lash,1,[Combo] counters [Guillotine Frenzy via Channeling]. 
+Mo & Krill,STRONG_AGAINST,McGinnis,1,[Combo] counters [Heavy Barrage via Channeling]. 
+Mo & Krill,STRONG_AGAINST,Mina,1,[Combo] counters [Requiem via Channeling]. 
+Mo & Krill,STRONG_AGAINST,Paige,1,[Combo] counters [Final Chapter via Channeling]. 
+Mo & Krill,STRONG_AGAINST,Paradox,1,[Combo] counters [Temporal Collapse via Channeling]. 
+Mo & Krill,STRONG_AGAINST,Seven,1,[Combo] counters [Storm Cloud via Channeling]. 
+Mo & Krill,STRONG_AGAINST,Warden,1,[Combo] counters [Last Stand via Channeling]. 
+Mo & Krill,WEAK_AGAINST,Viscous,1,[Sand Blast] is countered by [The Cube via Damage Output Reduction]. 
+Mo & Krill,WEAK_AGAINST,Yamato,1,[Sand Blast] is countered by [Storm's Reach via Damage Output Reduction]. 
+Paige,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Paige,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Paige,STRONG_AGAINST,Billy,1,[Guardian Page] counters [Force Field via Projectile]. 
+Paige,STRONG_AGAINST,Doorman,1,[Restoration Quill] counters [Call Bell via Movement Slow]. 
+Paige,STRONG_AGAINST,Drifter,2,[Guardian Page] counters [Warp Shot via Projectile]. [Guardian Page] counters [Ricochet Rhapsody via Projectile]. 
+Paige,STRONG_AGAINST,Dynamo,1,[Restoration Quill] counters [Kinetic Pulse via Movement Slow]. 
+Paige,STRONG_AGAINST,Grey Talon,1,[Restoration Quill] counters [Rain of Arrows via Movement Slow]. 
+Paige,STRONG_AGAINST,Haze,2,[Restoration Quill] counters [Smoke Bomb via Movement Slow]. [Restoration Quill] counters [Sleep Dagger via Movement Slow]. 
+Paige,STRONG_AGAINST,Holliday,1,[Restoration Quill] counters [Crackshot via Movement Slow]. 
+Paige,STRONG_AGAINST,Infernus,4,[Restoration Quill] counters [Blazing Advance via Damage Over Time]. [Restoration Quill] counters [Flame Shot via Damage Over Time]. [Restoration Quill] counters [Fire Wells via Damage Over Time]. [Restoration Quill] counters [Blazing Advance via Movement Slow]. 
+Paige,STRONG_AGAINST,Ivy,4,[Restoration Quill] counters [Fear Toxin via Damage Over Time]. [Restoration Quill] counters [Venom Trap via Damage Over Time]. [Restoration Quill] counters [Toxic Bolt via Damage Over Time]. [Restoration Quill] counters [Toxic Bolt via Movement Slow]. 
+Paige,STRONG_AGAINST,Kelvin,3,[Restoration Quill] counters [Frozen Shelter via Movement Slow]. [Restoration Quill] counters [Arctic Beam via Movement Slow]. [Restoration Quill] counters [Frost Grenade via Movement Slow]. 
+Paige,STRONG_AGAINST,Lady Geist,2,[Restoration Quill] counters [Essence Bomb via Damage Over Time]. [Restoration Quill] counters [Life Drain via Movement Slow]. 
+Paige,STRONG_AGAINST,McGinnis,4,[Restoration Quill] counters [Heavy Barrage via Damage Over Time]. [Restoration Quill] counters [Heavy Barrage via Movement Slow]. [Restoration Quill] counters [Mini Turret via Movement Slow]. [Restoration Quill] counters [Spectral Wall via Movement Slow]. 
+Paige,STRONG_AGAINST,Mina,2,[Restoration Quill] counters [Spectral Dagger via Damage Over Time]. [Restoration Quill] counters [Spectral Dagger via Movement Slow]. 
+Paige,STRONG_AGAINST,Mirage,3,[Guardian Page] counters [Holo Shot via Projectile]. [Restoration Quill] counters [Hall of Mirrors via Damage Over Time]. [Restoration Quill] counters [Mirror Trap via Movement Slow]. 
+Paige,STRONG_AGAINST,Paradox,1,[Restoration Quill] counters [Chrono Burst via Movement Slow]. 
+Paige,STRONG_AGAINST,Pocket,2,[Restoration Quill] counters [Affliction via Damage Over Time]. [Restoration Quill] counters [Barrage via Movement Slow]. 
+Paige,STRONG_AGAINST,Seven,2,[Restoration Quill] counters [Storm Cloud via Damage Over Time]. [Restoration Quill] counters [Lightning Ball via Movement Slow]. 
+Paige,STRONG_AGAINST,Shiv,1,[Restoration Quill] counters [Serrated Knives via Movement Slow]. 
+Paige,STRONG_AGAINST,Victor,1,[Restoration Quill] counters [Aura of Suffering via Movement Slow]. 
+Paige,STRONG_AGAINST,Vindicta,1,[Guardian Page] counters [Ballistic Volley via Projectile]. 
+Paige,STRONG_AGAINST,Viscous,4,[Restoration Quill] counters [Splatter via Damage Over Time]. [Restoration Quill] counters [Goo Ball via Damage Over Time]. [Restoration Quill] counters [Splatter via Movement Slow]. [Restoration Quill] counters [Puddle Punch via Movement Slow]. 
+Paige,STRONG_AGAINST,Vyper,2,[Restoration Quill] counters [Lethal Venom via Damage Over Time]. [Restoration Quill] counters [Screwjab Dagger via Movement Slow]. 
+Paige,STRONG_AGAINST,Warden,1,[Restoration Quill] counters [Alchemical Flask via Movement Slow]. 
+Paige,STRONG_AGAINST,Wraith,1,[Restoration Quill] counters [Card Trick via Movement Slow]. 
+Paige,STRONG_AGAINST,Yamato,1,[Guardian Page] counters [Windguard via Projectile]. 
+Paige,WEAK_AGAINST,Abrams,2,[Final Chapter] is countered by [Shoulder Charge via Channeling]. [Final Chapter] is countered by [Seismic Impact via Channeling]. 
+Paige,WEAK_AGAINST,Bebop,3,[Guardian Page] is countered by [Drop the Beat via Projectile]. [Guardian Page] is countered by [Sound Barrier via Barrier]. [Final Chapter] is countered by [Sound Barrier via Barrier]. 
+Paige,WEAK_AGAINST,Billy,1,[Guardian Page] is countered by [Force Field via Projectile]. 
+Paige,WEAK_AGAINST,Doorman,1,[Final Chapter] is countered by [Luggage Cart via Channeling]. 
+Paige,WEAK_AGAINST,Dynamo,2,[Final Chapter] is countered by [Kinetic Pulse via Channeling]. [Final Chapter] is countered by [Singularity via Channeling]. 
+Paige,WEAK_AGAINST,Grey Talon,1,[Final Chapter] is countered by [Spirit Snare via Channeling]. 
+Paige,WEAK_AGAINST,Haze,2,[Guardian Page] is countered by [Voidstrike via Barrier]. [Final Chapter] is countered by [Voidstrike via Barrier]. 
+Paige,WEAK_AGAINST,Infernus,2,[Final Chapter] is countered by [Fire Wells via Area Heal]. [Restoration Quill] is countered by [Fire Wells via Area Heal]. 
+Paige,WEAK_AGAINST,Kelvin,1,[Page Turner] is countered by [Ice Path via Movement Slow]. 
+Paige,WEAK_AGAINST,Lash,1,[Page Turner] is countered by [Blood Rush via Movement Slow]. 
+Paige,WEAK_AGAINST,Mo & Krill,1,[Final Chapter] is countered by [Combo via Channeling]. 
+Paige,WEAK_AGAINST,Paradox,2,[Page Turner] is countered by [Rewind via Movement Slow]. [Final Chapter] is countered by [Temporal Collapse via Channeling]. 
+Paige,WEAK_AGAINST,Pocket,2,[Final Chapter] is countered by [Affliction via Area Heal]. [Restoration Quill] is countered by [Affliction via Area Heal]. 
+Paige,WEAK_AGAINST,Seven,1,[Final Chapter] is countered by [Static Charge via Channeling]. 
+Paige,WEAK_AGAINST,Victor,1,[Page Turner] is countered by [Jumpstart via Movement Slow]. 
+Paige,WEAK_AGAINST,Vindicta,4,[Guardian Page] is countered by [Ballistic Volley via Barrier]. [Final Chapter] is countered by [Ballistic Volley via Barrier]. [Guardian Page] is countered by [Execution Shot via Barrier]. [Final Chapter] is countered by [Execution Shot via Barrier]. 
+Paige,WEAK_AGAINST,Viscous,1,[Page Turner] is countered by [The Cube via Movement Slow]. 
+Paige,WEAK_AGAINST,Vyper,3,[Final Chapter] is countered by [Petrifying Bola via Channeling]. [Final Chapter] is countered by [Lethal Venom via Area Heal]. [Restoration Quill] is countered by [Lethal Venom via Area Heal]. 
+Paige,WEAK_AGAINST,Warden,1,[Page Turner] is countered by [Willpower via Movement Slow]. 
+Paige,WEAK_AGAINST,Wraith,1,[Final Chapter] is countered by [Telekinesis via Channeling]. 
+Paige,WEAK_AGAINST,Yamato,2,[Guardian Page] is countered by [Windguard via Projectile]. [Page Turner] is countered by [Storm's Reach via Movement Slow]. 
+Paradox,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Paradox,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Paradox,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Paradox,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Paradox,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Paradox,STRONG_AGAINST,Billy,1,[Temporal Collapse] counters [Bullet Storm via Channeling]. 
+Paradox,STRONG_AGAINST,Doorman,1,[Rewind] counters [Call Bell via Movement Slow]. 
+Paradox,STRONG_AGAINST,Dynamo,2,[Rewind] counters [Kinetic Pulse via Movement Slow]. [Temporal Collapse] counters [Rejuvenating Aurora via Channeling]. 
+Paradox,STRONG_AGAINST,Grey Talon,1,[Rewind] counters [Rain of Arrows via Movement Slow]. 
+Paradox,STRONG_AGAINST,Haze,2,[Rewind] counters [Smoke Bomb via Movement Slow]. [Rewind] counters [Sleep Dagger via Movement Slow]. 
+Paradox,STRONG_AGAINST,Holliday,1,[Rewind] counters [Crackshot via Movement Slow]. 
+Paradox,STRONG_AGAINST,Infernus,5,[Rewind] counters [Blazing Advance via Damage Over Time]. [Rewind] counters [Flame Shot via Damage Over Time]. [Rewind] counters [Fire Wells via Damage Over Time]. [Rewind] counters [Blazing Advance via Movement Slow]. [Rewind] counters [Fire Wells via Healing Reduction]. 
+Paradox,STRONG_AGAINST,Ivy,5,[Rewind] counters [Fear Toxin via Damage Over Time]. [Rewind] counters [Venom Trap via Damage Over Time]. [Rewind] counters [Toxic Bolt via Damage Over Time]. [Rewind] counters [Toxic Bolt via Movement Slow]. [Temporal Collapse] counters [Execution Beam via Channeling]. 
+Paradox,STRONG_AGAINST,Kelvin,3,[Rewind] counters [Frozen Shelter via Movement Slow]. [Rewind] counters [Arctic Beam via Movement Slow]. [Rewind] counters [Frost Grenade via Movement Slow]. 
+Paradox,STRONG_AGAINST,Lady Geist,2,[Rewind] counters [Essence Bomb via Damage Over Time]. [Rewind] counters [Life Drain via Movement Slow]. 
+Paradox,STRONG_AGAINST,Lash,1,[Temporal Collapse] counters [Guillotine Frenzy via Channeling]. 
+Paradox,STRONG_AGAINST,McGinnis,5,[Rewind] counters [Heavy Barrage via Damage Over Time]. [Rewind] counters [Heavy Barrage via Movement Slow]. [Rewind] counters [Mini Turret via Movement Slow]. [Rewind] counters [Spectral Wall via Movement Slow]. [Temporal Collapse] counters [Heavy Barrage via Channeling]. 
+Paradox,STRONG_AGAINST,Mina,3,[Rewind] counters [Spectral Dagger via Damage Over Time]. [Rewind] counters [Spectral Dagger via Movement Slow]. [Temporal Collapse] counters [Requiem via Channeling]. 
+Paradox,STRONG_AGAINST,Mirage,2,[Rewind] counters [Hall of Mirrors via Damage Over Time]. [Rewind] counters [Mirror Trap via Movement Slow]. 
+Paradox,STRONG_AGAINST,Paige,2,[Rewind] counters [Page Turner via Movement Slow]. [Temporal Collapse] counters [Final Chapter via Channeling]. 
+Paradox,STRONG_AGAINST,Pocket,3,[Rewind] counters [Affliction via Damage Over Time]. [Rewind] counters [Barrage via Movement Slow]. [Rewind] counters [Affliction via Healing Reduction]. 
+Paradox,STRONG_AGAINST,Seven,3,[Rewind] counters [Storm Cloud via Damage Over Time]. [Rewind] counters [Lightning Ball via Movement Slow]. [Temporal Collapse] counters [Storm Cloud via Channeling]. 
+Paradox,STRONG_AGAINST,Shiv,1,[Rewind] counters [Serrated Knives via Movement Slow]. 
+Paradox,STRONG_AGAINST,Victor,1,[Rewind] counters [Aura of Suffering via Movement Slow]. 
+Paradox,STRONG_AGAINST,Viscous,4,[Rewind] counters [Splatter via Damage Over Time]. [Rewind] counters [Goo Ball via Damage Over Time]. [Rewind] counters [Splatter via Movement Slow]. [Rewind] counters [Puddle Punch via Movement Slow]. 
+Paradox,STRONG_AGAINST,Vyper,3,[Rewind] counters [Lethal Venom via Damage Over Time]. [Rewind] counters [Screwjab Dagger via Movement Slow]. [Rewind] counters [Lethal Venom via Healing Reduction]. 
+Paradox,STRONG_AGAINST,Warden,2,[Rewind] counters [Alchemical Flask via Movement Slow]. [Temporal Collapse] counters [Last Stand via Channeling]. 
+Paradox,STRONG_AGAINST,Wraith,1,[Rewind] counters [Card Trick via Movement Slow]. 
+Paradox,WEAK_AGAINST,Abrams,2,[Temporal Collapse] is countered by [Shoulder Charge via Channeling]. [Temporal Collapse] is countered by [Seismic Impact via Channeling]. 
+Paradox,WEAK_AGAINST,Doorman,1,[Temporal Collapse] is countered by [Luggage Cart via Channeling]. 
+Paradox,WEAK_AGAINST,Dynamo,2,[Temporal Collapse] is countered by [Kinetic Pulse via Channeling]. [Temporal Collapse] is countered by [Singularity via Channeling]. 
+Paradox,WEAK_AGAINST,Grey Talon,1,[Temporal Collapse] is countered by [Spirit Snare via Channeling]. 
+Paradox,WEAK_AGAINST,Holliday,1,[Rewind] is countered by [Crackshot via Teleport]. 
+Paradox,WEAK_AGAINST,Infernus,1,[Rewind] is countered by [Fire Wells via Area Heal]. 
+Paradox,WEAK_AGAINST,Kelvin,1,[Chrono Burst] is countered by [Ice Path via Movement Slow]. 
+Paradox,WEAK_AGAINST,Lash,2,[Rewind] is countered by [Grappling Whip via Teleport]. [Chrono Burst] is countered by [Blood Rush via Movement Slow]. 
+Paradox,WEAK_AGAINST,Mo & Krill,1,[Temporal Collapse] is countered by [Combo via Channeling]. 
+Paradox,WEAK_AGAINST,Paige,1,[Chrono Burst] is countered by [Restoration Quill via Movement Slow]. 
+Paradox,WEAK_AGAINST,Pocket,1,[Rewind] is countered by [Affliction via Area Heal]. 
+Paradox,WEAK_AGAINST,Seven,1,[Temporal Collapse] is countered by [Static Charge via Channeling]. 
+Paradox,WEAK_AGAINST,Victor,2,[Chrono Burst] is countered by [Jumpstart via Movement Slow]. [Event Horizon] is countered by [Jumpstart via Fire Rate Slow]. 
+Paradox,WEAK_AGAINST,Viscous,2,[Chrono Burst] is countered by [The Cube via Movement Slow]. [Event Horizon] is countered by [The Cube via Fire Rate Slow]. 
+Paradox,WEAK_AGAINST,Vyper,2,[Temporal Collapse] is countered by [Petrifying Bola via Channeling]. [Rewind] is countered by [Lethal Venom via Area Heal]. 
+Paradox,WEAK_AGAINST,Warden,1,[Chrono Burst] is countered by [Willpower via Movement Slow]. 
+Paradox,WEAK_AGAINST,Wraith,1,[Temporal Collapse] is countered by [Telekinesis via Channeling]. 
+Paradox,WEAK_AGAINST,Yamato,2,[Chrono Burst] is countered by [Storm's Reach via Movement Slow]. [Event Horizon] is countered by [Storm's Reach via Fire Rate Slow]. 
+Pocket,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Pocket,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Pocket,STRONG_AGAINST,Abrams,1,[Affliction] counters [Infernal Resilience via Self Heal]. 
+Pocket,STRONG_AGAINST,Calico,1,[Affliction] counters [Leaping Slash via Self Heal]. 
+Pocket,STRONG_AGAINST,Dynamo,1,[Affliction] counters [Rejuvenating Aurora via Area Heal]. 
+Pocket,STRONG_AGAINST,Kelvin,2,[Affliction] counters [Frost Grenade via Area Heal]. [Affliction] counters [Frozen Shelter via Area Heal]. 
+Pocket,STRONG_AGAINST,Lash,1,[Affliction] counters [Guillotine Frenzy via Self Heal]. 
+Pocket,STRONG_AGAINST,McGinnis,1,[Affliction] counters [Medicinal Specter via Area Heal]. 
+Pocket,STRONG_AGAINST,Mina,1,[Affliction] counters [Requiem via Area Heal]. 
+Pocket,STRONG_AGAINST,Paige,2,[Affliction] counters [Final Chapter via Area Heal]. [Affliction] counters [Restoration Quill via Area Heal]. 
+Pocket,STRONG_AGAINST,Paradox,1,[Affliction] counters [Rewind via Area Heal]. 
+Pocket,STRONG_AGAINST,Victor,1,[Affliction] counters [Jumpstart via Self Heal]. 
+Pocket,STRONG_AGAINST,Viscous,1,[Affliction] counters [The Cube via Area Heal]. 
+Pocket,WEAK_AGAINST,Holliday,1,[Flying Cloak] is countered by [Crackshot via Teleport]. 
+Pocket,WEAK_AGAINST,Kelvin,1,[Barrage] is countered by [Ice Path via Movement Slow]. 
+Pocket,WEAK_AGAINST,Lash,2,[Flying Cloak] is countered by [Grappling Whip via Teleport]. [Barrage] is countered by [Blood Rush via Movement Slow]. 
+Pocket,WEAK_AGAINST,Paige,2,[Affliction] is countered by [Restoration Quill via Damage Over Time]. [Barrage] is countered by [Restoration Quill via Movement Slow]. 
+Pocket,WEAK_AGAINST,Paradox,3,[Affliction] is countered by [Rewind via Damage Over Time]. [Barrage] is countered by [Rewind via Movement Slow]. [Affliction] is countered by [Rewind via Healing Reduction]. 
+Pocket,WEAK_AGAINST,Victor,2,[Barrage] is countered by [Jumpstart via Movement Slow]. [Enchanter's Satchel] is countered by [Jumpstart via Fire Rate Slow]. 
+Pocket,WEAK_AGAINST,Viscous,2,[Barrage] is countered by [The Cube via Movement Slow]. [Enchanter's Satchel] is countered by [The Cube via Fire Rate Slow]. 
+Pocket,WEAK_AGAINST,Warden,1,[Barrage] is countered by [Willpower via Movement Slow]. 
+Pocket,WEAK_AGAINST,Yamato,2,[Barrage] is countered by [Storm's Reach via Movement Slow]. [Enchanter's Satchel] is countered by [Storm's Reach via Fire Rate Slow]. 
+Seven,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Seven,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Seven,STRONG_AGAINST,Billy,1,[Static Charge] counters [Bullet Storm via Channeling]. 
+Seven,STRONG_AGAINST,Dynamo,1,[Static Charge] counters [Rejuvenating Aurora via Channeling]. 
+Seven,STRONG_AGAINST,Ivy,1,[Static Charge] counters [Execution Beam via Channeling]. 
+Seven,STRONG_AGAINST,Lash,1,[Static Charge] counters [Guillotine Frenzy via Channeling]. 
+Seven,STRONG_AGAINST,McGinnis,1,[Static Charge] counters [Heavy Barrage via Channeling]. 
+Seven,STRONG_AGAINST,Mina,1,[Static Charge] counters [Requiem via Channeling]. 
+Seven,STRONG_AGAINST,Paige,1,[Static Charge] counters [Final Chapter via Channeling]. 
+Seven,STRONG_AGAINST,Paradox,1,[Static Charge] counters [Temporal Collapse via Channeling]. 
+Seven,STRONG_AGAINST,Warden,1,[Static Charge] counters [Last Stand via Channeling]. 
+Seven,WEAK_AGAINST,Abrams,2,[Storm Cloud] is countered by [Shoulder Charge via Channeling]. [Storm Cloud] is countered by [Seismic Impact via Channeling]. 
+Seven,WEAK_AGAINST,Doorman,1,[Storm Cloud] is countered by [Luggage Cart via Channeling]. 
+Seven,WEAK_AGAINST,Dynamo,2,[Storm Cloud] is countered by [Kinetic Pulse via Channeling]. [Storm Cloud] is countered by [Singularity via Channeling]. 
+Seven,WEAK_AGAINST,Grey Talon,1,[Storm Cloud] is countered by [Spirit Snare via Channeling]. 
+Seven,WEAK_AGAINST,Kelvin,1,[Lightning Ball] is countered by [Ice Path via Movement Slow]. 
+Seven,WEAK_AGAINST,Lash,1,[Lightning Ball] is countered by [Blood Rush via Movement Slow]. 
+Seven,WEAK_AGAINST,Mo & Krill,1,[Storm Cloud] is countered by [Combo via Channeling]. 
+Seven,WEAK_AGAINST,Paige,2,[Storm Cloud] is countered by [Restoration Quill via Damage Over Time]. [Lightning Ball] is countered by [Restoration Quill via Movement Slow]. 
+Seven,WEAK_AGAINST,Paradox,3,[Storm Cloud] is countered by [Rewind via Damage Over Time]. [Lightning Ball] is countered by [Rewind via Movement Slow]. [Storm Cloud] is countered by [Temporal Collapse via Channeling]. 
+Seven,WEAK_AGAINST,Victor,1,[Lightning Ball] is countered by [Jumpstart via Movement Slow]. 
+Seven,WEAK_AGAINST,Viscous,1,[Lightning Ball] is countered by [The Cube via Movement Slow]. 
+Seven,WEAK_AGAINST,Vyper,1,[Storm Cloud] is countered by [Petrifying Bola via Channeling]. 
+Seven,WEAK_AGAINST,Warden,1,[Lightning Ball] is countered by [Willpower via Movement Slow]. 
+Seven,WEAK_AGAINST,Wraith,1,[Storm Cloud] is countered by [Telekinesis via Channeling]. 
+Seven,WEAK_AGAINST,Yamato,1,[Lightning Ball] is countered by [Storm's Reach via Movement Slow]. 
+Shiv,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Shiv,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Shiv,WEAK_AGAINST,Holliday,1,[Slice and Dice] is countered by [Crackshot via Dash]. 
+Shiv,WEAK_AGAINST,Kelvin,1,[Serrated Knives] is countered by [Ice Path via Movement Slow]. 
+Shiv,WEAK_AGAINST,Lash,2,[Slice and Dice] is countered by [Grappling Whip via Dash]. [Serrated Knives] is countered by [Blood Rush via Movement Slow]. 
+Shiv,WEAK_AGAINST,Paige,1,[Serrated Knives] is countered by [Restoration Quill via Movement Slow]. 
+Shiv,WEAK_AGAINST,Paradox,1,[Serrated Knives] is countered by [Rewind via Movement Slow]. 
+Shiv,WEAK_AGAINST,Victor,1,[Serrated Knives] is countered by [Jumpstart via Movement Slow]. 
+Shiv,WEAK_AGAINST,Viscous,3,[Serrated Knives] is countered by [The Cube via Movement Slow]. [Serrated Knives] is countered by [The Cube via Bleed]. [Slice and Dice] is countered by [The Cube via Bleed]. 
+Shiv,WEAK_AGAINST,Warden,1,[Serrated Knives] is countered by [Willpower via Movement Slow]. 
+Shiv,WEAK_AGAINST,Yamato,1,[Serrated Knives] is countered by [Storm's Reach via Movement Slow]. 
+Sinclair,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Kelvin,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,McGinnis,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Paige,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Paradox,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Victor,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Viscous,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Warden,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Sinclair,EVEN_AGAINST,Yamato,0,No direct ability or mechanic counters found.
+Sinclair,WEAK_AGAINST,Holliday,1,[Spectral Assistant] is countered by [Crackshot via Teleport]. 
+Sinclair,WEAK_AGAINST,Lash,1,[Spectral Assistant] is countered by [Grappling Whip via Teleport]. 
+Victor,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Victor,EVEN_AGAINST,Bebop,0,No direct ability or mechanic counters found.
+Victor,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Victor,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Victor,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Victor,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Victor,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Victor,EVEN_AGAINST,Vindicta,0,No direct ability or mechanic counters found.
+Victor,STRONG_AGAINST,Doorman,1,[Jumpstart] counters [Call Bell via Movement Slow]. 
+Victor,STRONG_AGAINST,Dynamo,1,[Jumpstart] counters [Kinetic Pulse via Movement Slow]. 
+Victor,STRONG_AGAINST,Grey Talon,1,[Jumpstart] counters [Rain of Arrows via Movement Slow]. 
+Victor,STRONG_AGAINST,Haze,2,[Jumpstart] counters [Smoke Bomb via Movement Slow]. [Jumpstart] counters [Sleep Dagger via Movement Slow]. 
+Victor,STRONG_AGAINST,Holliday,1,[Jumpstart] counters [Crackshot via Movement Slow]. 
+Victor,STRONG_AGAINST,Infernus,1,[Jumpstart] counters [Blazing Advance via Movement Slow]. 
+Victor,STRONG_AGAINST,Ivy,1,[Jumpstart] counters [Toxic Bolt via Movement Slow]. 
+Victor,STRONG_AGAINST,Kelvin,5,[Jumpstart] counters [Frozen Shelter via Movement Slow]. [Jumpstart] counters [Arctic Beam via Movement Slow]. [Jumpstart] counters [Frost Grenade via Movement Slow]. [Jumpstart] counters [Arctic Beam via Fire Rate Slow]. [Jumpstart] counters [Frozen Shelter via Fire Rate Slow]. 
+Victor,STRONG_AGAINST,Lady Geist,1,[Jumpstart] counters [Life Drain via Movement Slow]. 
+Victor,STRONG_AGAINST,McGinnis,3,[Jumpstart] counters [Heavy Barrage via Movement Slow]. [Jumpstart] counters [Mini Turret via Movement Slow]. [Jumpstart] counters [Spectral Wall via Movement Slow]. 
+Victor,STRONG_AGAINST,Mina,1,[Jumpstart] counters [Spectral Dagger via Movement Slow]. 
+Victor,STRONG_AGAINST,Mirage,1,[Jumpstart] counters [Mirror Trap via Movement Slow]. 
+Victor,STRONG_AGAINST,Paige,1,[Jumpstart] counters [Page Turner via Movement Slow]. 
+Victor,STRONG_AGAINST,Paradox,2,[Jumpstart] counters [Chrono Burst via Movement Slow]. [Jumpstart] counters [Event Horizon via Fire Rate Slow]. 
+Victor,STRONG_AGAINST,Pocket,2,[Jumpstart] counters [Barrage via Movement Slow]. [Jumpstart] counters [Enchanter's Satchel via Fire Rate Slow]. 
+Victor,STRONG_AGAINST,Seven,1,[Jumpstart] counters [Lightning Ball via Movement Slow]. 
+Victor,STRONG_AGAINST,Shiv,1,[Jumpstart] counters [Serrated Knives via Movement Slow]. 
+Victor,STRONG_AGAINST,Viscous,2,[Jumpstart] counters [Splatter via Movement Slow]. [Jumpstart] counters [Puddle Punch via Movement Slow]. 
+Victor,STRONG_AGAINST,Vyper,1,[Jumpstart] counters [Screwjab Dagger via Movement Slow]. 
+Victor,STRONG_AGAINST,Warden,1,[Jumpstart] counters [Alchemical Flask via Movement Slow]. 
+Victor,STRONG_AGAINST,Wraith,1,[Jumpstart] counters [Card Trick via Movement Slow]. 
+Victor,WEAK_AGAINST,Infernus,1,[Jumpstart] is countered by [Fire Wells via Self Heal]. 
+Victor,WEAK_AGAINST,Kelvin,1,[Aura of Suffering] is countered by [Ice Path via Movement Slow]. 
+Victor,WEAK_AGAINST,Lash,1,[Aura of Suffering] is countered by [Blood Rush via Movement Slow]. 
+Victor,WEAK_AGAINST,Paige,1,[Aura of Suffering] is countered by [Restoration Quill via Movement Slow]. 
+Victor,WEAK_AGAINST,Paradox,1,[Aura of Suffering] is countered by [Rewind via Movement Slow]. 
+Victor,WEAK_AGAINST,Pocket,1,[Jumpstart] is countered by [Affliction via Self Heal]. 
+Victor,WEAK_AGAINST,Viscous,1,[Aura of Suffering] is countered by [The Cube via Movement Slow]. 
+Victor,WEAK_AGAINST,Vyper,1,[Jumpstart] is countered by [Lethal Venom via Self Heal]. 
+Victor,WEAK_AGAINST,Warden,1,[Aura of Suffering] is countered by [Willpower via Movement Slow]. 
+Victor,WEAK_AGAINST,Yamato,1,[Aura of Suffering] is countered by [Storm's Reach via Movement Slow]. 
+Vindicta,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Dynamo,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Haze,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Holliday,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Ivy,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Kelvin,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Lash,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Mina,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Paradox,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Seven,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Vindicta,EVEN_AGAINST,Victor,0,No direct ability or mechanic counters found.
+Vindicta,STRONG_AGAINST,Bebop,2,[Ballistic Volley] counters [Bass Blast via Barrier]. [Execution Shot] counters [Bass Blast via Barrier]. 
+Vindicta,STRONG_AGAINST,Billy,2,[Ballistic Volley] counters [Force Field via Barrier]. [Execution Shot] counters [Force Field via Barrier]. 
+Vindicta,STRONG_AGAINST,Drifter,1,[Lock-On Round] counters [Smoke Hustle via Stealth]. 
+Vindicta,STRONG_AGAINST,McGinnis,2,[Ballistic Volley] counters [Spectral Wall via Barrier]. [Execution Shot] counters [Spectral Wall via Barrier]. 
+Vindicta,STRONG_AGAINST,Mirage,1,[Lock-On Round] counters [Phase Shift via Stealth]. 
+Vindicta,STRONG_AGAINST,Paige,4,[Ballistic Volley] counters [Guardian Page via Barrier]. [Ballistic Volley] counters [Final Chapter via Barrier]. [Execution Shot] counters [Guardian Page via Barrier]. [Execution Shot] counters [Final Chapter via Barrier]. 
+Vindicta,STRONG_AGAINST,Viscous,2,[Ballistic Volley] counters [The Cube via Barrier]. [Execution Shot] counters [The Cube via Barrier]. 
+Vindicta,STRONG_AGAINST,Vyper,2,[Ballistic Volley] counters [Slither via Barrier]. [Execution Shot] counters [Slither via Barrier]. 
+Vindicta,STRONG_AGAINST,Warden,2,[Ballistic Volley] counters [Willpower via Barrier]. [Execution Shot] counters [Willpower via Barrier]. 
+Vindicta,STRONG_AGAINST,Wraith,2,[Ballistic Volley] counters [Project Mind via Barrier]. [Execution Shot] counters [Project Mind via Barrier]. 
+Vindicta,WEAK_AGAINST,Bebop,1,[Ballistic Volley] is countered by [Drop the Beat via Projectile]. 
+Vindicta,WEAK_AGAINST,Billy,1,[Ballistic Volley] is countered by [Force Field via Projectile]. 
+Vindicta,WEAK_AGAINST,Paige,1,[Ballistic Volley] is countered by [Guardian Page via Projectile]. 
+Vindicta,WEAK_AGAINST,Yamato,1,[Ballistic Volley] is countered by [Windguard via Projectile]. 
+Viscous,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Viscous,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Viscous,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Viscous,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Viscous,STRONG_AGAINST,Billy,1,[The Cube] counters [Bullet Storm via Damage Output Reduction]. 
+Viscous,STRONG_AGAINST,Doorman,1,[The Cube] counters [Call Bell via Movement Slow]. 
+Viscous,STRONG_AGAINST,Dynamo,1,[The Cube] counters [Kinetic Pulse via Movement Slow]. 
+Viscous,STRONG_AGAINST,Grey Talon,1,[The Cube] counters [Rain of Arrows via Movement Slow]. 
+Viscous,STRONG_AGAINST,Haze,2,[The Cube] counters [Smoke Bomb via Movement Slow]. [The Cube] counters [Sleep Dagger via Movement Slow]. 
+Viscous,STRONG_AGAINST,Holliday,2,[The Cube] counters [Crackshot via Movement Slow]. [The Cube] counters [Crackshot via Ability Suppression]. 
+Viscous,STRONG_AGAINST,Infernus,1,[The Cube] counters [Blazing Advance via Movement Slow]. 
+Viscous,STRONG_AGAINST,Ivy,1,[The Cube] counters [Toxic Bolt via Movement Slow]. 
+Viscous,STRONG_AGAINST,Kelvin,5,[The Cube] counters [Frozen Shelter via Movement Slow]. [The Cube] counters [Arctic Beam via Movement Slow]. [The Cube] counters [Frost Grenade via Movement Slow]. [The Cube] counters [Arctic Beam via Fire Rate Slow]. [The Cube] counters [Frozen Shelter via Fire Rate Slow]. 
+Viscous,STRONG_AGAINST,Lady Geist,1,[The Cube] counters [Life Drain via Movement Slow]. 
+Viscous,STRONG_AGAINST,Lash,1,[The Cube] counters [Razor Lash via Bleed]. 
+Viscous,STRONG_AGAINST,McGinnis,3,[The Cube] counters [Heavy Barrage via Movement Slow]. [The Cube] counters [Mini Turret via Movement Slow]. [The Cube] counters [Spectral Wall via Movement Slow]. 
+Viscous,STRONG_AGAINST,Mina,1,[The Cube] counters [Spectral Dagger via Movement Slow]. 
+Viscous,STRONG_AGAINST,Mirage,1,[The Cube] counters [Mirror Trap via Movement Slow]. 
+Viscous,STRONG_AGAINST,Mo & Krill,1,[The Cube] counters [Sand Blast via Damage Output Reduction]. 
+Viscous,STRONG_AGAINST,Paige,1,[The Cube] counters [Page Turner via Movement Slow]. 
+Viscous,STRONG_AGAINST,Paradox,2,[The Cube] counters [Chrono Burst via Movement Slow]. [The Cube] counters [Event Horizon via Fire Rate Slow]. 
+Viscous,STRONG_AGAINST,Pocket,2,[The Cube] counters [Barrage via Movement Slow]. [The Cube] counters [Enchanter's Satchel via Fire Rate Slow]. 
+Viscous,STRONG_AGAINST,Seven,1,[The Cube] counters [Lightning Ball via Movement Slow]. 
+Viscous,STRONG_AGAINST,Shiv,3,[The Cube] counters [Serrated Knives via Movement Slow]. [The Cube] counters [Serrated Knives via Bleed]. [The Cube] counters [Slice and Dice via Bleed]. 
+Viscous,STRONG_AGAINST,Victor,1,[The Cube] counters [Aura of Suffering via Movement Slow]. 
+Viscous,STRONG_AGAINST,Vyper,1,[The Cube] counters [Screwjab Dagger via Movement Slow]. 
+Viscous,STRONG_AGAINST,Warden,2,[The Cube] counters [Alchemical Flask via Movement Slow]. [The Cube] counters [Alchemical Flask via Damage Output Reduction]. 
+Viscous,STRONG_AGAINST,Wraith,1,[The Cube] counters [Card Trick via Movement Slow]. 
+Viscous,WEAK_AGAINST,Bebop,1,[The Cube] is countered by [Sound Barrier via Barrier]. 
+Viscous,WEAK_AGAINST,Haze,1,[The Cube] is countered by [Voidstrike via Barrier]. 
+Viscous,WEAK_AGAINST,Infernus,1,[The Cube] is countered by [Fire Wells via Area Heal]. 
+Viscous,WEAK_AGAINST,Kelvin,2,[Splatter] is countered by [Ice Path via Movement Slow]. [Puddle Punch] is countered by [Ice Path via Movement Slow]. 
+Viscous,WEAK_AGAINST,Lash,2,[Splatter] is countered by [Blood Rush via Movement Slow]. [Puddle Punch] is countered by [Blood Rush via Movement Slow]. 
+Viscous,WEAK_AGAINST,Paige,4,[Splatter] is countered by [Restoration Quill via Damage Over Time]. [Goo Ball] is countered by [Restoration Quill via Damage Over Time]. [Splatter] is countered by [Restoration Quill via Movement Slow]. [Puddle Punch] is countered by [Restoration Quill via Movement Slow]. 
+Viscous,WEAK_AGAINST,Paradox,4,[Splatter] is countered by [Rewind via Damage Over Time]. [Goo Ball] is countered by [Rewind via Damage Over Time]. [Splatter] is countered by [Rewind via Movement Slow]. [Puddle Punch] is countered by [Rewind via Movement Slow]. 
+Viscous,WEAK_AGAINST,Pocket,1,[The Cube] is countered by [Affliction via Area Heal]. 
+Viscous,WEAK_AGAINST,Victor,2,[Splatter] is countered by [Jumpstart via Movement Slow]. [Puddle Punch] is countered by [Jumpstart via Movement Slow]. 
+Viscous,WEAK_AGAINST,Vindicta,2,[The Cube] is countered by [Ballistic Volley via Barrier]. [The Cube] is countered by [Execution Shot via Barrier]. 
+Viscous,WEAK_AGAINST,Vyper,1,[The Cube] is countered by [Lethal Venom via Area Heal]. 
+Viscous,WEAK_AGAINST,Warden,2,[Splatter] is countered by [Willpower via Movement Slow]. [Puddle Punch] is countered by [Willpower via Movement Slow]. 
+Viscous,WEAK_AGAINST,Yamato,2,[Splatter] is countered by [Storm's Reach via Movement Slow]. [Puddle Punch] is countered by [Storm's Reach via Movement Slow]. 
+Vyper,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Vyper,EVEN_AGAINST,Wraith,0,No direct ability or mechanic counters found.
+Vyper,STRONG_AGAINST,Abrams,1,[Lethal Venom] counters [Infernal Resilience via Self Heal]. 
+Vyper,STRONG_AGAINST,Billy,1,[Petrifying Bola] counters [Bullet Storm via Channeling]. 
+Vyper,STRONG_AGAINST,Calico,1,[Lethal Venom] counters [Leaping Slash via Self Heal]. 
+Vyper,STRONG_AGAINST,Dynamo,2,[Petrifying Bola] counters [Rejuvenating Aurora via Channeling]. [Lethal Venom] counters [Rejuvenating Aurora via Area Heal]. 
+Vyper,STRONG_AGAINST,Ivy,1,[Petrifying Bola] counters [Execution Beam via Channeling]. 
+Vyper,STRONG_AGAINST,Kelvin,2,[Lethal Venom] counters [Frost Grenade via Area Heal]. [Lethal Venom] counters [Frozen Shelter via Area Heal]. 
+Vyper,STRONG_AGAINST,Lash,2,[Petrifying Bola] counters [Guillotine Frenzy via Channeling]. [Lethal Venom] counters [Guillotine Frenzy via Self Heal]. 
+Vyper,STRONG_AGAINST,McGinnis,2,[Petrifying Bola] counters [Heavy Barrage via Channeling]. [Lethal Venom] counters [Medicinal Specter via Area Heal]. 
+Vyper,STRONG_AGAINST,Mina,2,[Petrifying Bola] counters [Requiem via Channeling]. [Lethal Venom] counters [Requiem via Area Heal]. 
+Vyper,STRONG_AGAINST,Paige,3,[Petrifying Bola] counters [Final Chapter via Channeling]. [Lethal Venom] counters [Final Chapter via Area Heal]. [Lethal Venom] counters [Restoration Quill via Area Heal]. 
+Vyper,STRONG_AGAINST,Paradox,2,[Petrifying Bola] counters [Temporal Collapse via Channeling]. [Lethal Venom] counters [Rewind via Area Heal]. 
+Vyper,STRONG_AGAINST,Seven,1,[Petrifying Bola] counters [Storm Cloud via Channeling]. 
+Vyper,STRONG_AGAINST,Victor,1,[Lethal Venom] counters [Jumpstart via Self Heal]. 
+Vyper,STRONG_AGAINST,Viscous,1,[Lethal Venom] counters [The Cube via Area Heal]. 
+Vyper,STRONG_AGAINST,Warden,1,[Petrifying Bola] counters [Last Stand via Channeling]. 
+Vyper,WEAK_AGAINST,Bebop,1,[Slither] is countered by [Sound Barrier via Barrier]. 
+Vyper,WEAK_AGAINST,Haze,1,[Slither] is countered by [Voidstrike via Barrier]. 
+Vyper,WEAK_AGAINST,Holliday,1,[Slither] is countered by [Crackshot via Dash]. 
+Vyper,WEAK_AGAINST,Kelvin,1,[Screwjab Dagger] is countered by [Ice Path via Movement Slow]. 
+Vyper,WEAK_AGAINST,Lash,2,[Slither] is countered by [Grappling Whip via Dash]. [Screwjab Dagger] is countered by [Blood Rush via Movement Slow]. 
+Vyper,WEAK_AGAINST,Paige,2,[Lethal Venom] is countered by [Restoration Quill via Damage Over Time]. [Screwjab Dagger] is countered by [Restoration Quill via Movement Slow]. 
+Vyper,WEAK_AGAINST,Paradox,3,[Lethal Venom] is countered by [Rewind via Damage Over Time]. [Screwjab Dagger] is countered by [Rewind via Movement Slow]. [Lethal Venom] is countered by [Rewind via Healing Reduction]. 
+Vyper,WEAK_AGAINST,Victor,1,[Screwjab Dagger] is countered by [Jumpstart via Movement Slow]. 
+Vyper,WEAK_AGAINST,Vindicta,2,[Slither] is countered by [Ballistic Volley via Barrier]. [Slither] is countered by [Execution Shot via Barrier]. 
+Vyper,WEAK_AGAINST,Viscous,1,[Screwjab Dagger] is countered by [The Cube via Movement Slow]. 
+Vyper,WEAK_AGAINST,Warden,1,[Screwjab Dagger] is countered by [Willpower via Movement Slow]. 
+Vyper,WEAK_AGAINST,Yamato,1,[Screwjab Dagger] is countered by [Storm's Reach via Movement Slow]. 
+Warden,EVEN_AGAINST,Billy,0,No direct ability or mechanic counters found.
+Warden,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Warden,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Warden,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Warden,STRONG_AGAINST,Doorman,1,[Willpower] counters [Call Bell via Movement Slow]. 
+Warden,STRONG_AGAINST,Dynamo,1,[Willpower] counters [Kinetic Pulse via Movement Slow]. 
+Warden,STRONG_AGAINST,Grey Talon,1,[Willpower] counters [Rain of Arrows via Movement Slow]. 
+Warden,STRONG_AGAINST,Haze,2,[Willpower] counters [Smoke Bomb via Movement Slow]. [Willpower] counters [Sleep Dagger via Movement Slow]. 
+Warden,STRONG_AGAINST,Holliday,1,[Willpower] counters [Crackshot via Movement Slow]. 
+Warden,STRONG_AGAINST,Infernus,1,[Willpower] counters [Blazing Advance via Movement Slow]. 
+Warden,STRONG_AGAINST,Ivy,1,[Willpower] counters [Toxic Bolt via Movement Slow]. 
+Warden,STRONG_AGAINST,Kelvin,3,[Willpower] counters [Frozen Shelter via Movement Slow]. [Willpower] counters [Arctic Beam via Movement Slow]. [Willpower] counters [Frost Grenade via Movement Slow]. 
+Warden,STRONG_AGAINST,Lady Geist,1,[Willpower] counters [Life Drain via Movement Slow]. 
+Warden,STRONG_AGAINST,McGinnis,3,[Willpower] counters [Heavy Barrage via Movement Slow]. [Willpower] counters [Mini Turret via Movement Slow]. [Willpower] counters [Spectral Wall via Movement Slow]. 
+Warden,STRONG_AGAINST,Mina,1,[Willpower] counters [Spectral Dagger via Movement Slow]. 
+Warden,STRONG_AGAINST,Mirage,1,[Willpower] counters [Mirror Trap via Movement Slow]. 
+Warden,STRONG_AGAINST,Paige,1,[Willpower] counters [Page Turner via Movement Slow]. 
+Warden,STRONG_AGAINST,Paradox,1,[Willpower] counters [Chrono Burst via Movement Slow]. 
+Warden,STRONG_AGAINST,Pocket,1,[Willpower] counters [Barrage via Movement Slow]. 
+Warden,STRONG_AGAINST,Seven,1,[Willpower] counters [Lightning Ball via Movement Slow]. 
+Warden,STRONG_AGAINST,Shiv,1,[Willpower] counters [Serrated Knives via Movement Slow]. 
+Warden,STRONG_AGAINST,Victor,1,[Willpower] counters [Aura of Suffering via Movement Slow]. 
+Warden,STRONG_AGAINST,Viscous,2,[Willpower] counters [Splatter via Movement Slow]. [Willpower] counters [Puddle Punch via Movement Slow]. 
+Warden,STRONG_AGAINST,Vyper,1,[Willpower] counters [Screwjab Dagger via Movement Slow]. 
+Warden,STRONG_AGAINST,Wraith,1,[Willpower] counters [Card Trick via Movement Slow]. 
+Warden,WEAK_AGAINST,Abrams,2,[Last Stand] is countered by [Shoulder Charge via Channeling]. [Last Stand] is countered by [Seismic Impact via Channeling]. 
+Warden,WEAK_AGAINST,Bebop,1,[Willpower] is countered by [Sound Barrier via Barrier]. 
+Warden,WEAK_AGAINST,Doorman,1,[Last Stand] is countered by [Luggage Cart via Channeling]. 
+Warden,WEAK_AGAINST,Dynamo,2,[Last Stand] is countered by [Kinetic Pulse via Channeling]. [Last Stand] is countered by [Singularity via Channeling]. 
+Warden,WEAK_AGAINST,Grey Talon,1,[Last Stand] is countered by [Spirit Snare via Channeling]. 
+Warden,WEAK_AGAINST,Haze,1,[Willpower] is countered by [Voidstrike via Barrier]. 
+Warden,WEAK_AGAINST,Kelvin,1,[Alchemical Flask] is countered by [Ice Path via Movement Slow]. 
+Warden,WEAK_AGAINST,Lash,1,[Alchemical Flask] is countered by [Blood Rush via Movement Slow]. 
+Warden,WEAK_AGAINST,Mo & Krill,1,[Last Stand] is countered by [Combo via Channeling]. 
+Warden,WEAK_AGAINST,Paige,1,[Alchemical Flask] is countered by [Restoration Quill via Movement Slow]. 
+Warden,WEAK_AGAINST,Paradox,2,[Alchemical Flask] is countered by [Rewind via Movement Slow]. [Last Stand] is countered by [Temporal Collapse via Channeling]. 
+Warden,WEAK_AGAINST,Seven,1,[Last Stand] is countered by [Static Charge via Channeling]. 
+Warden,WEAK_AGAINST,Victor,1,[Alchemical Flask] is countered by [Jumpstart via Movement Slow]. 
+Warden,WEAK_AGAINST,Vindicta,2,[Willpower] is countered by [Ballistic Volley via Barrier]. [Willpower] is countered by [Execution Shot via Barrier]. 
+Warden,WEAK_AGAINST,Viscous,2,[Alchemical Flask] is countered by [The Cube via Movement Slow]. [Alchemical Flask] is countered by [The Cube via Damage Output Reduction]. 
+Warden,WEAK_AGAINST,Vyper,1,[Last Stand] is countered by [Petrifying Bola via Channeling]. 
+Warden,WEAK_AGAINST,Wraith,1,[Last Stand] is countered by [Telekinesis via Channeling]. 
+Warden,WEAK_AGAINST,Yamato,2,[Alchemical Flask] is countered by [Storm's Reach via Movement Slow]. [Alchemical Flask] is countered by [Storm's Reach via Damage Output Reduction]. 
+Wraith,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Doorman,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Drifter,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Grey Talon,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Infernus,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Lady Geist,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Mirage,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Mo & Krill,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Pocket,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Shiv,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Wraith,EVEN_AGAINST,Vyper,0,No direct ability or mechanic counters found.
+Wraith,STRONG_AGAINST,Billy,1,[Telekinesis] counters [Bullet Storm via Channeling]. 
+Wraith,STRONG_AGAINST,Dynamo,1,[Telekinesis] counters [Rejuvenating Aurora via Channeling]. 
+Wraith,STRONG_AGAINST,Ivy,1,[Telekinesis] counters [Execution Beam via Channeling]. 
+Wraith,STRONG_AGAINST,Lash,1,[Telekinesis] counters [Guillotine Frenzy via Channeling]. 
+Wraith,STRONG_AGAINST,McGinnis,1,[Telekinesis] counters [Heavy Barrage via Channeling]. 
+Wraith,STRONG_AGAINST,Mina,1,[Telekinesis] counters [Requiem via Channeling]. 
+Wraith,STRONG_AGAINST,Paige,1,[Telekinesis] counters [Final Chapter via Channeling]. 
+Wraith,STRONG_AGAINST,Paradox,1,[Telekinesis] counters [Temporal Collapse via Channeling]. 
+Wraith,STRONG_AGAINST,Seven,1,[Telekinesis] counters [Storm Cloud via Channeling]. 
+Wraith,STRONG_AGAINST,Warden,1,[Telekinesis] counters [Last Stand via Channeling]. 
+Wraith,WEAK_AGAINST,Bebop,1,[Project Mind] is countered by [Sound Barrier via Barrier]. 
+Wraith,WEAK_AGAINST,Haze,1,[Project Mind] is countered by [Voidstrike via Barrier]. 
+Wraith,WEAK_AGAINST,Holliday,1,[Project Mind] is countered by [Crackshot via Teleport]. 
+Wraith,WEAK_AGAINST,Kelvin,1,[Card Trick] is countered by [Ice Path via Movement Slow]. 
+Wraith,WEAK_AGAINST,Lash,2,[Project Mind] is countered by [Grappling Whip via Teleport]. [Card Trick] is countered by [Blood Rush via Movement Slow]. 
+Wraith,WEAK_AGAINST,Paige,1,[Card Trick] is countered by [Restoration Quill via Movement Slow]. 
+Wraith,WEAK_AGAINST,Paradox,1,[Card Trick] is countered by [Rewind via Movement Slow]. 
+Wraith,WEAK_AGAINST,Victor,1,[Card Trick] is countered by [Jumpstart via Movement Slow]. 
+Wraith,WEAK_AGAINST,Vindicta,2,[Project Mind] is countered by [Ballistic Volley via Barrier]. [Project Mind] is countered by [Execution Shot via Barrier]. 
+Wraith,WEAK_AGAINST,Viscous,1,[Card Trick] is countered by [The Cube via Movement Slow]. 
+Wraith,WEAK_AGAINST,Warden,1,[Card Trick] is countered by [Willpower via Movement Slow]. 
+Wraith,WEAK_AGAINST,Yamato,1,[Card Trick] is countered by [Storm's Reach via Movement Slow]. 
+Yamato,EVEN_AGAINST,Abrams,0,No direct ability or mechanic counters found.
+Yamato,EVEN_AGAINST,Calico,0,No direct ability or mechanic counters found.
+Yamato,EVEN_AGAINST,Sinclair,0,No direct ability or mechanic counters found.
+Yamato,STRONG_AGAINST,Billy,2,[Windguard] counters [Force Field via Projectile]. [Storm's Reach] counters [Bullet Storm via Damage Output Reduction]. 
+Yamato,STRONG_AGAINST,Doorman,1,[Storm's Reach] counters [Call Bell via Movement Slow]. 
+Yamato,STRONG_AGAINST,Drifter,2,[Windguard] counters [Warp Shot via Projectile]. [Windguard] counters [Ricochet Rhapsody via Projectile]. 
+Yamato,STRONG_AGAINST,Dynamo,1,[Storm's Reach] counters [Kinetic Pulse via Movement Slow]. 
+Yamato,STRONG_AGAINST,Grey Talon,1,[Storm's Reach] counters [Rain of Arrows via Movement Slow]. 
+Yamato,STRONG_AGAINST,Haze,2,[Storm's Reach] counters [Smoke Bomb via Movement Slow]. [Storm's Reach] counters [Sleep Dagger via Movement Slow]. 
+Yamato,STRONG_AGAINST,Holliday,1,[Storm's Reach] counters [Crackshot via Movement Slow]. 
+Yamato,STRONG_AGAINST,Infernus,1,[Storm's Reach] counters [Blazing Advance via Movement Slow]. 
+Yamato,STRONG_AGAINST,Ivy,1,[Storm's Reach] counters [Toxic Bolt via Movement Slow]. 
+Yamato,STRONG_AGAINST,Kelvin,5,[Storm's Reach] counters [Frozen Shelter via Movement Slow]. [Storm's Reach] counters [Arctic Beam via Movement Slow]. [Storm's Reach] counters [Frost Grenade via Movement Slow]. [Storm's Reach] counters [Arctic Beam via Fire Rate Slow]. [Storm's Reach] counters [Frozen Shelter via Fire Rate Slow]. 
+Yamato,STRONG_AGAINST,Lady Geist,1,[Storm's Reach] counters [Life Drain via Movement Slow]. 
+Yamato,STRONG_AGAINST,McGinnis,3,[Storm's Reach] counters [Heavy Barrage via Movement Slow]. [Storm's Reach] counters [Mini Turret via Movement Slow]. [Storm's Reach] counters [Spectral Wall via Movement Slow]. 
+Yamato,STRONG_AGAINST,Mina,1,[Storm's Reach] counters [Spectral Dagger via Movement Slow]. 
+Yamato,STRONG_AGAINST,Mirage,2,[Windguard] counters [Holo Shot via Projectile]. [Storm's Reach] counters [Mirror Trap via Movement Slow]. 
+Yamato,STRONG_AGAINST,Mo & Krill,1,[Storm's Reach] counters [Sand Blast via Damage Output Reduction]. 
+Yamato,STRONG_AGAINST,Paige,2,[Windguard] counters [Guardian Page via Projectile]. [Storm's Reach] counters [Page Turner via Movement Slow]. 
+Yamato,STRONG_AGAINST,Paradox,2,[Storm's Reach] counters [Chrono Burst via Movement Slow]. [Storm's Reach] counters [Event Horizon via Fire Rate Slow]. 
+Yamato,STRONG_AGAINST,Pocket,2,[Storm's Reach] counters [Barrage via Movement Slow]. [Storm's Reach] counters [Enchanter's Satchel via Fire Rate Slow]. 
+Yamato,STRONG_AGAINST,Seven,1,[Storm's Reach] counters [Lightning Ball via Movement Slow]. 
+Yamato,STRONG_AGAINST,Shiv,1,[Storm's Reach] counters [Serrated Knives via Movement Slow]. 
+Yamato,STRONG_AGAINST,Victor,1,[Storm's Reach] counters [Aura of Suffering via Movement Slow]. 
+Yamato,STRONG_AGAINST,Vindicta,1,[Windguard] counters [Ballistic Volley via Projectile]. 
+Yamato,STRONG_AGAINST,Viscous,2,[Storm's Reach] counters [Splatter via Movement Slow]. [Storm's Reach] counters [Puddle Punch via Movement Slow]. 
+Yamato,STRONG_AGAINST,Vyper,1,[Storm's Reach] counters [Screwjab Dagger via Movement Slow]. 
+Yamato,STRONG_AGAINST,Warden,2,[Storm's Reach] counters [Alchemical Flask via Movement Slow]. [Storm's Reach] counters [Alchemical Flask via Damage Output Reduction]. 
+Yamato,STRONG_AGAINST,Wraith,1,[Storm's Reach] counters [Card Trick via Movement Slow]. 
+Yamato,WEAK_AGAINST,Bebop,1,[Windguard] is countered by [Drop the Beat via Projectile]. 
+Yamato,WEAK_AGAINST,Billy,1,[Windguard] is countered by [Force Field via Projectile]. 
+Yamato,WEAK_AGAINST,Holliday,1,[Gale Step] is countered by [Crackshot via Dash]. 
+Yamato,WEAK_AGAINST,Lash,1,[Gale Step] is countered by [Grappling Whip via Dash]. 
+Yamato,WEAK_AGAINST,Paige,1,[Windguard] is countered by [Guardian Page via Projectile]. 

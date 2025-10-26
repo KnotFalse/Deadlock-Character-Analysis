@@ -1,0 +1,60 @@
+character:
+  name: Sinclair
+  archetype: Mystic
+  description: >
+    A show-stopping illusionist duo who twist bolts around corners, conjure spectral clones,
+    and even steal enemy ultimates mid-fight.
+  source_url: https://deadlock.wiki/Sinclair
+  last_updated: 2025-10-26
+abilities:
+  - name: Vexing Bolt
+    slot: Q
+    type: active
+    description: >
+      Fire a curving bolt whose damage scales with travel time; if the Spectral Assistant is active
+      it mirrors the shot at reduced power.
+    mechanics:
+      uses:
+        - Damage Ramp
+      counters: []
+    notes: >
+      Deadlock wiki highlights the bolt's redirect behavior and scaling damage, with assistant shots
+      dealing 50% effectiveness when linked.
+  - name: Spectral Assistant
+    slot: E
+    type: active
+    description: >
+      Summon Sinclair's spectral partner to fire alongside you; reactivate to instantly swap
+      positions with the assistant.
+    mechanics:
+      uses:
+        - Summoned Assistant
+        - Teleport
+      counters: []
+    notes: >
+      Assistant attacks mirror Sinclair's shots, and the reactivation teleport enables rapid
+      repositioning according to Dot Esports' hero reveal.
+  - name: Rabbit Hex
+    slot: Shift
+    type: active
+    description: >
+      Transform an enemy into a rabbit, increasing damage they take while leaving them unable to
+      attack or cast for the duration.
+    mechanics:
+      uses:
+        - Hex
+        - Damage Amplification
+      counters: []
+    notes: >
+      Patch notes clarify the polymorph now functions as an AoE targeter and does not interrupt
+      ongoing channelled abilities, so no counter tag is applied.
+  - name: Audience Participation
+    slot: R
+    type: ultimate
+    description: >
+      Copy an enemy hero's ultimate for a limited time; reactivating casts the stolen ability with
+      its current upgrade tier and cooldown.
+    mechanics:
+      uses:
+        - Ultimate Copy
+      counters: []

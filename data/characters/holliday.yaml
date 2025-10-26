@@ -1,0 +1,58 @@
+character:
+  name: Holliday
+  archetype: Marksman
+  description: >
+    A demolitionist sniper who manipulates terrain with Bounce Pad, hurls Powder
+    Kegs to juggle enemies, and locks evasive foes down with Crackshot.
+  source_url: https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates
+  last_updated: 2025-10-26
+abilities:
+  - name: Powder Keg
+    slot: Q
+    type: active
+    description: >
+      Toss an explosive barrel that detonates on impact or after a short fuse,
+      launching enemies upward and dealing heavy area damage.
+    mechanics:
+      uses:
+        - Explosive
+        - Knockup
+      counters: []
+  - name: Bounce Pad
+    slot: E
+    type: active
+    description: >
+      Deploy a kinetic pad that flings Holliday or allies skyward, granting a
+      temporary speed boost and an empowered slam on landing.
+    mechanics:
+      uses:
+        - Knockup
+        - Haste
+      counters: []
+  - name: Crackshot
+    slot: Shift
+    type: active
+    description: >
+      Fire a piercing round that slows enemies and prevents the use of movement
+      abilities while the debuff lingers.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Ability Suppression
+      counters:
+        - Dash
+        - Teleport
+    notes: >
+      Dot Esports ability primer states Crackshot prevents targets from using mobility
+      abilities while the debuff is active, justifying the Dash/Teleport counter tags.
+  - name: Spirit Lasso
+    slot: R
+    type: ultimate
+    description: >
+      Snare a target with a spectral rope, yanking them back after a delay and
+      stunning enemies caught at the return point.
+    mechanics:
+      uses:
+        - Tether
+        - Stun
+      counters: []

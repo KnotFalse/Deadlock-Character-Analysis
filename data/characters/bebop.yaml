@@ -1,0 +1,56 @@
+character:
+  name: Bebop
+  archetype: Mystic
+  description: >
+    A rhythm-fueled support DJ who shields allies with bass pulses, bounces enemies away with
+    speaker walls, and opens portals with sound.
+  source_url: https://www.sportskeeda.com/esports/all-deadlock-characters-abilities
+  last_updated: 2025-10-26
+abilities:
+  - name: Bass Blast
+    slot: Q
+    type: active
+    description: >
+      Fire a sonic projectile that damages enemies and projects a barrier around the first ally hit.
+    mechanics:
+      uses:
+        - Barrier
+      counters: []
+  - name: Drop the Beat
+    slot: E
+    type: active
+    description: >
+      Create a torus wall of sound that knocks enemies backward and reflects projectiles, buying
+      space for Bebop's team.
+    mechanics:
+      uses:
+        - Knockback
+      counters:
+        - Projectile
+    notes: >
+      Official previews explain Drop the Beat blocks and reflects bullets, giving it a natural
+      counter interaction versus projectile abilities.
+  - name: Groove Gate
+    slot: Shift
+    type: active
+    description: >
+      Place paired amplifier gates that allies can traverse, granting bonus movement speed upon exit.
+    mechanics:
+      uses:
+        - Portal
+        - Haste
+      counters: []
+  - name: Sound Barrier
+    slot: R
+    type: ultimate
+    description: >
+      Channel an overpowering bass drop that disintegrates enemy barriers and damages foes in a
+      wide radius.
+    mechanics:
+      uses:
+        - Explosive
+      counters:
+        - Barrier
+    notes: >
+      Sound Barrier explicitly shatters shields, functioning as a barrier-breaker per Sportskeeda's
+      ultimate synopsis.

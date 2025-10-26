@@ -1,0 +1,57 @@
+character:
+  name: Doorman
+  archetype: Mystic
+  description: >
+    A hospitality maestro who weaponizes portals, bellhop carts, and void-service to reshuffle
+    fights and banish foes to a hotel mini-dimension.
+  source_url: https://www.pcgamer.com/games/third-person-shooter/deadlocks-latest-character-basically-gets-a-portal-gun-and-his-ult-teleports-enemies-to-a-void-hotel-where-they-have-to-do-a-platforming-challenge/
+  last_updated: 2025-10-26
+abilities:
+  - name: Call Bell
+    slot: Q
+    type: active
+    description: >
+      Toss a bell-shaped grenade that explodes in a small radius, slowing enemies and wrecking
+      their weapon accuracy while damaging them.
+    mechanics:
+      uses:
+        - Movement Slow
+        - Accuracy Reduction
+        - Explosive
+      counters: []
+  - name: Doorway
+    slot: E
+    type: active
+    description: >
+      Place a pair of linked doors that allies can traverse, letting the team reposition through
+      Doorman's personal portals.
+    mechanics:
+      uses:
+        - Portal
+      counters: []
+  - name: Luggage Cart
+    slot: Shift
+    type: active
+    description: >
+      Charge forward with a spectral cart that bowls enemies over, knocking them back and
+      stunning any who collide with terrain.
+    mechanics:
+      uses:
+        - Knockback
+        - Stun
+      counters:
+        - Channeling
+    notes: >
+      PC Gamer preview confirms the cart slam stuns on wall impact; Deadlock crowd-control
+      documentation notes stuns break channelled abilities, so Luggage Cart can interrupt
+      enemy channels when the stun triggers.
+  - name: Hotel Guest
+    slot: R
+    type: ultimate
+    description: >
+      Summon a void attendant that drags an enemy through a portal into a pocket hotel suite,
+      forcing them to complete a traversal trial before returning to the fight.
+    mechanics:
+      uses:
+        - Banish
+      counters: []

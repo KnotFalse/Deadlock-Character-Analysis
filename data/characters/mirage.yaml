@@ -1,0 +1,58 @@
+character:
+  name: Mirage
+  archetype: Assassin
+  description: >
+    A holographic trickster who deploys decoys, teleports through clones, and disorients enemies
+    with a phasing ultimate.
+  source_url: https://www.sportskeeda.com/esports/all-deadlock-character-abilities-ultimates
+  last_updated: 2025-10-26
+abilities:
+  - name: Holo Shot
+    slot: Q
+    type: active
+    description: >
+      Fire a projectile that leaves behind a decoy; reactivating swaps Mirage's position with the
+      hologram.
+    mechanics:
+      uses:
+        - Projectile
+        - Teleport
+        - Summoned Assistant
+      counters: []
+  - name: Mirror Trap
+    slot: E
+    type: active
+    description: >
+      Place a trap that spawns a decoy and reveals the triggering enemy, applying a brief slow.
+    mechanics:
+      uses:
+        - Stealth Reveal
+        - Movement Slow
+        - Summoned Assistant
+      counters:
+        - Stealth
+  - name: Phase Shift
+    slot: Shift
+    type: mobility
+    description: >
+      Slip into a phased state, becoming untargetable and invisible for a short duration while
+      gaining movement speed.
+    mechanics:
+      uses:
+        - Untargetable
+        - Stealth
+        - Haste
+      counters: []
+  - name: Hall of Mirrors
+    slot: R
+    type: ultimate
+    description: >
+      Summon multiple decoys that mirror Mirage's movements; enemies inside the hall take damage
+      from each decoy attack and have their stealth broken.
+    mechanics:
+      uses:
+        - Damage Over Time
+        - Stealth Reveal
+        - Summoned Assistant
+      counters:
+        - Stealth

@@ -1,0 +1,57 @@
+character:
+  name: Vindicta
+  archetype: Marksman
+  description: >
+    A relentless sniper who locks onto priority targets, applies armor shred, and punctures barriers
+    with piercing rounds.
+  source_url: https://www.deadlocktips.com/hero/vindicta
+  last_updated: 2025-10-26
+abilities:
+  - name: Lock-On Round
+    slot: Q
+    type: active
+    description: >
+      Mark an enemy with a tracking bullet, reducing their armor and revealing them through stealth
+      for the duration.
+    mechanics:
+      uses:
+        - Damage Amplification
+        - Stealth Reveal
+      counters:
+        - Stealth
+  - name: Ballistic Volley
+    slot: E
+    type: active
+    description: >
+      Fire a rapid volley that punctures barriers, dealing bonus damage to shielded enemies.
+    mechanics:
+      uses:
+        - Projectile
+      counters:
+        - Barrier
+    notes: >
+      Ballistic Volley’s piercing rounds specifically damage enemies hiding behind shields, giving
+      Vindicta anti-barrier utility.
+  - name: Grapple Hook
+    slot: Shift
+    type: mobility
+    description: >
+      Grapple to terrain or enemies, repositioning Vindicta with increased weapon fire rate after
+      landing.
+    mechanics:
+      uses:
+        - Pull
+        - Haste
+        - Fire Rate Buff
+      counters: []
+  - name: Execution Shot
+    slot: R
+    type: ultimate
+    description: >
+      Charge a lethal sniper round that executes low-health targets and pierces barriers.
+    mechanics:
+      uses:
+        - Execute
+        - Barrier Pierce
+      counters:
+        - Barrier

@@ -1,0 +1,60 @@
+character:
+  name: Lash
+  archetype: Assassin
+  description: >
+    A fast-paced duelist who lashes foes with blades, pulls them into melee, and annihilates
+    targets with a frenzied ultimate.
+  source_url: https://www.gamesradar.com/deadlock-lash-abilities/
+  last_updated: 2025-10-26
+abilities:
+  - name: Razor Lash
+    slot: Q
+    type: active
+    description: >
+      Whip forward with twin blades, dealing repeated hits that apply stacking bleed.
+    mechanics:
+      uses:
+        - Bleed
+        - Damage Ramp
+      counters: []
+  - name: Grappling Whip
+    slot: E
+    type: active
+    description: >
+      Fire a whip that pulls the first enemy hit toward Lash, briefly interrupting their movement.
+    mechanics:
+      uses:
+        - Pull
+      counters:
+        - Teleport
+        - Dash
+    notes: >
+      The whip cancels ongoing movement abilities; community breakdowns document that it can yank
+      targets out of dashes or teleports.
+  - name: Blood Rush
+    slot: Shift
+    type: active
+    description: >
+      Gain a burst of movement speed and lifesteal, letting Lash stick to targets while shrugging
+      off minor slows.
+    mechanics:
+      uses:
+        - Haste
+        - Lifesteal
+      counters:
+        - Movement Slow
+    notes: >
+      Patch notes specify Blood Rush grants slow resistance, allowing Lash to ignore Movement Slow
+      during its duration.
+  - name: Guillotine Frenzy
+    slot: R
+    type: ultimate
+    description: >
+      Channel a flurry of strikes on a single target, executing them if they fall below a health
+      threshold while healing Lash.
+    mechanics:
+      uses:
+        - Channeling
+        - Execute
+        - Self Heal
+      counters: []

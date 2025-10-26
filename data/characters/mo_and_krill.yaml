@@ -1,0 +1,60 @@
+character:
+  name: Mo & Krill
+  archetype: Brawler
+  description: >
+    A tag-team bruiser duo who burrow through the battlefield, disarm marksmen with sand,
+    and finish foes with a crushing wrestling combo.
+  source_url: https://dotesports.com/deadlock/news/deadlock-mo-krill-abilities-explained
+  last_updated: 2025-10-26
+abilities:
+  - name: Scorn
+    slot: Q
+    type: active
+    description: >
+      Empower Mo's fists with spirit energy, stealing health with every punch and rapidly
+      stacking damage on a focused target.
+    mechanics:
+      uses:
+        - Lifesteal
+        - Damage Ramp
+      counters: []
+  - name: Burrow
+    slot: E
+    type: active
+    description: >
+      Dive Krill underground to move quickly; emerging launches enemies upward while the duo
+      gains bullet and spirit resistance.
+    mechanics:
+      uses:
+        - Haste
+        - Crowd-Control Immunity
+        - Knockup
+      counters: []
+    notes: >
+      Ability descriptions stress Burrow's unstoppable travel—moisture shielding grants CC
+      immunity until the duo erupts.
+  - name: Sand Blast
+    slot: Shift
+    type: active
+    description: >
+      Unleash a sandstorm cone that disarms opponents and shreds their weapon damage for a short
+      duration.
+    mechanics:
+      uses:
+        - Disarm
+        - Damage Output Reduction
+      counters: []
+  - name: Combo
+    slot: R
+    type: ultimate
+    description: >
+      Krill grapples an enemy while Mo pummels them, ending in an explosive slam that stuns
+      surrounding foes.
+    mechanics:
+      uses:
+        - Stun
+      counters:
+        - Channeling
+    notes: >
+      The finishing slam produces a multi-target stun, making Combo an effective tool for
+      breaking channelled ultimates mid-fight.

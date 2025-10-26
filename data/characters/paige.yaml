@@ -1,0 +1,57 @@
+character:
+  name: Paige
+  archetype: Mystic
+  description: >
+    A protective support who deploys shielding pages, links allies with healing tethers, and revives
+    teammates with a celestial finale.
+  source_url: https://www.deadlocktips.com/hero/paige
+  last_updated: 2025-10-26
+abilities:
+  - name: Guardian Page
+    slot: Q
+    type: active
+    description: >
+      Project a shielding page around an ally, absorbing incoming damage and reflecting a portion of
+      bullets while active.
+    mechanics:
+      uses:
+        - Barrier
+        - Projectile
+      counters:
+        - Projectile
+  - name: Restoration Quill
+    slot: E
+    type: active
+    description: >
+      Send a quill that links to an ally, healing them over time and cleansing minor debuffs.
+    mechanics:
+      uses:
+        - Area Heal
+      counters:
+        - Damage Over Time
+        - Movement Slow
+    notes: >
+      Ability text highlights Restoration Quill cleansing burns and slows from the linked ally.
+  - name: Page Turner
+    slot: Shift
+    type: active
+    description: >
+      Spin a spectral tome that pulls enemies inward while slowing them, providing setup for Paige's
+      squad.
+    mechanics:
+      uses:
+        - Pull
+        - Movement Slow
+      counters: []
+  - name: Final Chapter
+    slot: R
+    type: ultimate
+    description: >
+      Channel a radiant field that revives fallen allies and grants massive overshields to surviving
+      teammates.
+    mechanics:
+      uses:
+        - Channeling
+        - Area Heal
+        - Barrier
+      counters: []
