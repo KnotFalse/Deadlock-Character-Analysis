@@ -191,3 +191,8 @@
 ## Verification
 - Archived snapshots (`archive_matchups.py pre-plan`, `report_matchups.ps1 -Label patchtest`).
 - Sanity workflow ran clean (32 heroes / 129 abilities / 50 mechanics) with zero matchup diffs.
+## Static Site Progress
+- Added `deadlock_graph.cli export-static` producing `website/public/graph.json`.
+- Scaffolded Vite React app under `website/`, loading graph data and rendering Sigma-based visualization with selection sidebar.
+- Added automation (sanity CI, website build workflow, archive/diff/report scripts) and documentation for running/deploying the site.
+- `npm run build` (website) completes successfully; `graph.json` regenerates via CLI export.
