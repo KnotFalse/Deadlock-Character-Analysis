@@ -39,3 +39,5 @@ Before committing, run ./scripts/run_sanity.ps1 to verify YAML ↔ Neo4j parity,
 
 
 CI users can reuse .github/workflows/sanity.yml, which runs scripts/run_sanity_ci.ps1 on pull requests and main pushes.
+\n## Static Site\n- Generate graph data: \python -m deadlock_graph.cli export-static\\n- Develop the frontend: \cd website && npm run dev\\n- Build for Pages: \
+pm run build\ (see \website/README.md\ for details).\n

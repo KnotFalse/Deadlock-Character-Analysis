@@ -1,0 +1,88 @@
+:root {
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+body {
+  margin: 0;
+}
+
+.App {
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+header {
+  margin-bottom: 1.5rem;
+}
+
+.layout {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 320px 1fr;
+}
+
+aside {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+  display: grid;
+  gap: 1.5rem;
+  height: fit-content;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  margin-right: 0.5rem;
+  background-color: #334155;
+}
+
+.dot[data-label='Character'] {
+  background-color: #2563eb;
+}
+
+.dot[data-label='Ability'] {
+  background-color: #7c3aed;
+}
+
+.dot[data-label='Mechanic'] {
+  background-color: #059669;
+}
+
+.dot[data-label='Archetype'] {
+  background-color: #f97316;
+}
+
+.muted {
+  color: #64748b;
+}
+
+.details pre {
+  background-color: #f1f5f9;
+  border-radius: 10px;
+  padding: 0.75rem;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.graph-panel {
+  min-height: 620px;
+}
+
+.error {
+  color: #dc2626;
+}
