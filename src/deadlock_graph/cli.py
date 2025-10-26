@@ -265,19 +265,29 @@ def export_static(
     # Character nodes
     for name, profile in sorted(character_profiles.items()):
         archetype = archetype_lookup.get(name)
-        add_node(
-            node_id=f"character:{name}",
-            label="Character",
-            props={
-                "name": name,
-                "description": profile.character.description,
-                "archetype": archetype,
-                "source_url": str(profile.character.source_url),
-                "last_updated": profile.character.last_updated.isoformat(),
-                "abilities": [ability.name for ability in profile.abilities],
-            },
-            size=2.0,
-        )
+    add_node(
+        node_id=f"character:{name}",
+        label="Character",
+        props={
+            "name": name,
+            "description": profile.character.description,
+            "archetype": archetype,
+            "source_url": str(profile.character.source_url),
+            "last_updated": profile.character.last_updated.isoformat(),
+            "abilities": [ability.name for ability in profile.abilities],
+            "ability_slots": [
+                {"name": ability.name, "slot": ability.slot, "type": ability.type}
+                for ability in profile.abilities
+            ],
+            "mechanics_used": sorted(
+                {mech for ability in profile.abilities for mech in ability.mechanics.uses}
+            ),
+            "mechanics_countered": sorted(
+                {mech for ability in profile.abilities for mech in ability.mechanics.counters}
+            ),
+        },
+        size=2.0,
+    )
 
     # Relationship helpers
     def add_edge(edge_id: str, source: str, target: str, rel_type: str, props: dict | None = None) -> None:
@@ -388,14 +398,47 @@ def export_static(
             node["x"] = radius * math.cos(angle)
             node["y"] = radius * math.sin(angle)
 
+    # Degree metrics
+    degrees_in = {}
+    degrees_out = {}
+    for edge in edges:
+        degrees_out[edge["source"]] = degrees_out.get(edge["source"], 0) + 1
+        degrees_in[edge["target"]] = degrees_in.get(edge["target"], 0) + 1
+
+    # Metadata summary
+    label_distribution = {}
+    for node in nodes:
+        label_distribution[node["label"]] = label_distribution.get(node["label"], 0) + 1
+
+    archetype_counts = {}
+    for node in nodes:
+        if node["label"] == "Character":
+            archetype = node["properties"].get("archetype")
+            if archetype:
+                archetype_counts[archetype] = archetype_counts.get(archetype, 0) + 1
+
+    mechanic_counts = {}
+    for node in nodes:
+        if node["label"] == "Mechanic":
+            mechanic_counts[node["properties"]["category"]] = (
+                mechanic_counts.get(node["properties"]["category"], 0) + 1
+            )
+
     graph_payload = {
         "meta": {
             "generated_at": datetime.now().isoformat(),
             "node_count": len(nodes),
             "edge_count": len(edges),
+            "label_distribution": label_distribution,
+            "archetype_counts": archetype_counts,
+            "mechanic_category_counts": mechanic_counts,
         },
         "nodes": nodes,
         "edges": edges,
+        "indexes": {
+            "degrees_in": degrees_in,
+            "degrees_out": degrees_out,
+        },
     }
 
     out.parent.mkdir(parents=True, exist_ok=True)

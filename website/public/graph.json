@@ -1,8 +1,33 @@
 {
   "meta": {
-    "generated_at": "2025-10-26T09:26:33.381388",
-    "node_count": 215,
-    "edge_count": 1658
+    "generated_at": "2025-10-26T09:34:58.777837",
+    "node_count": 184,
+    "edge_count": 1658,
+    "label_distribution": {
+      "Archetype": 4,
+      "Mechanic": 50,
+      "Ability": 129,
+      "Character": 1
+    },
+    "archetype_counts": {
+      "Assassin": 1
+    },
+    "mechanic_category_counts": {
+      "debuff": 7,
+      "sustain": 3,
+      "crowd_control": 15,
+      "mitigation": 5,
+      "counter": 1,
+      "damage_over_time": 2,
+      "damage": 3,
+      "ability_state": 3,
+      "buff": 3,
+      "mobility": 3,
+      "finisher": 1,
+      "special": 2,
+      "utility": 1,
+      "support": 1
+    }
   },
   "nodes": [
     {
@@ -2857,627 +2882,6 @@
       "y": -2.207070963081785
     },
     {
-      "id": "character:Abrams",
-      "label": "Character",
-      "properties": {
-        "name": "Abrams",
-        "description": "A front-line bruiser who dives headfirst into fights, draining foes with Siphon Life and locking them down with punishing crowd control.\n",
-        "archetype": "Brawler",
-        "source_url": "https://deadlockwiki.org/w/Abrams",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Siphon Life",
-          "Shoulder Charge",
-          "Infernal Resilience",
-          "Seismic Impact"
-        ]
-      },
-      "size": 2.0,
-      "x": 2.5,
-      "y": 0.0
-    },
-    {
-      "id": "character:Bebop",
-      "label": "Character",
-      "properties": {
-        "name": "Bebop",
-        "description": "A rhythm-fueled support DJ who shields allies with bass pulses, bounces enemies away with speaker walls, and opens portals with sound.\n",
-        "archetype": "Brawler",
-        "source_url": "https://www.sportskeeda.com/esports/all-deadlock-characters-abilities",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Bass Blast",
-          "Drop the Beat",
-          "Groove Gate",
-          "Sound Barrier"
-        ]
-      },
-      "size": 2.0,
-      "x": 2.451963201008076,
-      "y": 0.4877258050403206
-    },
-    {
-      "id": "character:Billy",
-      "label": "Character",
-      "properties": {
-        "name": "Billy",
-        "description": "A dimensional gunfighter who leaps through portals, deploys force fields, and traps enemies under a spinning storm of bullets.\n",
-        "archetype": "Brawler",
-        "source_url": "https://www.gamesradar.com/deadlock-billy-abilities-ultimate/",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Ricochet Shot",
-          "Force Field",
-          "Portal Dive",
-          "Bullet Storm"
-        ]
-      },
-      "size": 2.0,
-      "x": 2.309698831278217,
-      "y": 0.9567085809127245
-    },
-    {
-      "id": "character:Calico",
-      "label": "Character",
-      "properties": {
-        "name": "Calico",
-        "description": "A contract killer who flows through the shadows with Ava, weaving burst damage and evasion to dismantle targets before they can react.\n",
-        "archetype": "Assassin",
-        "source_url": "https://deadlock.wiki/Calico",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Gloom Bombs",
-          "Leaping Slash",
-          "Ava",
-          "Return to Shadows"
-        ]
-      },
-      "size": 2.0,
-      "x": 2.078674030756363,
-      "y": 1.3889255825490054
-    },
-    {
-      "id": "character:Doorman",
-      "label": "Character",
-      "properties": {
-        "name": "Doorman",
-        "description": "A hospitality maestro who weaponizes portals, bellhop carts, and void-service to reshuffle fights and banish foes to a hotel mini-dimension.\n",
-        "archetype": "Mystic",
-        "source_url": "https://www.pcgamer.com/games/third-person-shooter/deadlocks-latest-character-basically-gets-a-portal-gun-and-his-ult-teleports-enemies-to-a-void-hotel-where-they-have-to-do-a-platforming-challenge/",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Call Bell",
-          "Doorway",
-          "Luggage Cart",
-          "Hotel Guest"
-        ]
-      },
-      "size": 2.0,
-      "x": 1.7677669529663689,
-      "y": 1.7677669529663689
-    },
-    {
-      "id": "character:Drifter",
-      "label": "Character",
-      "properties": {
-        "name": "Drifter",
-        "description": "A gunslinger whose warped bullets bend around terrain, deploy tripwire traps, and unleash a ricochet ultimate that punishes clustered foes.\n",
-        "archetype": "Assassin",
-        "source_url": "https://www.sportskeeda.com/esports/all-deadlock-characters-abilities",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Warp Shot",
-          "Tripwire",
-          "Smoke Hustle",
-          "Ricochet Rhapsody"
-        ]
-      },
-      "size": 2.0,
-      "x": 1.3889255825490057,
-      "y": 2.078674030756363
-    },
-    {
-      "id": "character:Dynamo",
-      "label": "Character",
-      "properties": {
-        "name": "Dynamo",
-        "description": "A battlefield tactician who manipulates gravity, empowering allies with teleports and heals before collapsing foes into devastating singularities.\n",
-        "archetype": "Mystic",
-        "source_url": "https://www.pcgamer.com/games/moba/deadlock-characters-heroes-abilities/",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Kinetic Pulse",
-          "Quantum Entanglement",
-          "Rejuvenating Aurora",
-          "Singularity"
-        ]
-      },
-      "size": 2.0,
-      "x": 0.9567085809127246,
-      "y": 2.309698831278217
-    },
-    {
-      "id": "character:Grey Talon",
-      "label": "Character",
-      "properties": {
-        "name": "Grey Talon",
-        "description": "A precision archer who glides through the battlefield, pinning foes with Spirit Snare traps before calling down a stunning owl strike.\n",
-        "archetype": "Marksman",
-        "source_url": "https://www.sportskeeda.com/esports/all-deadlock-character-abilities-ultimates",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Spirit Shot",
-          "Rain of Arrows",
-          "Spirit Snare",
-          "Guided Owl"
-        ]
-      },
-      "size": 2.0,
-      "x": 0.4877258050403208,
-      "y": 2.451963201008076
-    },
-    {
-      "id": "character:Haze",
-      "label": "Character",
-      "properties": {
-        "name": "Haze",
-        "description": "A void-slinging infiltrator who manipulates vision and positioning to isolate high-value targets before finishing them with Voidstrike.\n",
-        "archetype": "Assassin",
-        "source_url": "https://deadlock.wiki/Haze",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Fixation",
-          "Smoke Bomb",
-          "Sleep Dagger",
-          "Shadowstep",
-          "Voidstrike"
-        ]
-      },
-      "size": 2.0,
-      "x": 1.5308084989341916e-16,
-      "y": 2.5
-    },
-    {
-      "id": "character:Holliday",
-      "label": "Character",
-      "properties": {
-        "name": "Holliday",
-        "description": "A demolitionist sniper who manipulates terrain with Bounce Pad, hurls Powder Kegs to juggle enemies, and locks evasive foes down with Crackshot.\n",
-        "archetype": "Marksman",
-        "source_url": "https://dotesports.com/deadlock/news/all-deadlock-character-abilities-and-ultimates",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Powder Keg",
-          "Bounce Pad",
-          "Crackshot",
-          "Spirit Lasso"
-        ]
-      },
-      "size": 2.0,
-      "x": -0.4877258050403205,
-      "y": 2.451963201008076
-    },
-    {
-      "id": "character:Infernus",
-      "label": "Character",
-      "properties": {
-        "name": "Infernus",
-        "description": "A pyromancer who drenches zones in burning oil, lunges with flaming strikes, and rains down meteors to finish fights.\n",
-        "archetype": "Marksman",
-        "source_url": "https://www.sportskeeda.com/esports/all-deadlock-character-abilities-ultimates",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Flame Shot",
-          "Blazing Advance",
-          "Fire Wells",
-          "Meteor Swarm"
-        ]
-      },
-      "size": 2.0,
-      "x": -0.9567085809127243,
-      "y": 2.309698831278217
-    },
-    {
-      "id": "character:Ivy",
-      "label": "Character",
-      "properties": {
-        "name": "Ivy",
-        "description": "A venomous sniper who tags targets with toxic darts, fear effects, and a lethal execution beam that scales with debuff stacks.\n",
-        "archetype": "Marksman",
-        "source_url": "https://www.sportskeeda.com/esports/all-deadlock-characters-abilities",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Toxic Bolt",
-          "Venom Trap",
-          "Fear Toxin",
-          "Execution Beam"
-        ]
-      },
-      "size": 2.0,
-      "x": -1.388925582549005,
-      "y": 2.078674030756363
-    },
-    {
-      "id": "character:Kelvin",
-      "label": "Character",
-      "properties": {
-        "name": "Kelvin",
-        "description": "A frosty controller who slows fronts, parts terrain with Ice Path, and protects his squad inside Frozen Shelter's regenerative dome.\n",
-        "archetype": "Brawler",
-        "source_url": "https://deadlockwiki.org/w/Kelvin",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Frost Grenade",
-          "Ice Path",
-          "Arctic Beam",
-          "Frozen Shelter"
-        ]
-      },
-      "size": 2.0,
-      "x": -1.7677669529663687,
-      "y": 1.7677669529663689
-    },
-    {
-      "id": "character:Lady Geist",
-      "label": "Character",
-      "properties": {
-        "name": "Lady Geist",
-        "description": "A spectral huntress who flings toxic essences, siphons life through spectral tethers, and weaponises stolen health with devastating soul trades.\n",
-        "archetype": "Mystic",
-        "source_url": "https://www.deadlocktips.com/hero/lady-geist",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Essence Bomb",
-          "Life Drain",
-          "Malice",
-          "Soul Exchange"
-        ]
-      },
-      "size": 2.0,
-      "x": -2.078674030756363,
-      "y": 1.3889255825490054
-    },
-    {
-      "id": "character:Lash",
-      "label": "Character",
-      "properties": {
-        "name": "Lash",
-        "description": "A fast-paced duelist who lashes foes with blades, pulls them into melee, and annihilates targets with a frenzied ultimate.\n",
-        "archetype": "Assassin",
-        "source_url": "https://www.gamesradar.com/deadlock-lash-abilities/",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Razor Lash",
-          "Grappling Whip",
-          "Blood Rush",
-          "Guillotine Frenzy"
-        ]
-      },
-      "size": 2.0,
-      "x": -2.309698831278217,
-      "y": 0.9567085809127247
-    },
-    {
-      "id": "character:McGinnis",
-      "label": "Character",
-      "properties": {
-        "name": "McGinnis",
-        "description": "A battlefield engineer who locks down space with turrets, spectral walls, and healing drones while calling in devastating rocket barrages.\n",
-        "archetype": "Mystic",
-        "source_url": "https://deadlockwiki.org/w/McGinnis",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Mini Turret",
-          "Medicinal Specter",
-          "Spectral Wall",
-          "Heavy Barrage"
-        ]
-      },
-      "size": 2.0,
-      "x": -2.451963201008076,
-      "y": 0.48772580504032154
-    },
-    {
-      "id": "character:Mina",
-      "label": "Character",
-      "properties": {
-        "name": "Mina",
-        "description": "A ghostly gunslinger who summons spectral daggers, drains life at range, and chains kills to keep the pressure on.\n",
-        "archetype": "Marksman",
-        "source_url": "https://www.deadlocktips.com/hero/mina",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Spectral Dagger",
-          "Blood Pact",
-          "Specter Step",
-          "Requiem"
-        ]
-      },
-      "size": 2.0,
-      "x": -2.5,
-      "y": 3.061616997868383e-16
-    },
-    {
-      "id": "character:Mirage",
-      "label": "Character",
-      "properties": {
-        "name": "Mirage",
-        "description": "A holographic trickster who deploys decoys, teleports through clones, and disorients enemies with a phasing ultimate.\n",
-        "archetype": "Assassin",
-        "source_url": "https://www.sportskeeda.com/esports/all-deadlock-character-abilities-ultimates",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Holo Shot",
-          "Mirror Trap",
-          "Phase Shift",
-          "Hall of Mirrors"
-        ]
-      },
-      "size": 2.0,
-      "x": -2.451963201008076,
-      "y": -0.4877258050403209
-    },
-    {
-      "id": "character:Mo & Krill",
-      "label": "Character",
-      "properties": {
-        "name": "Mo & Krill",
-        "description": "A tag-team bruiser duo who burrow through the battlefield, disarm marksmen with sand, and finish foes with a crushing wrestling combo.\n",
-        "archetype": "Brawler",
-        "source_url": "https://dotesports.com/deadlock/news/deadlock-mo-krill-abilities-explained",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Scorn",
-          "Burrow",
-          "Sand Blast",
-          "Combo"
-        ]
-      },
-      "size": 2.0,
-      "x": -2.309698831278217,
-      "y": -0.9567085809127241
-    },
-    {
-      "id": "character:Paige",
-      "label": "Character",
-      "properties": {
-        "name": "Paige",
-        "description": "A protective support who deploys shielding pages, links allies with healing tethers, and revives teammates with a celestial finale.\n",
-        "archetype": "Mystic",
-        "source_url": "https://www.deadlocktips.com/hero/paige",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Guardian Page",
-          "Restoration Quill",
-          "Page Turner",
-          "Final Chapter"
-        ]
-      },
-      "size": 2.0,
-      "x": -2.0786740307563636,
-      "y": -1.388925582549005
-    },
-    {
-      "id": "character:Paradox",
-      "label": "Character",
-      "properties": {
-        "name": "Paradox",
-        "description": "A time-bending caster who rewinds allies, slows enemies, and steals momentum with future-sight bursts.\n",
-        "archetype": "Marksman",
-        "source_url": "https://www.sportskeeda.com/esports/all-deadlock-character-abilities-ultimates",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Chrono Burst",
-          "Rewind",
-          "Event Horizon",
-          "Temporal Collapse"
-        ]
-      },
-      "size": 2.0,
-      "x": -1.7677669529663693,
-      "y": -1.7677669529663687
-    },
-    {
-      "id": "character:Pocket",
-      "label": "Character",
-      "properties": {
-        "name": "Pocket",
-        "description": "A support mage who tosses cursed cards, warps across the map with her cloak, and imprisons enemies inside an explosive briefcase.\n",
-        "archetype": "Assassin",
-        "source_url": "https://www.deadlocktips.com/hero/pocket",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Barrage",
-          "Flying Cloak",
-          "Enchanter's Satchel",
-          "Affliction"
-        ]
-      },
-      "size": 2.0,
-      "x": -1.3889255825490054,
-      "y": -2.078674030756363
-    },
-    {
-      "id": "character:Seven",
-      "label": "Character",
-      "properties": {
-        "name": "Seven",
-        "description": "A storm-bending support who empowers allies with chain lightning and anchors team fights in a roaring storm cloud.\n",
-        "archetype": "Mystic",
-        "source_url": "https://esports.gg/news/deadlock/deadlock-seven-abilities-explained/",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Lightning Ball",
-          "Static Charge",
-          "Power Surge",
-          "Storm Cloud"
-        ]
-      },
-      "size": 2.0,
-      "x": -0.9567085809127258,
-      "y": -2.309698831278216
-    },
-    {
-      "id": "character:Shiv",
-      "label": "Character",
-      "properties": {
-        "name": "Shiv",
-        "description": "A relentless duelist who stacks bleeds with serrated blades, converts burst damage into delayed wounds, and executes weakened foes with Killing Blow.\n",
-        "archetype": "Brawler",
-        "source_url": "https://deadlockwiki.org/w/Shiv",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Serrated Knives",
-          "Slice and Dice",
-          "Bloodletting",
-          "Killing Blow"
-        ]
-      },
-      "size": 2.0,
-      "x": -0.48772580504032165,
-      "y": -2.4519632010080756
-    },
-    {
-      "id": "character:Sinclair",
-      "label": "Character",
-      "properties": {
-        "name": "Sinclair",
-        "description": "A show-stopping illusionist duo who twist bolts around corners, conjure spectral clones, and even steal enemy ultimates mid-fight.\n",
-        "archetype": "Mystic",
-        "source_url": "https://deadlock.wiki/Sinclair",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Vexing Bolt",
-          "Spectral Assistant",
-          "Rabbit Hex",
-          "Audience Participation"
-        ]
-      },
-      "size": 2.0,
-      "x": -4.592425496802574e-16,
-      "y": -2.5
-    },
-    {
-      "id": "character:Victor",
-      "label": "Character",
-      "properties": {
-        "name": "Victor",
-        "description": "A self-inflicted powerhouse who converts pain into damage, sprinting into fights with Jumpstart before detonating Pain Battery and reviving through sheer stubbornness.\n",
-        "archetype": "Brawler",
-        "source_url": "https://gamedaily.com/news/deadlock-victor-abilities-revealed",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Pain Battery",
-          "Jumpstart",
-          "Aura of Suffering",
-          "Shocking Reanimation"
-        ]
-      },
-      "size": 2.0,
-      "x": 0.48772580504032076,
-      "y": -2.451963201008076
-    },
-    {
-      "id": "character:Vindicta",
-      "label": "Character",
-      "properties": {
-        "name": "Vindicta",
-        "description": "A relentless sniper who locks onto priority targets, applies armor shred, and punctures barriers with piercing rounds.\n",
-        "archetype": "Marksman",
-        "source_url": "https://www.deadlocktips.com/hero/vindicta",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Lock-On Round",
-          "Ballistic Volley",
-          "Grapple Hook",
-          "Execution Shot"
-        ]
-      },
-      "size": 2.0,
-      "x": 0.956708580912725,
-      "y": -2.3096988312782165
-    },
-    {
-      "id": "character:Viscous",
-      "label": "Character",
-      "properties": {
-        "name": "Viscous",
-        "description": "A gelatinous controller who drenches choke points in goo, immobilises foes inside a stasis cube, and belly-flops stragglers with Puddle Punch.\n",
-        "archetype": "Mystic",
-        "source_url": "https://deadlockwiki.org/w/Viscous",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Splatter",
-          "The Cube",
-          "Puddle Punch",
-          "Goo Ball"
-        ]
-      },
-      "size": 2.0,
-      "x": 1.3889255825490046,
-      "y": -2.0786740307563636
-    },
-    {
-      "id": "character:Vyper",
-      "label": "Character",
-      "properties": {
-        "name": "Vyper",
-        "description": "A venomous striker who stacks poisons with rapid daggers, siphons health from marked prey, and petrifies targets to secure picks.\n",
-        "archetype": "Assassin",
-        "source_url": "https://www.deadlocktips.com/hero/vyper",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Screwjab Dagger",
-          "Lethal Venom",
-          "Slither",
-          "Petrifying Bola"
-        ]
-      },
-      "size": 2.0,
-      "x": 1.7677669529663684,
-      "y": -1.7677669529663693
-    },
-    {
-      "id": "character:Warden",
-      "label": "Character",
-      "properties": {
-        "name": "Warden",
-        "description": "A frontline alchemist who disrupts enemy offenses with crippling flasks, binding curses, and a self-sustaining Last Stand that anchors team fights.\n",
-        "archetype": "Brawler",
-        "source_url": "https://deadlockwiki.org/w/Warden",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Alchemical Flask",
-          "Willpower",
-          "Binding Word",
-          "Last Stand"
-        ]
-      },
-      "size": 2.0,
-      "x": 2.078674030756363,
-      "y": -1.3889255825490054
-    },
-    {
-      "id": "character:Wraith",
-      "label": "Character",
-      "properties": {
-        "name": "Wraith",
-        "description": "A card-slinging kingpin who charges homing blasts, boosts allied fire rates, and locks priority targets in mid-air with telekinetic force.\n",
-        "archetype": "Marksman",
-        "source_url": "https://deadlockwiki.org/w/Wraith",
-        "last_updated": "2025-10-26T00:00:00",
-        "abilities": [
-          "Card Trick",
-          "Project Mind",
-          "Full Auto",
-          "Telekinesis"
-        ]
-      },
-      "size": 2.0,
-      "x": 2.309698831278216,
-      "y": -0.956708580912726
-    },
-    {
       "id": "character:Yamato",
       "label": "Character",
       "properties": {
@@ -3491,11 +2895,48 @@
           "Gale Step",
           "Windguard",
           "Storm's Reach"
+        ],
+        "ability_slots": [
+          {
+            "name": "Crescent Slash",
+            "slot": "Q",
+            "type": "active"
+          },
+          {
+            "name": "Gale Step",
+            "slot": "E",
+            "type": "active"
+          },
+          {
+            "name": "Windguard",
+            "slot": "Shift",
+            "type": "active"
+          },
+          {
+            "name": "Storm's Reach",
+            "slot": "R",
+            "type": "ultimate"
+          }
+        ],
+        "mechanics_used": [
+          "Bullet Evasion",
+          "Crowd-Control Immunity",
+          "Damage Ramp",
+          "Dash",
+          "Haste",
+          "Projectile",
+          "Pull"
+        ],
+        "mechanics_countered": [
+          "Damage Output Reduction",
+          "Fire Rate Slow",
+          "Movement Slow",
+          "Projectile"
         ]
       },
       "size": 2.0,
-      "x": 2.4519632010080756,
-      "y": -0.4877258050403218
+      "x": 2.5,
+      "y": 0.0
     }
   ],
   "edges": [
@@ -18994,5 +18435,387 @@
         "reason": "[Windguard] is countered by [Guardian Page via Projectile]. "
       }
     }
-  ]
+  ],
+  "indexes": {
+    "degrees_in": {
+      "archetype:Brawler": 8,
+      "archetype:Assassin": 8,
+      "archetype:Mystic": 8,
+      "archetype:Marksman": 8,
+      "ability:Siphon Life": 1,
+      "mechanic:Lifesteal": 8,
+      "ability:Shoulder Charge": 1,
+      "mechanic:Dash": 12,
+      "mechanic:Stun": 12,
+      "mechanic:Channeling": 32,
+      "ability:Infernal Resilience": 1,
+      "mechanic:Self Heal": 10,
+      "ability:Seismic Impact": 1,
+      "ability:Bass Blast": 1,
+      "mechanic:Barrier": 17,
+      "ability:Drop the Beat": 1,
+      "mechanic:Knockback": 4,
+      "mechanic:Projectile": 15,
+      "ability:Groove Gate": 1,
+      "mechanic:Portal": 2,
+      "mechanic:Haste": 18,
+      "ability:Sound Barrier": 1,
+      "mechanic:Explosive": 11,
+      "ability:Ricochet Shot": 1,
+      "mechanic:Damage Ramp": 15,
+      "ability:Force Field": 1,
+      "ability:Portal Dive": 1,
+      "mechanic:Teleport": 13,
+      "mechanic:Crowd-Control Immunity": 3,
+      "ability:Bullet Storm": 1,
+      "mechanic:Damage Output Reduction": 7,
+      "ability:Gloom Bombs": 1,
+      "ability:Leaping Slash": 1,
+      "ability:Ava": 1,
+      "ability:Return to Shadows": 1,
+      "mechanic:Untargetable": 3,
+      "ability:Call Bell": 1,
+      "mechanic:Movement Slow": 44,
+      "mechanic:Accuracy Reduction": 2,
+      "ability:Doorway": 1,
+      "ability:Luggage Cart": 1,
+      "ability:Hotel Guest": 1,
+      "mechanic:Banish": 1,
+      "ability:Warp Shot": 1,
+      "ability:Tripwire": 1,
+      "mechanic:Immobilize": 4,
+      "mechanic:Stealth Reveal": 6,
+      "mechanic:Stealth": 14,
+      "ability:Smoke Hustle": 1,
+      "ability:Ricochet Rhapsody": 1,
+      "ability:Kinetic Pulse": 1,
+      "mechanic:Knockup": 6,
+      "ability:Quantum Entanglement": 1,
+      "mechanic:Fire Rate Buff": 4,
+      "ability:Rejuvenating Aurora": 1,
+      "mechanic:Area Heal": 15,
+      "ability:Singularity": 1,
+      "mechanic:Pull": 5,
+      "ability:Spirit Shot": 1,
+      "ability:Rain of Arrows": 1,
+      "ability:Spirit Snare": 1,
+      "mechanic:Silence": 3,
+      "mechanic:Disarm": 2,
+      "ability:Guided Owl": 1,
+      "ability:Fixation": 1,
+      "ability:Smoke Bomb": 1,
+      "mechanic:Invisibility": 2,
+      "mechanic:Bullet Evasion": 3,
+      "ability:Sleep Dagger": 1,
+      "mechanic:Sleep": 1,
+      "ability:Shadowstep": 1,
+      "ability:Voidstrike": 1,
+      "mechanic:Barrier Pierce": 2,
+      "ability:Powder Keg": 1,
+      "ability:Bounce Pad": 1,
+      "ability:Crackshot": 1,
+      "mechanic:Ability Suppression": 3,
+      "ability:Spirit Lasso": 1,
+      "mechanic:Tether": 2,
+      "ability:Flame Shot": 1,
+      "mechanic:Damage Over Time": 19,
+      "ability:Blazing Advance": 1,
+      "ability:Fire Wells": 1,
+      "mechanic:Healing Reduction": 5,
+      "ability:Meteor Swarm": 1,
+      "ability:Toxic Bolt": 1,
+      "ability:Venom Trap": 1,
+      "ability:Fear Toxin": 1,
+      "mechanic:Fear": 1,
+      "ability:Execution Beam": 1,
+      "mechanic:Execute": 4,
+      "ability:Frost Grenade": 1,
+      "ability:Ice Path": 1,
+      "ability:Arctic Beam": 1,
+      "mechanic:Fire Rate Slow": 10,
+      "ability:Frozen Shelter": 1,
+      "ability:Essence Bomb": 1,
+      "ability:Life Drain": 1,
+      "ability:Malice": 1,
+      "mechanic:Damage Amplification": 5,
+      "ability:Soul Exchange": 1,
+      "mechanic:Health Swap": 1,
+      "ability:Razor Lash": 1,
+      "mechanic:Bleed": 5,
+      "ability:Grappling Whip": 1,
+      "ability:Blood Rush": 1,
+      "ability:Guillotine Frenzy": 1,
+      "ability:Mini Turret": 1,
+      "mechanic:Summoned Assistant": 6,
+      "ability:Medicinal Specter": 1,
+      "ability:Spectral Wall": 1,
+      "ability:Heavy Barrage": 1,
+      "ability:Spectral Dagger": 1,
+      "ability:Blood Pact": 1,
+      "ability:Specter Step": 1,
+      "ability:Requiem": 1,
+      "ability:Holo Shot": 1,
+      "ability:Mirror Trap": 1,
+      "ability:Phase Shift": 1,
+      "ability:Hall of Mirrors": 1,
+      "ability:Scorn": 1,
+      "ability:Burrow": 1,
+      "ability:Sand Blast": 1,
+      "ability:Combo": 1,
+      "ability:Guardian Page": 1,
+      "ability:Restoration Quill": 1,
+      "ability:Page Turner": 1,
+      "ability:Final Chapter": 1,
+      "ability:Chrono Burst": 1,
+      "ability:Rewind": 1,
+      "ability:Event Horizon": 1,
+      "ability:Temporal Collapse": 1,
+      "ability:Barrage": 1,
+      "ability:Flying Cloak": 1,
+      "ability:Enchanter's Satchel": 1,
+      "ability:Affliction": 1,
+      "ability:Lightning Ball": 1,
+      "ability:Static Charge": 1,
+      "ability:Power Surge": 1,
+      "mechanic:Chain Lightning": 1,
+      "ability:Storm Cloud": 1,
+      "ability:Serrated Knives": 1,
+      "ability:Slice and Dice": 1,
+      "ability:Bloodletting": 1,
+      "mechanic:Damage Deferral": 1,
+      "ability:Killing Blow": 1,
+      "ability:Vexing Bolt": 1,
+      "ability:Spectral Assistant": 1,
+      "ability:Rabbit Hex": 1,
+      "mechanic:Hex": 1,
+      "ability:Audience Participation": 1,
+      "mechanic:Ultimate Copy": 1,
+      "ability:Pain Battery": 1,
+      "ability:Jumpstart": 1,
+      "ability:Aura of Suffering": 1,
+      "ability:Shocking Reanimation": 1,
+      "ability:Lock-On Round": 1,
+      "ability:Ballistic Volley": 1,
+      "ability:Grapple Hook": 1,
+      "ability:Execution Shot": 1,
+      "ability:Splatter": 1,
+      "ability:The Cube": 1,
+      "mechanic:Stasis": 1,
+      "ability:Puddle Punch": 1,
+      "ability:Goo Ball": 1,
+      "ability:Screwjab Dagger": 1,
+      "mechanic:Stamina Burn": 2,
+      "ability:Lethal Venom": 1,
+      "ability:Slither": 1,
+      "ability:Petrifying Bola": 1,
+      "mechanic:Petrify": 1,
+      "ability:Alchemical Flask": 1,
+      "ability:Willpower": 1,
+      "ability:Binding Word": 1,
+      "ability:Last Stand": 1,
+      "ability:Card Trick": 1,
+      "ability:Project Mind": 1,
+      "ability:Full Auto": 1,
+      "ability:Telekinesis": 1,
+      "ability:Crescent Slash": 1,
+      "ability:Gale Step": 1,
+      "ability:Windguard": 1,
+      "ability:Storm's Reach": 1,
+      "character:Bebop": 32,
+      "character:Calico": 31,
+      "character:Doorman": 35,
+      "character:Drifter": 32,
+      "character:Grey Talon": 35,
+      "character:Haze": 34,
+      "character:Kelvin": 39,
+      "character:Lady Geist": 31,
+      "character:Mirage": 32,
+      "character:Mo & Krill": 31,
+      "character:Shiv": 31,
+      "character:Sinclair": 31,
+      "character:Victor": 39,
+      "character:Vindicta": 34,
+      "character:Viscous": 41,
+      "character:Wraith": 35,
+      "character:Yamato": 34,
+      "character:Billy": 34,
+      "character:Dynamo": 36,
+      "character:Ivy": 31,
+      "character:Lash": 42,
+      "character:McGinnis": 31,
+      "character:Mina": 31,
+      "character:Paige": 48,
+      "character:Paradox": 46,
+      "character:Seven": 36,
+      "character:Warden": 43,
+      "character:Holliday": 33,
+      "character:Infernus": 37,
+      "character:Pocket": 37,
+      "character:Vyper": 38,
+      "character:Abrams": 32
+    },
+    "degrees_out": {
+      "character:Abrams": 39,
+      "character:Bebop": 39,
+      "character:Billy": 40,
+      "character:Calico": 36,
+      "character:Doorman": 41,
+      "character:Drifter": 39,
+      "character:Dynamo": 43,
+      "character:Grey Talon": 41,
+      "character:Haze": 41,
+      "character:Holliday": 40,
+      "character:Infernus": 44,
+      "character:Ivy": 37,
+      "character:Kelvin": 45,
+      "character:Lady Geist": 36,
+      "character:Lash": 50,
+      "character:McGinnis": 36,
+      "character:Mina": 36,
+      "character:Mirage": 39,
+      "character:Mo & Krill": 37,
+      "character:Paige": 56,
+      "character:Paradox": 55,
+      "character:Pocket": 44,
+      "character:Seven": 42,
+      "character:Shiv": 36,
+      "character:Sinclair": 36,
+      "character:Victor": 46,
+      "character:Vindicta": 42,
+      "character:Viscous": 51,
+      "character:Vyper": 46,
+      "character:Warden": 49,
+      "character:Wraith": 41,
+      "character:Yamato": 43,
+      "ability:Siphon Life": 1,
+      "ability:Shoulder Charge": 3,
+      "ability:Infernal Resilience": 1,
+      "ability:Seismic Impact": 3,
+      "ability:Bass Blast": 1,
+      "ability:Drop the Beat": 2,
+      "ability:Groove Gate": 2,
+      "ability:Sound Barrier": 2,
+      "ability:Ricochet Shot": 1,
+      "ability:Force Field": 3,
+      "ability:Portal Dive": 3,
+      "ability:Bullet Storm": 2,
+      "ability:Gloom Bombs": 1,
+      "ability:Leaping Slash": 2,
+      "ability:Ava": 1,
+      "ability:Return to Shadows": 2,
+      "ability:Call Bell": 3,
+      "ability:Doorway": 1,
+      "ability:Luggage Cart": 3,
+      "ability:Hotel Guest": 1,
+      "ability:Warp Shot": 2,
+      "ability:Tripwire": 3,
+      "ability:Smoke Hustle": 2,
+      "ability:Ricochet Rhapsody": 4,
+      "ability:Kinetic Pulse": 3,
+      "ability:Quantum Entanglement": 2,
+      "ability:Rejuvenating Aurora": 2,
+      "ability:Singularity": 3,
+      "ability:Spirit Shot": 1,
+      "ability:Rain of Arrows": 2,
+      "ability:Spirit Snare": 4,
+      "ability:Guided Owl": 1,
+      "ability:Fixation": 1,
+      "ability:Smoke Bomb": 3,
+      "ability:Sleep Dagger": 2,
+      "ability:Shadowstep": 1,
+      "ability:Voidstrike": 4,
+      "ability:Powder Keg": 2,
+      "ability:Bounce Pad": 2,
+      "ability:Crackshot": 4,
+      "ability:Spirit Lasso": 2,
+      "ability:Flame Shot": 2,
+      "ability:Blazing Advance": 3,
+      "ability:Fire Wells": 4,
+      "ability:Meteor Swarm": 2,
+      "ability:Toxic Bolt": 3,
+      "ability:Venom Trap": 4,
+      "ability:Fear Toxin": 2,
+      "ability:Execution Beam": 2,
+      "ability:Frost Grenade": 2,
+      "ability:Ice Path": 2,
+      "ability:Arctic Beam": 2,
+      "ability:Frozen Shelter": 3,
+      "ability:Essence Bomb": 2,
+      "ability:Life Drain": 4,
+      "ability:Malice": 1,
+      "ability:Soul Exchange": 1,
+      "ability:Razor Lash": 2,
+      "ability:Grappling Whip": 3,
+      "ability:Blood Rush": 3,
+      "ability:Guillotine Frenzy": 3,
+      "ability:Mini Turret": 3,
+      "ability:Medicinal Specter": 3,
+      "ability:Spectral Wall": 3,
+      "ability:Heavy Barrage": 3,
+      "ability:Spectral Dagger": 2,
+      "ability:Blood Pact": 2,
+      "ability:Specter Step": 2,
+      "ability:Requiem": 2,
+      "ability:Holo Shot": 3,
+      "ability:Mirror Trap": 4,
+      "ability:Phase Shift": 3,
+      "ability:Hall of Mirrors": 4,
+      "ability:Scorn": 2,
+      "ability:Burrow": 3,
+      "ability:Sand Blast": 2,
+      "ability:Combo": 2,
+      "ability:Guardian Page": 3,
+      "ability:Restoration Quill": 3,
+      "ability:Page Turner": 2,
+      "ability:Final Chapter": 3,
+      "ability:Chrono Burst": 2,
+      "ability:Rewind": 5,
+      "ability:Event Horizon": 2,
+      "ability:Temporal Collapse": 4,
+      "ability:Barrage": 2,
+      "ability:Flying Cloak": 1,
+      "ability:Enchanter's Satchel": 3,
+      "ability:Affliction": 4,
+      "ability:Lightning Ball": 2,
+      "ability:Static Charge": 2,
+      "ability:Power Surge": 2,
+      "ability:Storm Cloud": 2,
+      "ability:Serrated Knives": 2,
+      "ability:Slice and Dice": 2,
+      "ability:Bloodletting": 2,
+      "ability:Killing Blow": 1,
+      "ability:Vexing Bolt": 1,
+      "ability:Spectral Assistant": 2,
+      "ability:Rabbit Hex": 2,
+      "ability:Audience Participation": 1,
+      "ability:Pain Battery": 1,
+      "ability:Jumpstart": 4,
+      "ability:Aura of Suffering": 2,
+      "ability:Shocking Reanimation": 1,
+      "ability:Lock-On Round": 3,
+      "ability:Ballistic Volley": 2,
+      "ability:Grapple Hook": 3,
+      "ability:Execution Shot": 3,
+      "ability:Splatter": 3,
+      "ability:The Cube": 8,
+      "ability:Puddle Punch": 2,
+      "ability:Goo Ball": 2,
+      "ability:Screwjab Dagger": 3,
+      "ability:Lethal Venom": 4,
+      "ability:Slither": 3,
+      "ability:Petrifying Bola": 2,
+      "ability:Alchemical Flask": 3,
+      "ability:Willpower": 3,
+      "ability:Binding Word": 1,
+      "ability:Last Stand": 2,
+      "ability:Card Trick": 2,
+      "ability:Project Mind": 2,
+      "ability:Full Auto": 2,
+      "ability:Telekinesis": 3,
+      "ability:Crescent Slash": 1,
+      "ability:Gale Step": 3,
+      "ability:Windguard": 2,
+      "ability:Storm's Reach": 6
+    }
+  }
 }

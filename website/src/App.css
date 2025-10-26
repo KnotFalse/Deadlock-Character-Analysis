@@ -1,6 +1,7 @@
 :root {
   color: #0f172a;
   background-color: #f8fafc;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 body {
@@ -8,7 +9,6 @@ body {
 }
 
 .App {
-  font-family: 'Inter', system-ui, sans-serif;
   margin: 0 auto;
   max-width: 1200px;
   padding: 2rem;
@@ -34,6 +34,42 @@ aside {
   height: fit-content;
 }
 
+aside section h2 {
+  margin-bottom: 0.5rem;
+}
+
+input[type='search'] {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+}
+
+.search-results {
+  margin-top: 0.75rem;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.search-results button {
+  width: 100%;
+  text-align: left;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.35rem;
+  border-radius: 6px;
+}
+
+.search-results button:hover {
+  background: #e0e7ff;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -42,12 +78,19 @@ ul {
   gap: 0.5rem;
 }
 
+label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
 .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
   border-radius: 9999px;
-  margin-right: 0.5rem;
+  margin-right: 0.25rem;
   background-color: #334155;
 }
 
@@ -71,16 +114,44 @@ ul {
   color: #64748b;
 }
 
+select {
+  width: 100%;
+  padding: 0.45rem 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+}
+
+.clear {
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background: #e0e7ff;
+  cursor: pointer;
+}
+
+.clear:hover {
+  background: #c7d2fe;
+}
+
+.graph-panel {
+  min-height: 640px;
+  display: grid;
+  gap: 1rem;
+}
+
+.details {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
 .details pre {
   background-color: #f1f5f9;
   border-radius: 10px;
   padding: 0.75rem;
-  max-height: 200px;
+  max-height: 220px;
   overflow: auto;
-}
-
-.graph-panel {
-  min-height: 620px;
 }
 
 .error {

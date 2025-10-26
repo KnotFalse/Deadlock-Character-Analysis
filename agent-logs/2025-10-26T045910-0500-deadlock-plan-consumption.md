@@ -196,3 +196,7 @@
 - Scaffolded Vite React app under `website/`, loading graph data and rendering Sigma-based visualization with selection sidebar.
 - Added automation (sanity CI, website build workflow, archive/diff/report scripts) and documentation for running/deploying the site.
 - `npm run build` (website) completes successfully; `graph.json` regenerates via CLI export.
+## Static Site Enhancements
+- Export CLI now adds layout coordinates, degree indexes, and mechanic metadata for the website.
+- Frontend: introduced Zustand store, Fuse.js search, label/archetype/mechanic filters, relationship toggles, and Sigma visualization with highlight behavior.
+- Added website build workflow, README updates, and sanity CI integration; `npm run build` succeeds with new UI.
