@@ -1,7 +1,7 @@
 <script lang="ts">
   // Svelte 5 runes
   type Item = { label: string; value: string; meta?: any };
-  const props = $props<{ items?: Item[]; placeholder?: string; value?: string; maxItems?: number; onSelect?: (v: string, item?: Item) => void; testIdInput?: string; testIdList?: string; listId?: string }>();
+  const props = $props<{ items?: Item[]; placeholder?: string; value?: string; maxItems?: number; onSelect?: (v: string, item?: Item) => void; onQuery?: (q: string) => void; testIdInput?: string; testIdList?: string; listId?: string }>();
   const items = props.items ?? [];
   const placeholder = props.placeholder ?? '';
   const value = props.value ?? '';
@@ -43,6 +43,7 @@
     currentValue = v;
     open = true;
     activeIndex = 0;
+    props.onQuery?.(v);
   }
   function onKey(e: KeyboardEvent) {
     if (!open && (e.key === 'ArrowDown' || e.key === 'Enter')) { open = true; }

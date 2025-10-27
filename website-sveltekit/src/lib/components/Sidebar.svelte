@@ -34,6 +34,11 @@
     if (val) selectedNodeId.set(val);
     searchTerm.set('');
   }
+  let searchDebounce: any = null;
+  function onSearchQuery(q: string){
+    if (searchDebounce) clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(()=>{ searchTerm.set(q); }, 200);
+  }
   function mechanicItems(){
     return ($mechanicOptions || []).map((m:string) => ({ label: m, value: m }));
   }
@@ -43,7 +48,7 @@
 <aside class="card sidebar">
   <section class="section">
     <h2>Search</h2>
-    <Combobox placeholder="Search nodes..." items={searchItems()} onSelect={onSearchSelect} testIdInput="search" testIdList="search-results" listId="search-results" />
+    <Combobox placeholder="Search nodes..." items={searchItems()} onSelect={onSearchSelect} onQuery={onSearchQuery} testIdInput="search" testIdList="search-results" listId="search-results" />
   </section>
 
   <section class="section">
