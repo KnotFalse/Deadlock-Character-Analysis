@@ -1,11 +1,11 @@
 import { readFile } from 'node:fs/promises';
-import Ajv from 'ajv';
+import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 
 const schemaPath = new URL('../../schema/graph.schema.json', import.meta.url);
 const jsonPath = new URL('../static/graph.json', import.meta.url);
 
-const ajv = new Ajv({ allErrors: true, strict: false });
+const ajv = new Ajv2020({ allErrors: true, strict: false });
 addFormats(ajv);
 
 const [schemaRaw, jsonRaw] = await Promise.all([
