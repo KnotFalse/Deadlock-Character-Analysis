@@ -40,9 +40,9 @@ jobs:
         working-directory: website-sveltekit
         run: npm ci --no-audit --no-fund
 
-      - name: Validate graph.json schema
+      - name: Validate graph.json schema (strict)
         working-directory: website-sveltekit
-        run: npm run validate:graph
+        run: npm run validate:graph:strict
 
       - name: Upload export artifact
         uses: actions/upload-artifact@v4
