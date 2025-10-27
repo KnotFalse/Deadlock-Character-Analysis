@@ -19,7 +19,8 @@ test('Perf advisories — neighbor and search (non-gating)', async ({ page }) =>
 
   // Trigger neighbor once
   await page.getByTestId('search').fill('Abrams');
-  await page.getByRole('button', { name: /Abrams/i }).first().click();
+  await expect(page.getByTestId('search-results')).toBeVisible();
+  await page.getByTestId('search-results').getByRole('option', { name: /Abrams/i }).first().click();
   await page.getByTestId('neighbor-toggle').check();
   await page.waitForTimeout(100);
 

@@ -2,24 +2,21 @@
   // Svelte 5 runes
   type Item = { label: string; value: string; meta?: any };
   const props = $props<{ items?: Item[]; placeholder?: string; value?: string; maxItems?: number; onSelect?: (v: string, item?: Item) => void; onQuery?: (q: string) => void; testIdInput?: string; testIdList?: string; listId?: string }>();
-  const items = props.items ?? [];
-  const placeholder = props.placeholder ?? '';
-  const value = props.value ?? '';
-  const maxItems = props.maxItems ?? 10;
-  const onSelect = props.onSelect;
 
   let open = $state(false);
   let query = $state('');
-  let currentValue = $state(value);
+  let currentValue = $state(props.value ?? '');
   let activeIndex = $state<number>(-1);
   let rootEl: HTMLDivElement;
   let inputEl: HTMLInputElement;
   const listId = props.listId ?? 'cbx-list';
 
   function filtered(): Item[] {
+    const list = props.items ?? [];
     const q = query.trim().toLowerCase();
-    if (!q) return items.slice(0, maxItems);
-    return items.filter(i => i.label.toLowerCase().includes(q)).slice(0, maxItems);
+    const limit = props.maxItems ?? 10;
+    if (!q) return list.slice(0, limit);
+    return list.filter(i => i.label.toLowerCase().includes(q)).slice(0, limit);
   }
   function selectAt(idx: number) {
     const list = filtered();
@@ -28,7 +25,7 @@
     currentValue = it.label;
     open = false;
     activeIndex = -1;
-    onSelect?.(it.value, it);
+    props.onSelect?.(it.value, it);
   }
   function clear() {
     query = '';
@@ -48,20 +45,40 @@
   function onKey(e: KeyboardEvent) {
     if (!open && (e.key === 'ArrowDown' || e.key === 'Enter')) { open = true; }
     const list = filtered();
-    if (e.key === 'ArrowDown') { activeIndex = Math.min((activeIndex < 0 ? 0 : activeIndex + 1), list.length - 1); e.preventDefault(); }
-    else if (e.key === 'ArrowUp') { activeIndex = Math.max((activeIndex < 0 ? list.length - 1 : activeIndex - 1), 0); e.preventDefault(); }
-    else if (e.key === 'Enter') { if (open && activeIndex >= 0) { selectAt(activeIndex); e.preventDefault(); } }
+    if (e.key === 'ArrowDown') {
+      activeIndex = (activeIndex < 0) ? 0 : Math.min(activeIndex + 1, list.length - 1);
+      e.preventDefault();
+    }
+    else if (e.key === 'ArrowUp') {
+      activeIndex = (activeIndex < 0) ? (list.length - 1) : Math.max(activeIndex - 1, 0);
+      e.preventDefault();
+    }
+    else if (e.key === 'Enter') {
+      if (open) {
+        if (activeIndex < 0) activeIndex = 0;
+        if (list.length > 0) { selectAt(activeIndex); e.preventDefault(); }
+      }
+    }
     else if (e.key === 'Escape') { open = false; activeIndex = -1; }
   }
   function onBlur() {
     // Defer to allow option click
     setTimeout(() => { open = false; }, 100);
   }
+
+  // React to parent-driven value changes (e.g., programmatic selection/clear)
+  $effect(() => {
+    const next = props.value ?? '';
+    if (next !== currentValue) {
+      currentValue = next;
+      if (!next) query = '';
+    }
+  });
 </script>
 
 <div class="cbx" bind:this={rootEl}>
   <div class="cbx-input">
-    <input class="input" placeholder={placeholder} bind:this={inputEl} value={currentValue} oninput={onInput} onkeydown={onKey} onfocus={() => (open = true)} onblur={onBlur}
+    <input class="input" placeholder={props.placeholder ?? ''} bind:this={inputEl} value={currentValue} oninput={onInput} onkeydown={onKey} onfocus={() => (open = true)} onblur={onBlur}
       role="combobox" aria-expanded={open ? 'true' : 'false'} aria-autocomplete="list" aria-controls={listId} data-testid={props.testIdInput} />
     {#if currentValue}
       <button class="cbx-clear" title="Clear" onclick={clear} aria-label="Clear">×</button>

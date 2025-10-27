@@ -87,7 +87,7 @@
 
   <section class="section">
     <h2>Mechanic Filter</h2>
-    <Combobox placeholder="Filter mechanics…" items={mechanicItems()} onSelect={onMechanicSelect} />
+    <Combobox placeholder="Filter mechanics…" items={mechanicItems()} value={$mechanicFilter || ''} onSelect={onMechanicSelect} />
   </section>
 </aside>
 
