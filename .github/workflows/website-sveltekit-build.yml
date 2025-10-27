@@ -48,28 +48,35 @@ jobs:
           path: website-sveltekit/build
           if-no-files-found: warn
 
-
   post-preview-comment:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     needs: build-and-test
     steps:
-      - name: Post preview artifact link
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Post preview artifact link with counts
         uses: actions/github-script@v7
         with:
           script: |
-            const runUrl = https://github.com///actions/runs/;
+            const fs = require('fs');
+            const path = 'website-sveltekit/static/graph.json';
+            let counts = { nodes: 'unknown', edges: 'unknown', generated: 'unknown' };
+            try {
+              const j = JSON.parse(fs.readFileSync(path,'utf8'));
+              counts.nodes = j?.meta?.node_count ?? (j?.nodes?.length ?? 'unknown');
+              counts.edges = j?.meta?.edge_count ?? (j?.edges?.length ?? 'unknown');
+              counts.generated = j?.meta?.generated_at ?? 'unknown';
+            } catch {}
+            const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const body = [
               'Preview build artifact uploaded.',
               '',
-              • Run artifacts: ,
+              `• Nodes: ${counts.nodes}  • Edges: ${counts.edges}  • Generated: ${counts.generated}`,
+              `• Run artifacts: ${runUrl}`,
               '• Artifact name: website-sveltekit-build',
               '',
               'Download the artifact and open index.html locally to preview (CSR only).'
             ].join('\n');
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body
-            });
+            await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: context.issue.number, body });

@@ -27,6 +27,7 @@ if (!ok) {
 } else {
   const nodes = data?.meta?.node_count ?? data?.nodes?.length ?? 'unknown';
   const edges = data?.meta?.edge_count ?? data?.edges?.length ?? 'unknown';
-  console.log(`graph.json valid \u2713 (nodes=${nodes}, edges=${edges})`);
+  const sid = schema?.$id ?? 'unknown-id';
+  const sver = schema?.version ?? 'n/a';
+  console.log(`graph.json valid \u2713 (nodes=${nodes}, edges=${edges}) • schema: ${sid} v${sver}`);
 }
-

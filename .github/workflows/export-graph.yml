@@ -49,6 +49,7 @@ jobs:
         with:
           name: graph-export
           path: website-sveltekit/static/graph.json
+          retention-days: 14
 
       - name: Gather summary
         id: summarize
@@ -62,7 +63,18 @@ jobs:
           echo "edges=$EDGES" >> $GITHUB_OUTPUT
           echo "generated=$GEN" >> $GITHUB_OUTPUT
 
+      - name: Detect changes vs HEAD
+        id: diff
+        shell: bash
+        run: |
+          if git diff --quiet --exit-code -- website-sveltekit/static/graph.json; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Create pull request
+        if: steps.diff.outputs.changed == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -77,6 +89,6 @@ jobs:
             - edges: ${{ steps.summarize.outputs.edges }}
 
             This PR was created by the export-graph workflow. The SvelteKit build + tests should validate this change.
+          labels: data:update
           add-paths: |
             website-sveltekit/static/graph.json
-
