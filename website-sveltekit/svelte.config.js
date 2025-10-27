@@ -8,8 +8,9 @@ const config = {
 	preprocess: vitePreprocess(),
 
 	kit: {
-    adapter: adapter({ fallback: '404.html' })
-  }
+		adapter: adapter({ fallback: '404.html' }),
+		paths: { relative: true }
+	}
 };
 
 export default config;
