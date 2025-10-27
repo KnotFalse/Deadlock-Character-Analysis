@@ -1,0 +1,82 @@
+name: export-graph
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *' # daily at 06:00 UTC
+
+jobs:
+  export-and-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Export graph.json
+        run: |
+          python -m deadlock_graph.cli export-static -o website-sveltekit/static/graph.json
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: website-sveltekit/package-lock.json
+
+      - name: Install validator deps
+        working-directory: website-sveltekit
+        run: npm ci --no-audit --no-fund
+
+      - name: Validate graph.json schema
+        working-directory: website-sveltekit
+        run: npm run validate:graph
+
+      - name: Upload export artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: graph-export
+          path: website-sveltekit/static/graph.json
+
+      - name: Gather summary
+        id: summarize
+        shell: bash
+        run: |
+          META=$(jq -r '.meta' website-sveltekit/static/graph.json)
+          NODES=$(jq -r '.meta.node_count // (.nodes|length)' website-sveltekit/static/graph.json)
+          EDGES=$(jq -r '.meta.edge_count // (.edges|length)' website-sveltekit/static/graph.json)
+          GEN=$(jq -r '.meta.generated_at // "unknown"' website-sveltekit/static/graph.json)
+          echo "nodes=$NODES" >> $GITHUB_OUTPUT
+          echo "edges=$EDGES" >> $GITHUB_OUTPUT
+          echo "generated=$GEN" >> $GITHUB_OUTPUT
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: data/update-graph-${{ github.run_id }}
+          commit-message: "data: update graph.json (nodes=${{ steps.summarize.outputs.nodes }}, edges=${{ steps.summarize.outputs.edges }})"
+          title: "Data: update graph.json (nodes=${{ steps.summarize.outputs.nodes }}, edges=${{ steps.summarize.outputs.edges }})"
+          body: |
+            Updates website-sveltekit/static/graph.json
+
+            - generated_at: ${{ steps.summarize.outputs.generated }}
+            - nodes: ${{ steps.summarize.outputs.nodes }}
+            - edges: ${{ steps.summarize.outputs.edges }}
+
+            This PR was created by the export-graph workflow. The SvelteKit build + tests should validate this change.
+          add-paths: |
+            website-sveltekit/static/graph.json
+

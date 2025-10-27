@@ -86,6 +86,11 @@ export const filteredNodes = derived([graphData, activeLabels, activeArchetypes,
   });
 });
 
+// Expose filtered count for tests/diagnostics
+if (typeof window !== 'undefined') {
+  filteredNodes.subscribe(nodes => { (window as any).__GRAPH_FILTERED_NODE_COUNT__ = nodes.length; });
+}
+
 export const visibleNodeIds = derived(filteredNodes, nodes => new Set(nodes.map(n => n.id)));
 
 const REL_TYPES = new Set(['STRONG_AGAINST','WEAK_AGAINST','EVEN_AGAINST']);

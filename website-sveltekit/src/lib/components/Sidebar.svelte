@@ -16,11 +16,19 @@
 <aside style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem;display:grid;gap:1rem">
   <section>
     <h2>Search</h2>
-    <input data-testid="search" placeholder="Search nodes..." type="search" value={$searchTerm} on:input={onSearchInput} style="width:100%;padding:0.45rem;border:1px solid #cbd5f5;border-radius:8px" />
+    <input data-testid="search" aria-controls="search-results" placeholder="Search nodes..." type="search" value={$searchTerm} on:input={onSearchInput} style="width:100%;padding:0.45rem;border:1px solid #cbd5f5;border-radius:8px" on:keydown={(e)=>{
+      const list = document.getElementById('search-results');
+      const items = list ? Array.from(list.querySelectorAll('li button')) : [];
+      const idx = (window as any).__SEARCH_IDX__ ?? -1;
+      if (e.key==='ArrowDown') { (window as any).__SEARCH_IDX__ = Math.min(idx+1, items.length-1); e.preventDefault(); items[(window as any).__SEARCH_IDX__]?.focus(); }
+      else if (e.key==='ArrowUp') { (window as any).__SEARCH_IDX__ = Math.max(idx-1, 0); e.preventDefault(); items[(window as any).__SEARCH_IDX__]?.focus(); }
+      else if (e.key==='Enter') { if ((window as any).__SEARCH_IDX__ >= 0) { items[(window as any).__SEARCH_IDX__]?.click(); e.preventDefault(); } }
+      else if (e.key==='Escape') { (window as any).__SEARCH_IDX__ = -1; searchTerm.set(''); }
+    }} />
     {#if $searchTerm && $searchResults && $searchResults.length > 0}
-      <ul style="margin-top:0.5rem;list-style:none;padding:0;display:grid;gap:0.25rem">
+      <ul role="listbox" id="search-results" data-testid="search-results" style="margin-top:0.5rem;list-style:none;padding:0;display:grid;gap:0.25rem">
         {#each $searchResults.slice(0, 10) as n}
-          <li>
+          <li role="option">
             <button class="link-button" on:click={() => selectedNodeId.set(n.id)} aria-label={(n.properties?.['name'] ?? n.id)}>
               {n.properties?.['name'] ?? n.id}
             </button>
