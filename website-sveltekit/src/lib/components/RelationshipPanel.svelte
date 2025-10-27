@@ -22,7 +22,7 @@
 
 {#if $graphData}
   {#if $selectedNodeId}
-    <section class="relationship-summary" role="region" aria-label="Matchup Relationships">
+    <section class="relationship-summary" aria-label="Matchup Relationships">
       <h3>Matchup Relationships</h3>
       {#each REL as type}
         {#if group($graphData,$selectedNodeId)[type].length}
