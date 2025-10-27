@@ -90,6 +90,13 @@ npm run build
 npx vite preview --host
 ```
 
+## Data Quality & Aggregation
+
+- The export pipeline aggregates duplicate edges by (type, source, target) at the source.
+- Character↔Mechanic and Ability↔Mechanic edges merge evidence into `properties.evidence_count` and track `properties.ability_sources`/`properties.reasons` when available.
+- Matchup edges (STRONG/WEAK/EVEN) are deduped; EVEN is kept once per pair and dropped entirely when a STRONG/WEAK exists for the same pair.
+- CI gates run `npm run validate:graph:strict` to fail on duplicate node IDs, duplicate edge IDs, and invalid undirected duplicates.
+
 ## Frontend Tests
 
 - Playwright smoke coverage for React lives in `website/tests/`.

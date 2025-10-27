@@ -32,6 +32,10 @@ jobs:
         working-directory: website-sveltekit
         run: npm ci --no-audit --no-fund
 
+      - name: Validate graph.json (strict)
+        working-directory: website-sveltekit
+        run: npm run validate:graph:strict
+
       - name: Install Playwright (Chromium)
         working-directory: website-sveltekit
         run: npx playwright install --with-deps chromium

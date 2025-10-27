@@ -42,3 +42,9 @@ f68668f CI/commenter (fork-safe), Ajv2020 validator, a11y warning fix
 152010b chore(logs): record SvelteKit Pages publish (merged to main)
 176dca5 SvelteKit launch: publish to GitHub Pages via Actions
 
+
+## Patch
+- Fix: skip duplicate edges by key in Sigma graph builder (website-sveltekit/src/lib/components/GraphView.svelte).
+- Commit: ec0702b
+
+- Patch: add pair-level edge dedupe in GraphView to prevent multi-edge errors on simple graphs. Commit: ef99c56

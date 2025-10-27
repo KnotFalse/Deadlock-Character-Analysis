@@ -199,7 +199,8 @@ def export_static(
     character_profiles = {profile.character.name: profile for profile in iter_character_profiles(data_root / "characters")}
 
     nodes: list[dict] = []
-    edges: list[dict] = []
+    # Aggregate edges by (type, source, target)
+    edge_map: dict[tuple[str, str, str], dict] = {}
 
     # Utility to append node once with metadata
     def add_node(node_id: str, label: str, props: dict, size: float) -> None:
@@ -291,16 +292,61 @@ def export_static(
     )
 
     # Relationship helpers
+    def _edge_id_for(rel_type: str, source: str, target: str) -> str:
+        if rel_type == "IS_ARCHETYPE":
+            return f"edge:{source}::{target}"
+        if rel_type == "HAS_ABILITY":
+            return f"edge:{source}->{target}"
+        if rel_type == "USES_MECHANIC":
+            return f"edge:{source}->{target}:uses"
+        if rel_type == "COUNTERS_MECHANIC":
+            return f"edge:{source}->{target}:counters"
+        if rel_type == "CHARACTER_COUNTERS_MECHANIC":
+            return f"edge:{source}->{target}:character_counter"
+        # Matchups & others
+        return f"edge:{source}->{target}:{rel_type.lower()}"
+
+    def _merge_props(dst: dict, src: dict) -> dict:
+        # evidence_count
+        dst["evidence_count"] = int(dst.get("evidence_count", 0)) + int(src.get("evidence_count", 1))
+        # reasons: promote to list and dedupe
+        if "reason" in src and src["reason"]:
+            dst.setdefault("reasons", [])
+            if src["reason"] not in dst["reasons"]:
+                dst["reasons"].append(src["reason"])
+        for r in src.get("reasons", []) or []:
+            dst.setdefault("reasons", [])
+            if r not in dst["reasons"]:
+                dst["reasons"].append(r)
+        # ability_sources aggregation
+        if "ability" in src and src["ability"]:
+            dst.setdefault("ability_sources", [])
+            if src["ability"] not in dst["ability_sources"]:
+                dst["ability_sources"].append(src["ability"])
+        for a in src.get("ability_sources", []) or []:
+            dst.setdefault("ability_sources", [])
+            if a not in dst["ability_sources"]:
+                dst["ability_sources"].append(a)
+        # pass through other simple fields if absent
+        for k, v in src.items():
+            if k in ("evidence_count", "reason", "reasons", "ability", "ability_sources"):
+                continue
+            if k not in dst:
+                dst[k] = v
+        return dst
+
     def add_edge(edge_id: str, source: str, target: str, rel_type: str, props: dict | None = None) -> None:
-        edges.append(
-            {
-                "id": edge_id,
+        key = (rel_type, source, target)
+        if key not in edge_map:
+            edge_map[key] = {
+                "id": _edge_id_for(rel_type, source, target) if edge_id is None else edge_id,
                 "source": source,
                 "target": target,
                 "type": rel_type,
-                "properties": props or {},
+                "properties": {},
             }
-        )
+        # Merge properties with aggregation semantics
+        edge_map[key]["properties"] = _merge_props(edge_map[key]["properties"], props or {})
 
     # Character -> Archetype
     for name, profile in character_profiles.items():
@@ -364,14 +410,13 @@ def export_static(
                 source = row["source"]
                 target = row["target"]
                 rel_type = row["relationship"]
-                edge_id = f"edge:matchup:{idx}"
                 add_edge(
-                    edge_id=edge_id,
+                    edge_id=None,
                     source=f"character:{source}",
                     target=f"character:{target}",
                     rel_type=rel_type,
                     props={
-                        "evidence": int(row.get("evidence", "0")),
+                        "evidence_count": int(row.get("evidence", "0")) or 1,
                         "reason": row.get("reason", ""),
                     },
                 )
@@ -379,6 +424,38 @@ def export_static(
         typer.echo("matchups.csv not found; skipping matchup edges.", err=True)
 
     # Build networkx graph for layout and neighborhood indexes
+    # Build final edge list from aggregation, enforcing EVEN removal when STRONG/WEAK exist for the pair
+    # First, build a map of undirected pairs that have strong/weak
+    pair_rel: dict[tuple[str, str], set[str]] = {}
+    for (rel, s, t) in edge_map.keys():
+        a, b = (s, t) if s < t else (t, s)
+        pair_rel.setdefault((a, b), set()).add(rel)
+    # Filter out EVEN edges when pair has STRONG or WEAK
+    edges: list[dict] = []
+    seen_even_pairs: set[tuple[str, str]] = set()
+    for (rel, s, t), rec in edge_map.items():
+        a, b = (s, t) if s < t else (t, s)
+        rels = pair_rel.get((a, b), set())
+        if rel == "EVEN_AGAINST" and ("STRONG_AGAINST" in rels or "WEAK_AGAINST" in rels):
+            continue
+        if rel == "EVEN_AGAINST":
+            # Keep only canonical direction a -> b once
+            if (a, b) in seen_even_pairs:
+                continue
+            seen_even_pairs.add((a, b))
+            s, t = a, b
+            rec["source"], rec["target"] = s, t
+            rec["id"] = _edge_id_for(rel, s, t)
+        # Ensure evidence_count at least 1
+        props = rec.get("properties") or {}
+        if "evidence_count" not in props:
+            props["evidence_count"] = 1
+        rec["properties"] = props
+        # Use deterministic id if None/empty
+        if not rec.get("id"):
+            rec["id"] = _edge_id_for(rel, s, t)
+        edges.append(rec)
+
     g = nx.Graph()
     for node in nodes:
         g.add_node(node["id"])

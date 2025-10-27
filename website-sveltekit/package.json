@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "validate:graph": "node ./scripts/validate-graph.mjs",
+    "validate:graph:strict": "cross-env STRICT=1 node ./scripts/validate-graph.mjs",
     "test:e2e": "npm run build && playwright test",
     "test:e2e:ci": "npm run build && playwright test --reporter=list",
     "prepare": "svelte-kit sync || echo ''",
@@ -15,6 +16,7 @@
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "@playwright/test": "^1.56.1",
     "@sveltejs/adapter-auto": "^6.1.0",
     "@sveltejs/adapter-static": "^3.0.10",

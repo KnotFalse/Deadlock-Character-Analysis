@@ -16,8 +16,17 @@
     return out;
   }
   function label(gd, id){ const n = gd.nodes.find((x)=>x.id===id); return (n?.properties?.['name'] as string) ?? id; }
-  function reason(e: GraphEdge){ return (e.properties?.['reason'] as string) ?? ''; }
-  function evidence(e: GraphEdge){ const v = e.properties?.['evidence']; return typeof v==='number' ? v : Number(v ?? 0); }
+  function reason(e: GraphEdge){
+    const rs = (e.properties?.['reasons'] as string[]|undefined) || [];
+    if (rs.length) return rs.join(' • ');
+    return (e.properties?.['reason'] as string) ?? '';
+  }
+  function evidence(e: GraphEdge){
+    const c = e.properties?.['evidence_count'];
+    if (typeof c === 'number') return c;
+    const v = e.properties?.['evidence'];
+    return typeof v==='number' ? v : Number(v ?? 0);
+  }
 </script>
 
 {#if $graphData}
