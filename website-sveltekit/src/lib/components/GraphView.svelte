@@ -77,11 +77,18 @@
         raw: n,
       });
     });
-    // Guard against duplicate edges in data (some exports may repeat the same id)
+    // Guard against duplicate edges in data (by id and by node pair)
+    const seenPairs = new Set<string>();
     data.edges.forEach((e) => {
-      if (!g.hasNode(e.source) || !g.hasNode(e.target)) return;
-      if (g.hasEdge(e.id)) return; // skip duplicates by key
-      g.addEdgeWithKey(e.id, e.source, e.target, {
+      const { source, target } = e;
+      if (!g.hasNode(source) || !g.hasNode(target)) return;
+      // Pair-level dedupe for simple graphs (normalize order for undirected drawing)
+      const pairKey = source < target ? `${source}|${target}` : `${target}|${source}`;
+      if (seenPairs.has(pairKey)) return;
+      seenPairs.add(pairKey);
+      // Key-level dedupe safety
+      if (g.hasEdge(e.id)) return;
+      g.addEdgeWithKey(e.id, source, target, {
         label: e.type,
         color: '#94a3b8',
         raw: e,
