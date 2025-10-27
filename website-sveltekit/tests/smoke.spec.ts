@@ -49,8 +49,8 @@ test('Svelte explorer — core interactions', async ({ page }) => {
   const mechValue = (await mechBtn.textContent())?.trim();
   await mechBtn.click();
   if (mechValue) {
-    const select = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Mechanic Filter' }) }).locator('select');
-    await expect(select).toHaveValue(mechValue);
+    const combo = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Mechanic Filter' }) }).locator('input[role="combobox"]');
+    await expect(combo).toHaveValue(mechValue);
   }
 });
 
