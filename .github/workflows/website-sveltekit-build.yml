@@ -48,3 +48,28 @@ jobs:
           path: website-sveltekit/build
           if-no-files-found: warn
 
+
+  post-preview-comment:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    steps:
+      - name: Post preview artifact link
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const runUrl = https://github.com///actions/runs/;
+            const body = [
+              'Preview build artifact uploaded.',
+              '',
+              • Run artifacts: ,
+              '• Artifact name: website-sveltekit-build',
+              '',
+              'Download the artifact and open index.html locally to preview (CSR only).'
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });

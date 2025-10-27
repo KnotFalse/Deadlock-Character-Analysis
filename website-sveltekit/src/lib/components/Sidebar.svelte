@@ -1,11 +1,16 @@
 <script lang="ts">
-  import { activeLabels, activeArchetypes, relationshipFilters, mechanicFilter, searchTerm, labelOptions, archetypeOptions, mechanicOptions, toggleInSet, searchResults, selectedNodeId } from '$lib/stores/graph';
+  import { activeLabels, activeArchetypes, relationshipFilters, mechanicFilter, searchTerm, labelOptions, archetypeOptions, mechanicOptions, toggleInSet, searchResults, selectedNodeId, neighborMode } from '$lib/stores/graph';
   const REL_OPTIONS = ['STRONG_AGAINST','WEAK_AGAINST','EVEN_AGAINST'];
   function onMechanicChange(e: Event){
     const value = (e.target as HTMLSelectElement).value;
     mechanicFilter.set(value || null);
   }
-  function onSearchInput(e: Event){ searchTerm.set((e.target as HTMLInputElement).value); }
+  let searchTimer: any = null;
+  function onSearchInput(e: Event){
+    const value = (e.target as HTMLInputElement).value;
+    if (searchTimer) clearTimeout(searchTimer);
+    searchTimer = setTimeout(()=> searchTerm.set(value), 200);
+  }
 </script>
 
 <aside style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem;display:grid;gap:1rem">
@@ -23,6 +28,11 @@
         {/each}
       </ul>
     {/if}
+  </section>
+
+  <section>
+    <h2>Neighbor Mode</h2>
+    <label><input data-testid="neighbor-toggle" type="checkbox" checked={$neighborMode} on:change={() => neighborMode.set(!$neighborMode)} /> Highlight neighbors of selection</label>
   </section>
 
   <section>

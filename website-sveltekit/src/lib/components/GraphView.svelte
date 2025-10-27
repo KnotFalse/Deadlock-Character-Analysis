@@ -22,7 +22,8 @@
   let _selNode: string | null = null;
   let _selEdge: string | null = null;
 
-  function applyHighlights(){
+  let rafScheduled = false;
+  function applyHighlightsNow(){
     if (!sigma || !data) return;
     const g = sigma.getGraph();
     g.forEachNode((n)=>{
@@ -42,6 +43,10 @@
       if (_selEdge && e===_selEdge) { color='#f97316'; size = Math.max(size, 2.25); }
       g.setEdgeAttribute(e,'color',color); g.setEdgeAttribute(e,'size',size);
     });
+  }
+  function scheduleApply(){
+    if (rafScheduled) return; rafScheduled = true;
+    requestAnimationFrame(()=>{ rafScheduled = false; applyHighlightsNow(); });
   }
 
   onMount(() => {
@@ -76,18 +81,18 @@
 
     // Subscribe to store changes and re-apply highlights
     const unsubs = [
-      neighborIds.subscribe(v=>{ _neighborIds = new Set(v); applyHighlights(); }),
-      neighborEdgeIds.subscribe(v=>{ _neighborEdgeIds = new Set(v); applyHighlights(); }),
-      shortestPath.subscribe(v=>{ _path = new Set(v); applyHighlights(); }),
-      pathEdgeIds.subscribe(v=>{ _pathEdges = new Set(v); applyHighlights(); }),
-      metricSizes.subscribe(v=>{ _metricSizes = new Map(v); applyHighlights(); }),
-      metricColors.subscribe(v=>{ _metricColors = new Map(v); applyHighlights(); }),
-      searchResults.subscribe(v=>{ _searchIds = new Set((v||[]).map((n:any)=>n.id)); applyHighlights(); }),
-      selectedNodeId.subscribe(v=>{ _selNode = v; applyHighlights(); }),
-      selectedEdgeId.subscribe(v=>{ _selEdge = v; applyHighlights(); }),
+      neighborIds.subscribe(v=>{ _neighborIds = new Set(v); scheduleApply(); }),
+      neighborEdgeIds.subscribe(v=>{ _neighborEdgeIds = new Set(v); scheduleApply(); }),
+      shortestPath.subscribe(v=>{ _path = new Set(v); scheduleApply(); }),
+      pathEdgeIds.subscribe(v=>{ _pathEdges = new Set(v); scheduleApply(); }),
+      metricSizes.subscribe(v=>{ _metricSizes = new Map(v); scheduleApply(); }),
+      metricColors.subscribe(v=>{ _metricColors = new Map(v); scheduleApply(); }),
+      searchResults.subscribe(v=>{ _searchIds = new Set((v||[]).map((n:any)=>n.id)); scheduleApply(); }),
+      selectedNodeId.subscribe(v=>{ _selNode = v; scheduleApply(); }),
+      selectedEdgeId.subscribe(v=>{ _selEdge = v; scheduleApply(); }),
     ];
     // Initial paint after mount
-    tick().then(applyHighlights);
+    tick().then(scheduleApply);
     // Clean up subscriptions on destroy
     onDestroy(()=>{ unsubs.forEach(u=>u()); });
   });

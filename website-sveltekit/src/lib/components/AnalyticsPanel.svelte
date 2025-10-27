@@ -11,16 +11,16 @@
 </script>
 
 <section class="analytics-panel">
-  <div class="analytics-header">
+  <div class="analytics-header" data-testid="analytics-header">
     <h3>Analytics</h3>
-    <div class="metric-toggle">
+    <div class="metric-toggle" data-testid="metric-toggle">
       {#each OPTIONS as o}
-        <button class="toggle-button" class:active={$metricMode===o.value} on:click={() => setMode(o.value)} aria-pressed={$metricMode===o.value}>{o.label}</button>
+        <button class="toggle-button" data-testid={`metric-${o.value}`} class:active={$metricMode===o.value} on:click={() => setMode(o.value)} aria-pressed={$metricMode===o.value}>{o.label}</button>
       {/each}
     </div>
   </div>
   <p class="muted small">{OPTIONS.find(o=>o.value===$metricMode)?.desc}</p>
-  <div class="analytics-grid">
+  <div class="analytics-grid" data-testid="analytics-grid">
     <div class="analytics-card">
       <h4>Top Out-Degree</h4>
       <ol>
@@ -63,4 +63,3 @@
     </div>
   </div>
 </section>
-
