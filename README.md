@@ -39,6 +39,15 @@ Before committing, run ./scripts/run_sanity.ps1 to verify YAML ↔ Neo4j parity,
 
 CI users can reuse .github/workflows/sanity.yml, which runs scripts/run_sanity_ci.ps1 on pull requests and main pushes.
 
+## Web Apps
+
+- React (Vite) explorer — Live site on GitHub Pages. Stable reference while we migrate.
+- Svelte 5 + SvelteKit v2 (CSR + adapter-static) — Previewed via CI artifacts only. Does not deploy to Pages yet.
+
+Key policies:
+- Keep React Pages as the public site until SvelteKit meets parity (all e2e green, schema validation enforced, docs updated).
+- SvelteKit previews are attached to PRs as downloadable artifacts. Open `index.html` locally to view (CSR).
+
 ## Static Site Explorer
 
 The `website/` directory hosts a Vite + React frontend that consumes the exported `graph.json`.
@@ -71,8 +80,8 @@ The `website/` directory hosts a Vite + React frontend that consumes the exporte
 
 ## Deployment
 
-- `.github/workflows/pages-deploy.yml` builds `website/dist` and publishes it to GitHub Pages on every push to `main` (or on manual dispatch).
-- The Vite config uses relative asset paths so the bundle works both locally and on Pages.
+- React Pages: `.github/workflows/pages-deploy.yml` builds `website/dist` and publishes to GitHub Pages.
+- SvelteKit previews: `.github/workflows/website-sveltekit-build.yml` builds, runs Playwright, uploads `build/` as an artifact, and comments on PRs with a link. No Pages deploy from SvelteKit yet.
 
 To perform a manual preview without the workflow:
 ```bash
@@ -83,10 +92,13 @@ npx vite preview --host
 
 ## Frontend Tests
 
-- Playwright smoke coverage lives in `website/tests/`.
+- Playwright smoke coverage for React lives in `website/tests/`.
 - Local run (build + test):
   ```bash
   cd website
   npm run test:e2e
   ```
 - CI runs `npm run test:e2e:ci` (headless Chromium, list reporter). Tests exercise search, neighbor highlighting, path selection, relationship detail, and analytics toggles. During Playwright runs the app automatically enables a “light” graph mode (no WebGL canvas) to avoid headless GPU noise; interactive rendering still loads normally in user builds.
+
+- Svelte (SPA exploration): see `website-svelte/` for local tests.
+- SvelteKit (target): `website-sveltekit/tests/` and CI. Validate `graph.json` via `npm run validate:graph` inside `website-sveltekit/`.

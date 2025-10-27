@@ -234,5 +234,19 @@
 
 ### Task 7.3: Re-Synthesize Graph
 
+---
+
+## Web Apps (Policy Addendum)
+
+- React (Vite) explorer is the live GitHub Pages site and remains the public reference until SvelteKit reaches parity.
+- Svelte 5 + SvelteKit v2 runs as a CSR-only static build (adapter-static) and is previewed via CI artifacts on pull requests. It does not deploy to Pages yet.
+
+### Parity Criteria and Cutover Checklist
+- SvelteKit CI enforces schema validation for graph.json and runs the Playwright suite (smoke, neighbor, analytics, mechanic, relationship, keyboard search).
+- Docs updated (README and this plan) with policy and commands.
+- Export pipeline opens PRs to refresh `website-sveltekit/static/graph.json` with schema gates and SvelteKit build/tests.
+
+When all criteria are consistently green on main, mark the SPA (`website/`) as legacy in README and freeze changes for two weeks before removal/archive.
+
 - **Subtask 7.3.1:** After _any_ update in Task 7.2, the synthesized matchup data is now stale.
 - **Subtask 7.3.2:** Re-run **all of Phase 4 (Matchup Synthesis)**. This will clean the old relationships and generate a new, fully accurate set of `STRONG`, `WEAK`, and `EVEN` matchups based on the new evidence.

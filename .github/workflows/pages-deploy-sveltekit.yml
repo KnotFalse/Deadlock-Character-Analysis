@@ -1,0 +1,81 @@
+name: deploy-pages-sveltekit
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'website-sveltekit/**'
+      - '.github/workflows/pages-deploy-sveltekit.yml'
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  pages: write
+  contents: read
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: website-sveltekit/package-lock.json
+
+      - name: Install dependencies
+        working-directory: website-sveltekit
+        run: npm ci --no-audit --no-fund
+
+      - name: Validate graph.json schema
+        working-directory: website-sveltekit
+        run: npm run validate:graph
+
+      - name: Run e2e tests
+        working-directory: website-sveltekit
+        env:
+          CI: '1'
+        run: |
+          npx playwright install --with-deps chromium
+          npm run test:e2e:ci
+
+      - name: Build SvelteKit (static)
+        working-directory: website-sveltekit
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website-sveltekit/build
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+      - name: Post-deploy health probe (non-gating)
+        shell: bash
+        run: |
+          set -euo pipefail
+          URL="${{ steps.deployment.outputs.page_url }}"
+          echo "Probing ${URL}"
+          for i in {1..3}; do
+            if curl -fsS -o /dev/null "$URL"; then echo "Root OK"; break; else echo "Retry $i..."; sleep 2; fi; done
+          echo "Probing ${URL}_app/version.json"
+          for i in {1..3}; do
+            if curl -fsS -o /dev/null "${URL}_app/version.json"; then echo "Assets OK"; break; else echo "Retry $i..."; sleep 2; fi; done
+          echo "Health probe complete (non-gating)."

@@ -1,0 +1,12 @@
+:root{color:#0f172a;background:#f8fafc;font-family:Inter,system-ui,sans-serif}
+body{margin:0}
+.app{margin:0 auto;max-width:1200px;padding:2rem}
+
+/* Light structure helpers used by panels */
+.muted{color:#64748b}
+.small{font-size:0.875rem}
+.link-button{background:none;border:none;color:#2563eb;cursor:pointer;padding:0}
+.link-button:hover{color:#1d4ed8;text-decoration:underline}
+.relationship-summary{margin-top:1rem}
+.analytics-panel{margin-top:1rem}
+.path-summary{margin-top:0.5rem}
