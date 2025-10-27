@@ -26,3 +26,9 @@ Date: 2025-10-27T11:47:22
 - Frontend still guards against duplicate edges, but should not trigger now that export is clean.
 - Graph edges reduced (after aggregation), improving render performance.
 
+
+## PR
+- Opened PR #5: Export dedupe: aggregate edges, strict validation, CI gates
+- Auto-merge enabled (squash) and branch cleanup on success
+- Initial CI runs in progress: website-sveltekit build and test, Website Build, Sanity
+

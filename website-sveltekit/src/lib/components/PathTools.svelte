@@ -13,10 +13,10 @@
 </script>
 
 {#if $graphData}
-  <section style="display:grid;gap:0.5rem">
+  <section style="display:grid;gap:var(--gap-sm)">
     <h2>Path Tools</h2>
     <label class="muted" for="start">Start node</label>
-    <select id="start" data-testid="path-start" value={$pathStart || ''} on:change={onStartChange}>
+    <select class="select" id="start" data-testid="path-start" value={$pathStart || ''} on:change={onStartChange}>
       <option value="">Select start…</option>
       {#each Object.entries(grouped($graphData)) as [label, nodes]}
         <optgroup label={label}>
@@ -27,7 +27,7 @@
       {/each}
     </select>
     <label class="muted" for="end">End node</label>
-    <select id="end" data-testid="path-end" value={$pathEnd || ''} on:change={onEndChange}>
+    <select class="select" id="end" data-testid="path-end" value={$pathEnd || ''} on:change={onEndChange}>
       <option value="">Select end…</option>
       {#each Object.entries(grouped($graphData)) as [label, nodes]}
         <optgroup label={label}>
@@ -38,9 +38,9 @@
       {/each}
     </select>
     <div style="display:flex;gap:0.5rem;flex-wrap:wrap">
-      <button on:click={() => $selectedNodeId && setPathStart($selectedNodeId)} disabled={!$selectedNodeId}>Use selection as start</button>
-      <button on:click={() => $selectedNodeId && setPathEnd($selectedNodeId)} disabled={!$selectedNodeId}>Use selection as end</button>
-      <button on:click={() => clearPath()}>Clear path</button>
+      <button class="button" on:click={() => $selectedNodeId && setPathStart($selectedNodeId)} disabled={!$selectedNodeId}>Use selection as start</button>
+      <button class="button" on:click={() => $selectedNodeId && setPathEnd($selectedNodeId)} disabled={!$selectedNodeId}>Use selection as end</button>
+      <button class="button" on:click={() => clearPath()}>Clear path</button>
     </div>
     {#if $shortestPath.length > 0}
       <section class="path-summary" style="margin-top:0.5rem">

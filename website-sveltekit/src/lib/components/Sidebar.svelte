@@ -16,12 +16,20 @@
       searchTerm.set(value);
     }, 200);
   }
+  function labelColor(label: string): string {
+    const key = label.toLowerCase();
+    if (key==='character') return 'var(--label-character)';
+    if (key==='ability') return 'var(--label-ability)';
+    if (key==='mechanic') return 'var(--label-mechanic)';
+    if (key==='archetype') return 'var(--label-archetype)';
+    return 'var(--primary)';
+  }
 </script>
 
-<aside style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem;display:grid;gap:1rem">
+<aside class="card" style="display:grid;gap:var(--gap-md)">
   <section>
     <h2>Search</h2>
-    <input data-testid="search" aria-controls="search-results" placeholder="Search nodes..." type="search" value={$searchTerm} on:input={onSearchInput} style="width:100%;padding:0.45rem;border:1px solid #cbd5f5;border-radius:8px" on:keydown={(e)=>{
+    <input class="input" data-testid="search" aria-controls="search-results" placeholder="Search nodes..." type="search" value={$searchTerm} on:input={onSearchInput} on:keydown={(e)=>{
       const list = document.getElementById('search-results');
       const items = list ? Array.from(list.querySelectorAll('li button')) : [];
       const idx = (window as any).__SEARCH_IDX__ ?? -1;
@@ -45,14 +53,14 @@
 
   <section>
     <h2>Neighbor Mode</h2>
-    <label><input data-testid="neighbor-toggle" type="checkbox" checked={$neighborMode} on:change={() => { if (typeof window!=='undefined' && (window as any).__PERF_LOG__) { performance.mark('neighbor-toggle'); (window as any).__PERF_SIMPLE_MARK__='neighbor-toggle'; } neighborMode.set(!$neighborMode); }} /> Highlight neighbors of selection</label>
+    <label class="checkbox-row"><input data-testid="neighbor-toggle" type="checkbox" checked={$neighborMode} on:change={() => { if (typeof window!=='undefined' && (window as any).__PERF_LOG__) { performance.mark('neighbor-toggle'); (window as any).__PERF_SIMPLE_MARK__='neighbor-toggle'; } neighborMode.set(!$neighborMode); }} /> Highlight neighbors of selection</label>
   </section>
 
   <section>
     <h2>Node Labels</h2>
-    <ul>
+    <ul class="legend">
       {#each $labelOptions as label}
-        <li><label><input type="checkbox" checked={$activeLabels.has(label)} on:change={() => toggleInSet(activeLabels, label)} /> {label}</label></li>
+        <li><label><input type="checkbox" checked={$activeLabels.has(label)} on:change={() => toggleInSet(activeLabels, label)} /> <span class="legend-dot" style={`background:${labelColor(label)}`}></span>{label}</label></li>
       {/each}
     </ul>
   </section>
@@ -77,7 +85,7 @@
 
   <section>
     <h2>Mechanic Filter</h2>
-    <select value={$mechanicFilter || ''} on:change={onMechanicChange}>
+    <select class="select" value={$mechanicFilter || ''} on:change={onMechanicChange}>
       <option value="">All mechanics</option>
       {#each $mechanicOptions as m}
         <option value={m}>{m}</option>

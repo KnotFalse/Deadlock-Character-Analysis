@@ -43,17 +43,17 @@
       const base = g.getNodeAttribute(n,'color') as string;
       let color = _metricColors.get(n) ?? base;
       let size = _metricSizes.get(n) ?? (g.getNodeAttribute(n,'size') as number);
-      if (_searchIds.size>0) color = _searchIds.has(n) ? '#60a5fa' : '#cbd5f5';
-      if (_neighborIds.has(n)) { color = '#34d399'; size = size + 0.9; }
-      if (_path.has(n)) { color = '#facc15'; size = size + 1.1; }
-      if (_selNode && n===_selNode) { color = '#f97316'; size = size + 1.3; }
+      if (_searchIds.size>0) color = _searchIds.has(n) ? getComputedStyle(document.documentElement).getPropertyValue('--graph-search').trim() || '#60a5fa' : getComputedStyle(document.documentElement).getPropertyValue('--graph-deemph').trim() || '#cbd5f5';
+      if (_neighborIds.has(n)) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-neighbor').trim() || '#34d399'; size = size + 0.9; }
+      if (_path.has(n)) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-path').trim() || '#facc15'; size = size + 1.1; }
+      if (_selNode && n===_selNode) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-selected').trim() || '#f97316'; size = size + 1.3; }
       g.setNodeAttribute(n,'color',color); g.setNodeAttribute(n,'size',size);
     });
     g.forEachEdge((e)=>{
       const base = g.getEdgeAttribute(e,'color') as string; let color = base; let size = (g.getEdgeAttribute(e,'size') as number) ?? 1;
-      if (_neighborEdgeIds.has(e)) { color='#34d399'; size = Math.max(size, 1.75); }
-      if (_pathEdges.has(e)) { color='#facc15'; size = Math.max(size, 2); }
-      if (_selEdge && e===_selEdge) { color='#f97316'; size = Math.max(size, 2.25); }
+      if (_neighborEdgeIds.has(e)) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-neighbor').trim() || '#34d399'; size = Math.max(size, 1.75); }
+      if (_pathEdges.has(e)) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-path').trim() || '#facc15'; size = Math.max(size, 2); }
+      if (_selEdge && e===_selEdge) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-selected').trim() || '#f97316'; size = Math.max(size, 2.25); }
       g.setEdgeAttribute(e,'color',color); g.setEdgeAttribute(e,'size',size);
     });
   }
@@ -73,7 +73,7 @@
         x: n.x ?? Math.random() * 10,
         y: n.y ?? Math.random() * 10,
         size: n.size,
-        color: '#334155',
+        color: getComputedStyle(document.documentElement).getPropertyValue('--graph-node').trim() || '#334155',
         raw: n,
       });
     });
@@ -90,7 +90,7 @@
       if (g.hasEdge(e.id)) return;
       g.addEdgeWithKey(e.id, source, target, {
         label: e.type,
-        color: '#94a3b8',
+        color: getComputedStyle(document.documentElement).getPropertyValue('--graph-edge').trim() || '#94a3b8',
         raw: e,
       });
     });
@@ -122,13 +122,13 @@
 </script>
 
 {#if lightMode}
-  <div data-testid="graph-light-mode" style="width:100%;height:600px;border-radius:12px;border:1px solid #e2e8f0;display:grid;place-items:center;background:#f8fafc;color:#64748b;text-align:center">
+  <div data-testid="graph-light-mode" style="width:100%;height:100%;display:grid;place-items:center;background:var(--graph-bg);color:var(--muted);text-align:center;border-radius:var(--radius)">
     <div>
       <p>Graph rendering disabled for CI run.</p>
       <p class="muted small">Interactive canvas loads in standard builds.</p>
     </div>
   </div>
 {:else}
-  <div bind:this={container} style="width:100%;height:600px;border-radius:12px;border:1px solid #e2e8f0"></div>
+  <div bind:this={container} style="width:100%;height:100%;border-radius:var(--radius)"></div>
 {/if}
 
