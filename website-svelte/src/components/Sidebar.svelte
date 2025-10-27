@@ -1,12 +1,28 @@
 <script lang="ts">
-  import { activeLabels, activeArchetypes, relationshipFilters, mechanicFilter, searchTerm, labelOptions, archetypeOptions, mechanicOptions, toggleInSet } from '../stores/graph';
+  import { activeLabels, activeArchetypes, relationshipFilters, mechanicFilter, searchTerm, labelOptions, archetypeOptions, mechanicOptions, toggleInSet, searchResults, selectedNodeId } from '../stores/graph';
   const REL_OPTIONS = ['STRONG_AGAINST','WEAK_AGAINST','EVEN_AGAINST'];
+  function onMechanicChange(e: Event){
+    const value = (e.target as HTMLSelectElement).value;
+    mechanicFilter.set(value || null);
+  }
+  function onSearchInput(e: Event){ searchTerm.set((e.target as HTMLInputElement).value); }
 </script>
 
 <aside style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem;display:grid;gap:1rem">
   <section>
     <h2>Search</h2>
-    <input data-testid="search" placeholder="Search nodes..." type="search" bind:value={$searchTerm} style="width:100%;padding:0.45rem;border:1px solid #cbd5f5;border-radius:8px" />
+    <input data-testid="search" placeholder="Search nodes..." type="search" value={$searchTerm} on:input={onSearchInput} style="width:100%;padding:0.45rem;border:1px solid #cbd5f5;border-radius:8px" />
+    {#if $searchTerm && $searchResults && $searchResults.length > 0}
+      <ul style="margin-top:0.5rem;list-style:none;padding:0;display:grid;gap:0.25rem">
+        {#each $searchResults.slice(0, 10) as n}
+          <li>
+            <button class="link-button" on:click={() => selectedNodeId.set(n.id)} aria-label={(n.properties?.['name'] ?? n.id)}>
+              {n.properties?.['name'] ?? n.id}
+            </button>
+          </li>
+        {/each}
+      </ul>
+    {/if}
   </section>
 
   <section>
@@ -38,7 +54,7 @@
 
   <section>
     <h2>Mechanic Filter</h2>
-    <select bind:value={$mechanicFilter} on:change={(e)=>mechanicFilter.set((e.target as HTMLSelectElement).value||null)}>
+    <select value={$mechanicFilter || ''} on:change={onMechanicChange}>
       <option value="">All mechanics</option>
       {#each $mechanicOptions as m}
         <option value={m}>{m}</option>
@@ -46,4 +62,3 @@
     </select>
   </section>
 </aside>
-

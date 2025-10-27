@@ -38,7 +38,14 @@ export const searchResults = derived([fuse, searchTerm], ([f, term]) => {
 export function initGraph(data: GraphData) {
   const g = new Graph({ type: 'undirected' });
   data.nodes.forEach(n => g.addNode(n.id, { raw: n }));
-  data.edges.forEach(e => { if (!g.hasEdge(e.id)) g.addEdgeWithKey(e.id, e.source, e.target, { raw: e }); });
+  const seen = new Set<string>();
+  data.edges.forEach(e => {
+    const a = e.source, b = e.target;
+    const key = a < b ? `${a}|${b}` : `${b}|${a}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    if (!g.hasEdge(e.id)) g.addEdgeWithKey(e.id, a, b, { raw: e });
+  });
   graphData.set(data);
   graph.set(g);
 }

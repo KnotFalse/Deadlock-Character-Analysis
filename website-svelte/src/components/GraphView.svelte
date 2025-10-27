@@ -9,7 +9,7 @@
   let container: HTMLDivElement;
   let sigma: Sigma | null = null;
 
-  const lightMode = typeof window !== 'undefined' && Boolean((window as any).__GRAPH_LIGHT_MODE__);
+  let lightMode = false;
 
   // Local mirrors of store values for highlighting
   let _neighborIds = new Set<string>();
@@ -45,6 +45,7 @@
   }
 
   onMount(() => {
+    lightMode = typeof window !== 'undefined' && Boolean((window as any).__GRAPH_LIGHT_MODE__);
     if (lightMode) return;
     if (!data) return;
     const g = new Graph({ type: 'undirected', allowSelfLoops: true });
@@ -69,6 +70,9 @@
     sigma = new Sigma(g, container, { renderLabels: true });
     sigma.on('clickNode', (e) => { selectedNodeId.set(e.node as string); selectedEdgeId.set(null); });
     sigma.on('clickEdge', (e) => { selectedEdgeId.set(e.edge as string); });
+    // Clear selection when clicking the empty stage
+    // @ts-ignore - types for getMouseCaptor may vary
+    sigma.getMouseCaptor().on('clickStage', () => { selectedNodeId.set(null); selectedEdgeId.set(null); });
 
     // Subscribe to store changes and re-apply highlights
     const unsubs = [

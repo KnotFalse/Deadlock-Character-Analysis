@@ -17,16 +17,15 @@
     data = d;
     (window as any).__GRAPH_DATA__ = d;
   });
-  $: gd = $graphData;
-  $: results = $searchResults;
+  // Avoid reactive assignments that produce orphan effects in Svelte 5
 </script>
 
 <div class="app">
   <h1>Deadlock Graph Explorer (Svelte)</h1>
-  {#if !gd}
+  {#if !$graphData}
     <p>Loading graph data…</p>
   {:else}
-    <p>Generated: {new Date(gd.meta.generated_at).toLocaleString()} • Nodes: {gd.meta.node_count} • Edges: {gd.meta.edge_count}</p>
+    <p>Generated: {new Date($graphData.meta.generated_at).toLocaleString()} • Nodes: {$graphData.meta.node_count} • Edges: {$graphData.meta.edge_count}</p>
     <div style="display:grid;grid-template-columns:320px 1fr;gap:1rem">
       <Sidebar />
       <section>

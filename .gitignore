@@ -17,3 +17,9 @@ temp/
 
 # Logs
 agent-logs/*.tmp
+
+# Website (Svelte) build artifacts
+website-svelte/node_modules/
+website-svelte/dist/
+website-svelte/playwright-report/
+website-svelte/test-results/
