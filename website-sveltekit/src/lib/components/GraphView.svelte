@@ -77,13 +77,15 @@
         raw: n,
       });
     });
+    // Guard against duplicate edges in data (some exports may repeat the same id)
     data.edges.forEach((e) => {
-      if (g.hasNode(e.source) && g.hasNode(e.target))
-        g.addEdgeWithKey(e.id, e.source, e.target, {
-          label: e.type,
-          color: '#94a3b8',
-          raw: e,
-        });
+      if (!g.hasNode(e.source) || !g.hasNode(e.target)) return;
+      if (g.hasEdge(e.id)) return; // skip duplicates by key
+      g.addEdgeWithKey(e.id, e.source, e.target, {
+        label: e.type,
+        color: '#94a3b8',
+        raw: e,
+      });
     });
     sigma = new Sigma(g, container, { renderLabels: true });
     sigma.on('clickNode', (e) => { selectedNodeId.set(e.node as string); selectedEdgeId.set(null); });
