@@ -41,12 +41,12 @@ CI users can reuse .github/workflows/sanity.yml, which runs scripts/run_sanity_c
 
 ## Web Apps
 
-- React (Vite) explorer — Live site on GitHub Pages. Stable reference while we migrate.
-- Svelte 5 + SvelteKit v2 (CSR + adapter-static) — Previewed via CI artifacts only. Does not deploy to Pages yet.
+- Svelte 5 + SvelteKit v2 (CSR + adapter-static) — Live on GitHub Pages: https://knotfalse.github.io/Deadlock-Character-Analysis/
+- React (Vite) explorer — Deprecated and frozen for reference only (`website/` directory). Not deployed.
 
 Key policies:
-- Keep React Pages as the public site until SvelteKit meets parity (all e2e green, schema validation enforced, docs updated).
-- SvelteKit previews are attached to PRs as downloadable artifacts. Open `index.html` locally to view (CSR).
+- SvelteKit is the canonical site. CI validates `static/graph.json` against the JSON Schema, runs Playwright smoke tests, then deploys via `actions/deploy-pages` on pushes to `main` that touch `website-sveltekit/**`.
+- For fork PRs, a preview artifact of the built site is uploaded; a separate, fork‑safe workflow comments a summary with node/edge counts.
 
 ## Static Site Explorer
 
@@ -80,8 +80,8 @@ The `website/` directory hosts a Vite + React frontend that consumes the exporte
 
 ## Deployment
 
-- React Pages: `.github/workflows/pages-deploy.yml` builds `website/dist` and publishes to GitHub Pages.
-- SvelteKit previews: `.github/workflows/website-sveltekit-build.yml` builds, runs Playwright, uploads `build/` as an artifact, and comments on PRs with a link. No Pages deploy from SvelteKit yet.
+- SvelteKit Pages deploy: `.github/workflows/pages-deploy-sveltekit.yml` builds, validates schema, runs Playwright, uploads the static site, and deploys to GitHub Pages.
+- CI build + tests (non-deploy): `.github/workflows/website-sveltekit-build.yml` runs on PRs and pushes for fast feedback and preview artifacts.
 
 To perform a manual preview without the workflow:
 ```bash

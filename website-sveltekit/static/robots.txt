@@ -1,3 +1,4 @@
 # allow crawling everything by default
+# updated: 2025-10-27 for Pages redeploy
 User-agent: *
 Disallow:
