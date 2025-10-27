@@ -1,0 +1,61 @@
+name: comment preview on workflow_run (fork-safe)
+
+on:
+  workflow_run:
+    workflows: ["website-sveltekit build and test"]
+    types: ["completed"]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  post-preview-comment:
+    # Only when the triggering run succeeded, was for a pull_request, and the head repo is a fork
+    if: >-
+      ${{ github.event.workflow_run.conclusion == 'success' &&
+          github.event.workflow_run.event == 'pull_request' &&
+          github.event.workflow_run.head_repository.fork == true }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post comment with counts (fork-safe)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const run = context.payload.workflow_run;
+            const prs = run.pull_requests || [];
+            if (!prs.length) {
+              core.info('No associated PRs found on workflow_run; skipping.');
+              return;
+            }
+            const pr = prs[0];
+            const headRepo = run.head_repository; // fork repo
+            const ownerRepo = headRepo.full_name.split('/');
+            const owner = ownerRepo[0];
+            const repo = ownerRepo[1];
+            const ref = run.head_sha;
+            let counts = { nodes: 'unknown', edges: 'unknown', generated: 'unknown' };
+            try {
+              const res = await github.rest.repos.getContent({ owner, repo, path: 'website-sveltekit/static/graph.json', ref });
+              // getContent returns { content, encoding }
+              const b64 = res.data.content;
+              const buf = Buffer.from(b64, 'base64');
+              const j = JSON.parse(buf.toString('utf8'));
+              counts.nodes = j?.meta?.node_count ?? (j?.nodes?.length ?? 'unknown');
+              counts.edges = j?.meta?.edge_count ?? (j?.edges?.length ?? 'unknown');
+              counts.generated = j?.meta?.generated_at ?? 'unknown';
+            } catch (e) {
+              core.warning(`Could not read graph.json from fork @ ${owner}/${repo}@${ref}: ${e.message}`);
+            }
+            const runUrl = run.html_url || `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${run.id}`;
+            const body = [
+              'Preview build artifact uploaded (fork PR).',
+              '',
+              `• Nodes: ${counts.nodes}  • Edges: ${counts.edges}  • Generated: ${counts.generated}`,
+              `• Run artifacts: ${runUrl}`,
+              '• Artifact name: website-sveltekit-build',
+              '',
+              'Download the artifact and open index.html locally to preview (CSR only).'
+            ].join('\n');
+            await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: pr.number, body });
+
