@@ -16,7 +16,7 @@
   <section style="display:grid;gap:0.5rem">
     <h2>Path Tools</h2>
     <label class="muted" for="start">Start node</label>
-    <select id="start" value={$pathStart || ''} on:change={onStartChange}>
+    <select id="start" data-testid="path-start" value={$pathStart || ''} on:change={onStartChange}>
       <option value="">Select start…</option>
       {#each Object.entries(grouped($graphData)) as [label, nodes]}
         <optgroup label={label}>
@@ -27,7 +27,7 @@
       {/each}
     </select>
     <label class="muted" for="end">End node</label>
-    <select id="end" value={$pathEnd || ''} on:change={onEndChange}>
+    <select id="end" data-testid="path-end" value={$pathEnd || ''} on:change={onEndChange}>
       <option value="">Select end…</option>
       {#each Object.entries(grouped($graphData)) as [label, nodes]}
         <optgroup label={label}>
@@ -57,7 +57,7 @@
       </section>
     {/if}
     {#if $pathStart && $pathEnd && $shortestPath.length===0}
-      <p class="muted">No connection found between the chosen nodes.</p>
+      <p class="muted" data-testid="no-path">No connection found between the chosen nodes.</p>
     {/if}
   </section>
 {/if}

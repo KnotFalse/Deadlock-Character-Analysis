@@ -22,16 +22,16 @@
 
 {#if $graphData}
   {#if $selectedNodeId}
-    <section class="relationship-summary">
+    <section class="relationship-summary" role="region" aria-label="Matchup Relationships">
       <h3>Matchup Relationships</h3>
       {#each REL as type}
         {#if group($graphData,$selectedNodeId)[type].length}
-          <div class="relationship-group">
+          <div class="relationship-group" data-testid={`rel-group-${type.toLowerCase()}`} role="list" aria-label={type.replace('_',' ')}>
             <p class="muted">{type.replace('_',' ')}</p>
             <ul>
               {#each group($graphData,$selectedNodeId)[type] as e}
                 {#key e.id}
-                <li>
+                <li role="listitem">
                   <button class="link-button relationship" class:active={$selectedEdgeId===e.id} on:click={() => selectedEdgeId.set(e.id)}>
                     {(e.source===$selectedNodeId? '→ ' : '← ') + label($graphData, e.source=== $selectedNodeId ? e.target : e.source)}
                     {#if evidence(e) !== 0}<span class="muted"> • {evidence(e)}</span>{/if}

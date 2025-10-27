@@ -26,17 +26,15 @@
   function applyHighlightsNow(){
     if (!sigma || !data) return;
     if (typeof window !== 'undefined' && (window as any).__PERF_LOG__) {
-      const marks = (window as any).__PERF_PENDING_MARK__ as string | undefined;
-      if (marks) {
-        try {
-          performance.measure(marks.replace('-start',''), marks);
-        } catch {}
-        (window as any).__PERF_PENDING_MARK__ = undefined;
-      }
-      // also handle simple one-shot marks like 'neighbor-toggle' or 'search-input'
       const simple = (window as any).__PERF_SIMPLE_MARK__ as string | undefined;
       if (simple) {
-        try { performance.measure(simple, simple); } catch {}
+        try {
+          // measure duration since mark and log
+          performance.measure(simple, simple);
+          const entries = performance.getEntriesByName(simple);
+          const last = entries[entries.length - 1];
+          if (last) console.log(`[perf] ${simple}: ${last.duration.toFixed(1)}ms`);
+        } catch {}
         (window as any).__PERF_SIMPLE_MARK__ = undefined;
       }
     }

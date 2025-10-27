@@ -1,7 +1,7 @@
 import { test, expect, Page } from '@playwright/test';
 
 const initLightMode = async (page: Page) => {
-  await page.addInitScript(() => { (window as any).__GRAPH_LIGHT_MODE__ = true; });
+  await page.addInitScript(() => { (window as any).__GRAPH_LIGHT_MODE__ = true; (window as any).__PERF_LOG__ = true; (window as any).__PERF_LOG__ = true; });
 };
 
 const waitForApp = async (page: Page) => {
@@ -53,3 +53,4 @@ test('Svelte explorer — core interactions', async ({ page }) => {
     await expect(select).toHaveValue(mechValue);
   }
 });
+

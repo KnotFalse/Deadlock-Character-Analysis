@@ -21,7 +21,8 @@ test('Relationship detail drawer opens and clears', async ({ page }) => {
   await waitForApp(page);
 
   await searchFor(page, 'Abrams');
-  const rel = page.locator('.relationship-summary .relationship').first();
+  const relGroup = page.getByTestId('rel-group-strong_against');
+  const rel = relGroup.locator('.relationship').first();
   await expect(rel).toBeVisible();
   await rel.click();
 
@@ -29,3 +30,4 @@ test('Relationship detail drawer opens and clears', async ({ page }) => {
   await page.getByRole('button', { name: 'Clear', exact: true }).click();
   await expect(page.getByText('Relationship Detail')).toHaveCount(0);
 });
+
