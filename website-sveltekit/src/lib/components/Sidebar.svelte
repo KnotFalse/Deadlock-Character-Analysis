@@ -6,10 +6,15 @@
     mechanicFilter.set(value || null);
   }
   let searchTimer: any = null;
+  let focusedIndex = -1;
   function onSearchInput(e: Event){
     const value = (e.target as HTMLInputElement).value;
     if (searchTimer) clearTimeout(searchTimer);
-    searchTimer = setTimeout(()=> searchTerm.set(value), 200);
+    searchTimer = setTimeout(()=> { 
+      if (typeof window !== 'undefined' && (window as any).__PERF_LOG__) { performance.mark('search-input'); (window as any).__PERF_SIMPLE_MARK__ = 'search-input'; }
+      focusedIndex = -1; 
+      searchTerm.set(value);
+    }, 200);
   }
 </script>
 
@@ -27,9 +32,9 @@
     }} />
     {#if $searchTerm && $searchResults && $searchResults.length > 0}
       <ul role="listbox" id="search-results" data-testid="search-results" style="margin-top:0.5rem;list-style:none;padding:0;display:grid;gap:0.25rem">
-        {#each $searchResults.slice(0, 10) as n}
-          <li role="option">
-            <button class="link-button" on:click={() => selectedNodeId.set(n.id)} aria-label={(n.properties?.['name'] ?? n.id)}>
+        {#each $searchResults.slice(0, 10) as n, i}
+          <li role="option" aria-selected={i===focusedIndex}>
+            <button class="link-button" on:click={() => selectedNodeId.set(n.id)} aria-label={(n.properties?.['name'] ?? n.id)} on:focus={() => focusedIndex = i}>
               {n.properties?.['name'] ?? n.id}
             </button>
           </li>
@@ -40,7 +45,7 @@
 
   <section>
     <h2>Neighbor Mode</h2>
-    <label><input data-testid="neighbor-toggle" type="checkbox" checked={$neighborMode} on:change={() => neighborMode.set(!$neighborMode)} /> Highlight neighbors of selection</label>
+    <label><input data-testid="neighbor-toggle" type="checkbox" checked={$neighborMode} on:change={() => { if (typeof window!=='undefined' && (window as any).__PERF_LOG__) { performance.mark('neighbor-toggle'); (window as any).__PERF_SIMPLE_MARK__='neighbor-toggle'; } neighborMode.set(!$neighborMode); }} /> Highlight neighbors of selection</label>
   </section>
 
   <section>

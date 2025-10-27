@@ -25,6 +25,21 @@
   let rafScheduled = false;
   function applyHighlightsNow(){
     if (!sigma || !data) return;
+    if (typeof window !== 'undefined' && (window as any).__PERF_LOG__) {
+      const marks = (window as any).__PERF_PENDING_MARK__ as string | undefined;
+      if (marks) {
+        try {
+          performance.measure(marks.replace('-start',''), marks);
+        } catch {}
+        (window as any).__PERF_PENDING_MARK__ = undefined;
+      }
+      // also handle simple one-shot marks like 'neighbor-toggle' or 'search-input'
+      const simple = (window as any).__PERF_SIMPLE_MARK__ as string | undefined;
+      if (simple) {
+        try { performance.measure(simple, simple); } catch {}
+        (window as any).__PERF_SIMPLE_MARK__ = undefined;
+      }
+    }
     const g = sigma.getGraph();
     g.forEachNode((n)=>{
       const base = g.getNodeAttribute(n,'color') as string;
