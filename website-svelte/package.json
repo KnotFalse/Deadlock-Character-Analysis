@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:e2e": "npm run build && playwright test",
+    "test:e2e:ci": "npm run build && playwright test --reporter=list"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6",
+    "@playwright/test": "^1.48.0",
     "svelte": "^5.0.0",
     "typescript": "~5.9.3",
     "vite": "^5.4.0"
@@ -19,5 +22,8 @@
     "graphology": "^0.26.0",
     "graphology-shortest-path": "^2.1.0",
     "sigma": "^3.0.2"
+  },
+  "overrides": {
+    "@sveltejs/vite-plugin-svelte": "^4.0.0-next.6"
   }
 }

@@ -43,6 +43,11 @@ export function initGraph(data: GraphData) {
   graph.set(g);
 }
 
+// Expose selection to window for tests
+if (typeof window !== 'undefined') {
+  selectedNodeId.subscribe((v)=>{ (window as any).__GRAPH_SELECTED_NODE__ = v; });
+}
+
 // Options
 export const labelOptions = derived(graphData, g => g ? Object.keys(g.meta.label_distribution).sort((a,b)=>a.localeCompare(b)) : []);
 export const archetypeOptions = derived(graphData, g => g ? Object.keys(g.meta.archetype_counts).sort((a,b)=>a.localeCompare(b)) : []);

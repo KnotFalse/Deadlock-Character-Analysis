@@ -4,11 +4,48 @@
   import Graph from 'graphology';
   import type { GraphData } from '../types';
   import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults } from '../stores/graph';
+  import { tick } from 'svelte';
   export let data: GraphData | null = null;
   let container: HTMLDivElement;
   let sigma: Sigma | null = null;
 
+  const lightMode = typeof window !== 'undefined' && Boolean((window as any).__GRAPH_LIGHT_MODE__);
+
+  // Local mirrors of store values for highlighting
+  let _neighborIds = new Set<string>();
+  let _neighborEdgeIds = new Set<string>();
+  let _path = new Set<string>();
+  let _pathEdges = new Set<string>();
+  let _metricSizes = new Map<string, number>();
+  let _metricColors = new Map<string, string>();
+  let _searchIds = new Set<string>();
+  let _selNode: string | null = null;
+  let _selEdge: string | null = null;
+
+  function applyHighlights(){
+    if (!sigma || !data) return;
+    const g = sigma.getGraph();
+    g.forEachNode((n)=>{
+      const base = g.getNodeAttribute(n,'color') as string;
+      let color = _metricColors.get(n) ?? base;
+      let size = _metricSizes.get(n) ?? (g.getNodeAttribute(n,'size') as number);
+      if (_searchIds.size>0) color = _searchIds.has(n) ? '#60a5fa' : '#cbd5f5';
+      if (_neighborIds.has(n)) { color = '#34d399'; size = size + 0.9; }
+      if (_path.has(n)) { color = '#facc15'; size = size + 1.1; }
+      if (_selNode && n===_selNode) { color = '#f97316'; size = size + 1.3; }
+      g.setNodeAttribute(n,'color',color); g.setNodeAttribute(n,'size',size);
+    });
+    g.forEachEdge((e)=>{
+      const base = g.getEdgeAttribute(e,'color') as string; let color = base; let size = (g.getEdgeAttribute(e,'size') as number) ?? 1;
+      if (_neighborEdgeIds.has(e)) { color='#34d399'; size = Math.max(size, 1.75); }
+      if (_pathEdges.has(e)) { color='#facc15'; size = Math.max(size, 2); }
+      if (_selEdge && e===_selEdge) { color='#f97316'; size = Math.max(size, 2.25); }
+      g.setEdgeAttribute(e,'color',color); g.setEdgeAttribute(e,'size',size);
+    });
+  }
+
   onMount(() => {
+    if (lightMode) return;
     if (!data) return;
     const g = new Graph({ type: 'undirected', allowSelfLoops: true });
     data.nodes.forEach((n) => {
@@ -32,28 +69,34 @@
     sigma = new Sigma(g, container, { renderLabels: true });
     sigma.on('clickNode', (e) => { selectedNodeId.set(e.node as string); selectedEdgeId.set(null); });
     sigma.on('clickEdge', (e) => { selectedEdgeId.set(e.edge as string); });
+
+    // Subscribe to store changes and re-apply highlights
+    const unsubs = [
+      neighborIds.subscribe(v=>{ _neighborIds = new Set(v); applyHighlights(); }),
+      neighborEdgeIds.subscribe(v=>{ _neighborEdgeIds = new Set(v); applyHighlights(); }),
+      shortestPath.subscribe(v=>{ _path = new Set(v); applyHighlights(); }),
+      pathEdgeIds.subscribe(v=>{ _pathEdges = new Set(v); applyHighlights(); }),
+      metricSizes.subscribe(v=>{ _metricSizes = new Map(v); applyHighlights(); }),
+      metricColors.subscribe(v=>{ _metricColors = new Map(v); applyHighlights(); }),
+      searchResults.subscribe(v=>{ _searchIds = new Set((v||[]).map((n:any)=>n.id)); applyHighlights(); }),
+      selectedNodeId.subscribe(v=>{ _selNode = v; applyHighlights(); }),
+      selectedEdgeId.subscribe(v=>{ _selEdge = v; applyHighlights(); }),
+    ];
+    // Initial paint after mount
+    tick().then(applyHighlights);
+    // Clean up subscriptions on destroy
+    onDestroy(()=>{ unsubs.forEach(u=>u()); });
   });
   onDestroy(() => { sigma?.kill(); sigma = null; });
-  $: if (sigma && data) {
-    const g = sigma.getGraph();
-    const neighborSet = $neighborIds; const neighborEdgeSet = $neighborEdgeIds; const pathSet = new Set($shortestPath); const pathEdges = $pathEdgeIds; const mSizes = $metricSizes; const mColors = $metricColors; const srch = new Set($searchResults.map(n=>n.id));
-    g.forEachNode((n)=>{
-      const baseColor = g.getNodeAttribute(n,'color') as string;
-      let color = mColors.get(n) ?? baseColor; let size = mSizes.get(n) ?? g.getNodeAttribute(n,'size');
-      if (srch.size>0) color = srch.has(n) ? '#60a5fa' : '#cbd5f5';
-      if (neighborSet.has(n)) { color = '#34d399'; size = (size as number)+0.9; }
-      if (pathSet.has(n)) { color = '#facc15'; size = (size as number)+1.1; }
-      if ($selectedNodeId && n===$selectedNodeId) { color = '#f97316'; size = (size as number)+1.3; }
-      g.setNodeAttribute(n,'color',color); g.setNodeAttribute(n,'size',size as number);
-    });
-    g.forEachEdge((e)=>{
-      const base = g.getEdgeAttribute(e,'color') as string; let color = base; let size = g.getEdgeAttribute(e,'size') as number ?? 1;
-      if (neighborEdgeSet.has(e)) { color='#34d399'; size = Math.max(size, 1.75); }
-      if (pathEdges.has(e)) { color='#facc15'; size = Math.max(size, 2); }
-      if ($selectedEdgeId && e===$selectedEdgeId) { color='#f97316'; size = Math.max(size, 2.25); }
-      g.setEdgeAttribute(e,'color',color); g.setEdgeAttribute(e,'size',size);
-    });
-  }
 </script>
 
-<div bind:this={container} style="width:100%;height:600px;border-radius:12px;border:1px solid #e2e8f0"></div>
+{#if lightMode}
+  <div data-testid="graph-light-mode" style="width:100%;height:600px;border-radius:12px;border:1px solid #e2e8f0;display:grid;place-items:center;background:#f8fafc;color:#64748b;text-align:center">
+    <div>
+      <p>Graph rendering disabled for CI run.</p>
+      <p class="muted small">Interactive canvas loads in standard builds.</p>
+    </div>
+  </div>
+{:else}
+  <div bind:this={container} style="width:100%;height:600px;border-radius:12px;border:1px solid #e2e8f0"></div>
+{/if}
