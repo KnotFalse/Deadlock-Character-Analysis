@@ -10,7 +10,7 @@
 
   let data: GraphData | null = null;
   onMount(async () => {
-    const res = await fetch('/graph.json', { cache: 'no-store' });
+    const res = await fetch('graph.json', { cache: 'no-store' });
     const d = (await res.json()) as GraphData;
     initGraph(d);
     data = d;
