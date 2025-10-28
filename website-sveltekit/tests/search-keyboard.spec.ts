@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { waitForApp } from './utils/app';
 
 const initLightMode = async (page) => {
   await page.addInitScript(() => { (window).__GRAPH_LIGHT_MODE__ = true; });
@@ -6,8 +7,7 @@ const initLightMode = async (page) => {
 
 test('Keyboard selects first search result', async ({ page }) => {
   await initLightMode(page);
-  await page.goto('/');
-  await page.waitForLoadState('networkidle');
+  await waitForApp(page);
 
   const search = page.getByTestId('search');
   await search.fill('Abrams');

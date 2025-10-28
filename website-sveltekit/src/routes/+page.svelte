@@ -4,25 +4,28 @@
   import PathTools from '$lib/components/PathTools.svelte';
   import RelationshipPanel from '$lib/components/RelationshipPanel.svelte';
   import AnalyticsPanel from '$lib/components/AnalyticsPanel.svelte';
-  import { initGraph, graphData } from '$lib/stores/graph';
+  import { initGraph, graphData, appReady } from '$lib/stores/graph';
   import type { GraphData } from '$lib/types';
-  const props = $props<{ data: { graph: GraphData } }>();
+  const props = $props<{ data: { graph: GraphData|null; loadError?: string } }>();
   const graph = $derived(() => props.data?.graph as GraphData | undefined);
   $effect(() => {
     const g = graph;
     if (g) {
       initGraph(g);
       if (typeof window !== 'undefined') (window as any).__GRAPH_DATA__ = g;
+      if (typeof window !== 'undefined') console.info('[app] graph ready');
     }
   });
+  $effect(() => { if ($appReady && typeof window !== 'undefined') (window as any).__GRAPH_READY__ = true; });
+  $effect(() => { const e = (props.data as any)?.loadError; if (e && typeof window !== 'undefined') (window as any).__GRAPH_LOAD_ERROR__ = e; });
 </script>
 
 <div id="app" class="app">
   <h1>Deadlock Graph Explorer (SvelteKit)</h1>
   {#if !$graphData}
-    <p>Loading graph data…</p>
+    <p>Loading graph data.</p>
   {:else}
-    <p class="muted small">Generated: {new Date($graphData.meta.generated_at).toLocaleString()} • Nodes: {$graphData.meta.node_count} • Edges: {$graphData.meta.edge_count}</p>
+    <p class="muted small">Generated: {new Date($graphData.meta.generated_at).toLocaleString()} · Nodes: {$graphData.meta.node_count} · Edges: {$graphData.meta.edge_count}</p>
     <div class="grid-2">
       <Sidebar />
       <section>
@@ -38,4 +41,11 @@
       </section>
     </div>
   {/if}
+  {#if (props.data as any)?.loadError}
+    <p class="muted small" data-testid="load-error">Load error: {(props.data as any).loadError}</p>
+  {/if}
+  {#if $appReady}
+    <div data-testid="app-ready" style="display:none"></div>
+  {/if}
 </div>
+

@@ -7,6 +7,7 @@ import type { GraphData, GraphNode, GraphEdge } from '$lib/types';
 // Core graph data
 export const graphData = writable<GraphData | null>(null);
 export const graph = writable<Graph | null>(null);
+export const appReady = writable<boolean>(false);
 
 // Filters & selections
 export const searchTerm = writable('');
@@ -48,6 +49,7 @@ export function initGraph(data: GraphData) {
   });
   graphData.set(data);
   graph.set(g);
+  appReady.set(true);
 }
 
 // Expose selection to window for tests

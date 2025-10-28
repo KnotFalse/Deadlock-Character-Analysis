@@ -1,31 +1,17 @@
 import { test, expect, Page } from '@playwright/test';
+import { waitForApp, searchFor } from './utils/app';
 
 const initLightMode = async (page: Page) => {
   await page.addInitScript(() => { (window as any).__GRAPH_LIGHT_MODE__ = true; (window as any).__PERF_LOG__ = true; (window as any).__PERF_LOG__ = true; });
 };
 
-const waitForApp = async (page: Page) => {
-  await page.waitForLoadState('networkidle');
-  await page.waitForSelector('#app', { state: 'attached', timeout: 20000 });
-  // Search box is present once Svelte has mounted and fetched.
-  await expect(page.getByPlaceholder('Search nodes...')).toBeVisible({ timeout: 20000 });
-};
-
-const searchFor = async (page: Page, name: string) => {
-  const search = page.getByPlaceholder('Search nodes...');
-  await expect(search).toBeVisible();
-  await search.fill(name);
-  await page.getByTestId('search-results').waitFor({ state: 'visible' });
-  await page.getByTestId('search-results').getByRole('option', { name: new RegExp(`${name}`, 'i') }).first().click();
-};
+// helpers imported
 
 test('Svelte explorer — core interactions', async ({ page }) => {
   page.on('console', (m) => console.log(`[browser:${m.type()}] ${m.text()}`));
   page.on('pageerror', (e) => console.log(`[pageerror] ${e.message}`));
   await initLightMode(page);
-  await page.goto('/');
   await waitForApp(page);
-
   await searchFor(page, 'Abrams');
   await expect(page.locator('.relationship-summary')).toBeVisible();
 

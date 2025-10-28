@@ -1,15 +1,11 @@
 import { test, expect } from '@playwright/test';
+import { waitForApp } from './utils/app';
 
 const initLightMode = async (page) => {
   await page.addInitScript(() => { (window).__GRAPH_LIGHT_MODE__ = true; });
 };
 
-const waitForApp = async (page) => {
-  await page.goto('/');
-  await page.waitForLoadState('networkidle');
-  await page.waitForSelector('#app');
-  await expect(page.getByTestId('analytics-header')).toBeVisible();
-};
+// waitForApp imported
 
 test('Analytics toggles render ranking lists', async ({ page }) => {
   await initLightMode(page);

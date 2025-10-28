@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
+import { waitForApp } from './utils/app';
 
 test('No-path message appears for identical start/end', async ({ page }) => {
   await page.addInitScript(() => { (window as any).__GRAPH_LIGHT_MODE__ = true; });
-  await page.goto('/');
-  await page.waitForLoadState('networkidle');
+  await waitForApp(page);
 
   // Choose a deterministic character
   await page.getByTestId('search').fill('Abrams');

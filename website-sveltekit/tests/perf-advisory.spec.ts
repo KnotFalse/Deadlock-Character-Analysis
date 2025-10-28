@@ -1,4 +1,5 @@
 import { test, expect, Page } from '@playwright/test';
+import { waitForApp } from './utils/app';
 
 const init = async (page: Page) => {
   await page.addInitScript(() => { (window as any).__GRAPH_LIGHT_MODE__ = true; (window as any).__PERF_LOG__ = true; });
@@ -14,8 +15,7 @@ test('Perf advisories — neighbor and search (non-gating)', async ({ page }) =>
   await init(page);
   const logs: string[] = [];
   page.on('console', m => { if (m.type() === 'log') logs.push(m.text()); });
-  await page.goto('/');
-  await page.waitForLoadState('networkidle');
+  await waitForApp(page);
 
   // Trigger neighbor once
   await page.getByTestId('search').fill('Abrams');

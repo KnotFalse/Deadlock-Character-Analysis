@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
+import { waitForApp } from './utils/app';
 
 test('Path Tools combobox: type to select; path renders; clear resets', async ({ page }) => {
   await page.addInitScript(() => { (window as any).__GRAPH_LIGHT_MODE__ = true; });
-  await page.goto('/');
-  await page.waitForLoadState('networkidle');
+  await waitForApp(page);
 
   // Start: choose Abrams
   const start = page.getByTestId('path-start');
@@ -29,4 +29,3 @@ test('Path Tools combobox: type to select; path renders; clear resets', async ({
   await clearButtons.first().click();
   await expect(page.getByTestId('path-start')).toHaveValue('');
 });
-
