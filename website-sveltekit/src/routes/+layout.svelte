@@ -1,7 +1,7 @@
 <script lang="ts">
   import favicon from '$lib/assets/favicon.svg';
   import '../app.css';
-  let { children } = $props();
+  const props = $props<{ children?: any }>();
   let theme = $state<'dark'|'light'>('dark');
   function applyTheme(t: 'dark'|'light'){
     theme = t;
@@ -23,5 +23,5 @@
   <div style="display:flex;justify-content:flex-end;margin-bottom:var(--gap-sm)">
     <button class="button button--pill" onclick={toggleTheme} aria-label="Toggle theme">{theme==='dark' ? 'Dark' : 'Light'} mode</button>
   </div>
-  {@render children?.()}
+  {@render props.children?.()}
   </div>

@@ -107,3 +107,18 @@ Addendum 2025-10-28 — E2E Readiness Fix Plan (no E2E-only codepaths)
   - pp-ready sentinel appears and tests proceed without relying on “Generated:” header.
   - No pageerrors related to props or orEach on undefined during test runs.
   - Entire Playwright suite passes locally and in CI without disabling or skipping tests.
+---
+
+Progress 2025-10-28 — Implementation & Verification
+- Always render Sidebar; gate right-hand panels on `$appReady` (GraphView, PathTools, RelationshipPanel, Analytics).
+- Deterministic readiness markers: visible `<div data-testid="app-ready">` only when ready; window flags `__GRAPH_DATA__`, `__GRAPH_READY__` (plus alias `GRAPH_READY`), and `__GRAPH_LOAD_ERROR__` set.
+- Hydration safety: GraphView iterates `props.data?.(nodes|edges) ?? []` and keeps light-mode early return; RelationshipPanel guards `gd.edges` and tolerates missing labels; derived stores short-circuit on null graph.
+- Combobox a11y finalized: `aria-activedescendant`, stable option ids, `role="option"` with keyboard activation; removed auto-refocus to avoid overlapping listboxes in Path Tools.
+- Relationship panel open control uses a native `<button>` for a11y; headings include selected name; layout is 3-column on desktop and stacks on mobile.
+- Svelte 5 runes/Kit idioms migration complete in app components; imports normalized to `$lib/**`; no `on:*` in app code.
+- Build + svelte-check clean; Playwright suite 10/10 green locally; CI policies in place for Pages deploy.
+
+Acceptance (confirmed 2025-10-28)
+- app-ready sentinel present post-ready; Sidebar visible early; Search input available.
+- No runtime "props is not defined" or "forEach of undefined" during tests.
+- Full Playwright suite green (no skips). Pages deploy job includes non-gating health probe.

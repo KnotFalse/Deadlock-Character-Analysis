@@ -1,13 +1,14 @@
 import { test, expect } from '@playwright/test';
+import type { Page } from '@playwright/test';
 import { waitForApp } from './utils/app';
 
-const initLightMode = async (page) => {
+const initLightMode = async (page: Page) => {
   await page.addInitScript(() => { (window).__GRAPH_LIGHT_MODE__ = true; });
 };
 
 // waitForApp imported
 
-const getFilteredCount = async (page) => page.evaluate(() => (window).__GRAPH_FILTERED_NODE_COUNT__ ?? null);
+const getFilteredCount = async (page: Page) => page.evaluate(() => (window as any).__GRAPH_FILTERED_NODE_COUNT__ ?? null);
 
 test('Mechanic filter reduces visible nodes', async ({ page }) => {
   await initLightMode(page);

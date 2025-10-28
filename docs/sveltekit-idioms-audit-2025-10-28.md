@@ -5,7 +5,7 @@ Scope: website-sveltekit/** as of branch `feature/ui-bugfix-and-ux-pass`.
 ## Deviations and Recommendations
 
 1) Event directives (prefer runes DOM props)
-- Current: `on:click`, `on:change` in several components.
+- Current (original): `on:click`, `on:change` in several components.
 - Files:
   - src/routes/+layout.svelte:24
   - src/lib/components/AnalyticsPanel.svelte:25,37,50,63
@@ -15,13 +15,13 @@ Scope: website-sveltekit/** as of branch `feature/ui-bugfix-and-ux-pass`.
   - Reference: Svelte overview examples use `onclick` property on elements (not `on:click`). See https://svelte.dev/docs/svelte. 
 
 2) Props definition (prefer `$props` over `export let`)
-- Current: `export let data` in GraphView.svelte.
+- Current (original): `export let data` in GraphView.svelte.
 - File: src/lib/components/GraphView.svelte:8
 - Do: `const { data } = $props<{ data: GraphData | null }>();`
   - Reference: `$props` rune — https://svelte.dev/docs/svelte/%24props
 
 3) Local component state (prefer `$state` / `$derived` when template-reactive)
-- Current: plain `let` for state that influences markup.
+- Current (original): plain `let` for state that influences markup.
 - Files (non-exhaustive):
   - src/routes/+layout.svelte (theme)
   - src/lib/components/ui/Combobox.svelte (filtered computed via function)
@@ -29,31 +29,44 @@ Scope: website-sveltekit/** as of branch `feature/ui-bugfix-and-ux-pass`.
   - References: `$state` — https://svelte.dev/docs/svelte/%24state, `$derived` — https://svelte.dev/docs/svelte/%24derived, `$effect` — https://svelte.dev/docs/svelte/%24effect
 
 4) Aliases/imports (prefer `$lib` over absolute `/types`)
-- Current: `import type { ... } from '/types'`.
+- Current (original): `import type { ... } from '/types`.
 - File: src/lib/stores/graph.ts:5
 - Do: `import type { ... } from '$lib/types';`
   - Reference: `$lib` alias — https://svelte.dev/docs/kit/%24lib
 
 5) Data fetching (prefer `+page.ts` load over `onMount` when possible)
-- Current: CSR `onMount(() => fetch('graph.json'))`.
+- Current (original): CSR `onMount(() => fetch('graph.json'))`.
 - File: src/routes/+page.svelte
 - Do: Move to `+page.ts` `load` (`export const ssr = false` can remain). Keeps future SSR option open and aligns with Kit idioms.
   - Reference: SvelteKit load — https://svelte.dev/docs/kit/load
 
 6) Combobox a11y structure (aria-activedescendant and option ids)
-- Current: button inside li for role=option; no `aria-activedescendant` ID wiring.
+- Current (original): button inside li for role=option; no `aria-activedescendant` ID wiring.
 - File: src/lib/components/ui/Combobox.svelte
 - Do: Assign stable `id` per option; manage `aria-activedescendant` on input; use role=option on the item node (not nested button) with `aria-selected`.
   - Reference: WAI-ARIA 1.2 combobox pattern (non‑Svelte). Keep Svelte runes for behavior.
 
 7) Theming side effects with runes
-- Current: manual DOM write + localStorage in +layout.svelte; fine under `ssr=false` but mixed with `on:click`.
+- Current (original): manual DOM write + localStorage in +layout.svelte; fine under `ssr=false` but mixed with `on:click`.
 - File: src/routes/+layout.svelte
 - Do: use `$state` for `theme`, and property `onclick`. Keep browser guard for DOM/localStorage access.
   - Reference: Runes overview — https://svelte.dev/docs/svelte/what-are-runes
 
 8) Consistent `$lib` imports in components
-- Current: mix of `$lib/...` and relative `../stores/graph`.
+- Current (original): mix of `$lib/...` and relative `../stores/graph`.
+
+---
+
+## Resolution (2025-10-28)
+
+- Property-style events: addressed in app components (`onclick`, `oninput`, etc.).
+- Props via `$props`: addressed (e.g., GraphView + page/layout components).
+- Local reactive state: `$state`/`$derived` used where template-reactive; perf caches kept local intentionally.
+- Imports: normalized to `$lib/**`; no `'/types'` or bare absolute imports remain.
+- Data loading: moved to `+page.ts` `load` (CSR-only). SSR remains disabled as intended.
+- Combobox a11y: `aria-activedescendant` wired; stable option `id`s; `role="option"` on li; keyboard activation supported.
+- Theming: layout uses `$state` and property events; DOM/localStorage guarded.
+- Lint/typecheck: `svelte-check` clean; build succeeds.
 - Files: src/lib/components/AnalyticsPanel.svelte (and potentially others)
 - Do: normalize to `$lib/...` for lib imports.
   - Reference: `$lib` alias — https://svelte.dev/docs/kit/%24lib

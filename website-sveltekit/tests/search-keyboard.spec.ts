@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
+import type { Page } from '@playwright/test';
 import { waitForApp } from './utils/app';
 
-const initLightMode = async (page) => {
+const initLightMode = async (page: Page) => {
   await page.addInitScript(() => { (window).__GRAPH_LIGHT_MODE__ = true; });
 };
 

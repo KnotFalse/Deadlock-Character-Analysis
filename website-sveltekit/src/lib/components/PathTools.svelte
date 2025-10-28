@@ -3,7 +3,18 @@
   import type { GraphNode } from '$lib/types';
   import Combobox from '$lib/components/ui/Combobox.svelte';
   function nodeLabel(n: GraphNode): string { const name = (n.properties && (n.properties as any)['name']); return typeof name === 'string' ? name : n.id; }
-  function items(){ if (!$graphData) return []; return $graphData.nodes.map((n:GraphNode)=>({ label: nodeLabel(n)+` (${n.label})`, value: n.id })); }
+  function items(){
+    if (!$graphData) return [];
+    const sorted = $graphData.nodes.slice().sort((a: GraphNode, b: GraphNode) => {
+      const pri = (x: GraphNode) => (x.label === 'Character' ? 0 : x.label === 'Ability' ? 1 : x.label === 'Mechanic' ? 2 : 3);
+      const pa = pri(a), pb = pri(b);
+      if (pa !== pb) return pa - pb;
+      const la = nodeLabel(a).toLowerCase();
+      const lb = nodeLabel(b).toLowerCase();
+      return la.localeCompare(lb);
+    });
+    return sorted.map((n:GraphNode)=>({ label: nodeLabel(n)+` (${n.label})`, value: n.id }));
+  }
   function startLabel(){ if (!$graphData || !$pathStart) return ''; const n=$graphData.nodes.find(n=>n.id===$pathStart); return n? nodeLabel(n)+` (${n.label})`:''; }
   function endLabel(){ if (!$graphData || !$pathEnd) return ''; const n=$graphData.nodes.find(n=>n.id===$pathEnd); return n? nodeLabel(n)+` (${n.label})`:''; }
   function onStartSelect(v:string){ setPathStart(v||null); }

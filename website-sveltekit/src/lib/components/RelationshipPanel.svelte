@@ -1,9 +1,10 @@
 <script lang="ts">
-  function selectedName(gd, sel){ if (!gd || !sel) return ''; return label(gd, sel); }
+  import type { GraphData } from '$lib/types';
+  function selectedName(gd: GraphData | null, sel: string | null){ if (!gd || !sel) return ''; return label(gd, sel); }
   import { graphData, selectedNodeId, selectedEdgeId } from '$lib/stores/graph';
   import type { GraphEdge } from '$lib/types';
   const REL = ['STRONG_AGAINST','WEAK_AGAINST','EVEN_AGAINST'];
-  function group(gd, sel){
+  function group(gd: GraphData | null, sel: string | null){
     const out: Record<string, GraphEdge[]> = { STRONG_AGAINST:[], WEAK_AGAINST:[], EVEN_AGAINST:[] } as any;
     if (!gd || !sel || !gd.edges) return out;
     (gd.edges ?? []).forEach((e: GraphEdge)=>{
@@ -16,7 +17,7 @@
     }));
     return out;
   }
-  function label(gd, id){ const n = gd.nodes.find((x)=>x.id===id); return (n?.properties?.['name'] as string) ?? id; }
+  function label(gd: GraphData, id: string){ const n = gd.nodes.find((x)=>x.id===id); return (n?.properties?.['name'] as string) ?? id; }
   function reason(e: GraphEdge){
     const rs = (e.properties?.['reasons'] as string[]|undefined) || [];
     if (rs.length) return rs.join(' • ');

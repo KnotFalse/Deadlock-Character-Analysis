@@ -242,12 +242,30 @@
 
 ## Web Apps (Policy Addendum)
 
-- React (Vite) explorer is the live GitHub Pages site and remains the public reference until SvelteKit reaches parity.
-- Svelte 5 + SvelteKit v2 runs as a CSR-only static build (adapter-static) and is previewed via CI artifacts on pull requests. It does not deploy to Pages yet.
+- Svelte 5 + SvelteKit v2 is the canonical site and deploys to GitHub Pages from `main` (adapter-static, relative paths). The deploy workflow validates the graph schema and runs Playwright before publishing.
+- The older React (Vite) explorer under `website/` is deprecated and retained only for historical reference.
 
-### Parity Criteria and Cutover Checklist
-- SvelteKit CI enforces schema validation for graph.json and runs the Playwright suite (smoke, neighbor, analytics, mechanic, relationship, keyboard search).
-- Docs updated (README and this plan) with policy and commands.
+### CI/Deploy Policy
+- On push to `main` (paths affecting `website-sveltekit/**`), CI:
+  - Validates `static/graph.json` against the JSON Schema (`npm run validate:graph`).
+  - Builds and runs the Playwright suite (headless Chromium via preview server).
+  - Uploads and deploys the static site to Pages.
+
+### Readiness & A11y Contract (SvelteKit)
+- App readiness:
+  - Sidebar always renders; right-hand panels (GraphView, PathTools, RelationshipPanel, Analytics) are gated behind `$appReady`.
+  - A visible sentinel `<div data-testid="app-ready">` is appended when `$appReady` flips to `true`.
+  - Window markers: `window.__GRAPH_DATA__`, `window.__GRAPH_READY__` (and alias `window.GRAPH_READY`), and `window.__GRAPH_LOAD_ERROR__` are set deterministically for test helpers.
+- Hydration safety:
+  - Components iterate `(props.data?.nodes ?? [])` and `(props.data?.edges ?? [])`; RelationshipPanel guards missing edges and labels; derived stores short-circuit on null graph data.
+- Svelte 5/SvelteKit idioms:
+  - Use `$props/$state/$derived` runes and property-style event handlers (`onclick`, `oninput`, etc.). No `export let` in app components.
+  - `graph.json` is fetched in `+page.ts` (`ssr=false`, `prerender=true`).
+
+### Acceptance
+- CI green on graph validation + Playwright suite (smoke, neighbor, analytics, mechanic, relationship, keyboard search, path tools).
+- No runtime hydration errors (e.g., "forEach of undefined", "props is not defined").
+- Pages deploy completes; root and `_app/version.json` probe succeed.
 - Export pipeline opens PRs to refresh `website-sveltekit/static/graph.json` with schema gates and SvelteKit build/tests.
 
 When all criteria are consistently green on main, mark the SPA (`website/`) as legacy in README and freeze changes for two weeks before removal/archive.

@@ -2,7 +2,7 @@
   import { onMount, onDestroy } from 'svelte';
   import Sigma from 'sigma';
   import Graph from 'graphology';
-  import type { GraphData } from '$lib/types';
+  import type { GraphData, GraphNode, GraphEdge } from '$lib/types';
   import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults, visibleNodeIds, filteredEdges } from '$lib/stores/graph';
   import { tick } from 'svelte';
   const props = $props<{ data: GraphData | null }>();
@@ -26,7 +26,7 @@
 
   let rafScheduled = false;
   function applyHighlightsNow(){
-    if (!sigma || !data) return;
+    if (!sigma || !props.data) return;
     if (typeof window !== 'undefined' && (window as any).__PERF_LOG__) {
       const simple = (window as any).__PERF_SIMPLE_MARK__ as string | undefined;
       if (simple) {
@@ -89,11 +89,11 @@
   onMount(() => {
     lightMode = typeof window !== 'undefined' && Boolean((window as any).__GRAPH_LIGHT_MODE__);
     if (lightMode) return;
-    if (!data) return;
+    if (!props.data) return;
     const g = new Graph({ type: 'undirected', allowSelfLoops: true });
     const css = getComputedStyle(document.documentElement);
     const labelCol = css.getPropertyValue('--graph-label')?.trim?.() || css.getPropertyValue('--text')?.trim?.() || '#e5e7eb';
-    (props.data?.nodes ?? []).forEach((n) => {
+    (props.data?.nodes ?? []).forEach((n: GraphNode) => {
       g.addNode(n.id, {
         label: (n.properties?.name as string) ?? n.id,
         x: n.x ?? Math.random() * 10,
@@ -107,7 +107,7 @@
     });
     // Guard against duplicate edges in data (by id and by node pair)
     const seenPairs = new Set<string>();
-    (props.data?.edges ?? []).forEach((e) => {
+    (props.data?.edges ?? []).forEach((e: GraphEdge) => {
       const { source, target } = e;
       if (!g.hasNode(source) || !g.hasNode(target)) return;
       // Pair-level dedupe for simple graphs (normalize order for undirected drawing)
@@ -137,7 +137,8 @@
       ctx.fillStyle = col;
       ctx.fillText(label, Math.round(x + size + 4), Math.round(y));
     };
-    sigma = new Sigma(g, container, { renderLabels: true, labelColor: { attribute: 'labelColor' }, defaultDrawNodeHover: drawHover });
+    if (!container) return;
+    sigma = new Sigma(g, container as HTMLElement, { renderLabels: true, labelColor: { attribute: 'labelColor' }, defaultDrawNodeHover: drawHover });
     sigma.on('clickNode', (e) => { selectedNodeId.set(e.node as string); selectedEdgeId.set(null); });
     sigma.on('clickEdge', (e) => { selectedEdgeId.set(e.edge as string); });
     // Clear selection when clicking the empty stage

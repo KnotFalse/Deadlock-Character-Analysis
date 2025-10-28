@@ -12,30 +12,29 @@
   const listId = props.listId ?? 'cbx-list';
   let uid = $state(Math.random().toString(36).slice(2));
 
-  const filtered = $derived((): Item[] => {
+  let filtered = $state<Item[]>([]);
+  $effect(() => {
     const list = props.items ?? [];
     const q = query.trim().toLowerCase();
     const limit = props.maxItems ?? 10;
-    if (!q) return list.slice(0, limit);
-    return list.filter(i => i.label.toLowerCase().includes(q)).slice(0, limit);
+    filtered = (q ? list.filter((i: Item) => i.label.toLowerCase().includes(q)) : list).slice(0, limit);
   });
   function selectAt(idx: number) {
-    const list = filtered;
+    const list: Item[] = filtered;
     if (idx < 0 || idx >= list.length) return;
     const it = list[idx];
     currentValue = it.label;
     open = false;
     activeIndex = -1;
     props.onSelect?.(it.value, it);
-    // Keep keyboard focus in the input for faster repeated actions
-    inputEl?.focus();
+    // Do not refocus automatically; avoids reopening onfocus lists in other comboboxes
   }
   function clear() {
     query = '';
     currentValue = '';
     activeIndex = -1;
     props.onSelect?.('', undefined);
-    inputEl?.focus();
+    // Do not refocus automatically
   }
   function onInput(e: Event) {
     const v = (e.target as HTMLInputElement).value;
