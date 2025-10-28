@@ -39,21 +39,28 @@
       }
     }
     const g = sigma.getGraph();
+    // Read CSS vars once per run to avoid repeated style recalcs
+    const docStyles = typeof document !== 'undefined' ? getComputedStyle(document.documentElement) : ({} as any);
+    const colSearch = (docStyles.getPropertyValue?.('--graph-search')?.trim?.() || '#60a5fa');
+    const colDeemph = (docStyles.getPropertyValue?.('--graph-deemph')?.trim?.() || '#cbd5f5');
+    const colNeighbor = (docStyles.getPropertyValue?.('--graph-neighbor')?.trim?.() || '#34d399');
+    const colPath = (docStyles.getPropertyValue?.('--graph-path')?.trim?.() || '#facc15');
+    const colSelected = (docStyles.getPropertyValue?.('--graph-selected')?.trim?.() || '#f97316');
     g.forEachNode((n)=>{
       const base = g.getNodeAttribute(n,'color') as string;
       let color = _metricColors.get(n) ?? base;
       let size = _metricSizes.get(n) ?? (g.getNodeAttribute(n,'size') as number);
-      if (_searchIds.size>0) color = _searchIds.has(n) ? getComputedStyle(document.documentElement).getPropertyValue('--graph-search').trim() || '#60a5fa' : getComputedStyle(document.documentElement).getPropertyValue('--graph-deemph').trim() || '#cbd5f5';
-      if (_neighborIds.has(n)) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-neighbor').trim() || '#34d399'; size = size + 0.9; }
-      if (_path.has(n)) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-path').trim() || '#facc15'; size = size + 1.1; }
-      if (_selNode && n===_selNode) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-selected').trim() || '#f97316'; size = size + 1.3; }
+      if (_searchIds.size>0) color = _searchIds.has(n) ? colSearch : colDeemph;
+      if (_neighborIds.has(n)) { color = colNeighbor; size = size + 0.9; }
+      if (_path.has(n)) { color = colPath; size = size + 1.1; }
+      if (_selNode && n===_selNode) { color = colSelected; size = size + 1.3; }
       g.setNodeAttribute(n,'color',color); g.setNodeAttribute(n,'size',size);
     });
     g.forEachEdge((e)=>{
       const base = g.getEdgeAttribute(e,'color') as string; let color = base; let size = (g.getEdgeAttribute(e,'size') as number) ?? 1;
-      if (_neighborEdgeIds.has(e)) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-neighbor').trim() || '#34d399'; size = Math.max(size, 1.75); }
-      if (_pathEdges.has(e)) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-path').trim() || '#facc15'; size = Math.max(size, 2); }
-      if (_selEdge && e===_selEdge) { color = getComputedStyle(document.documentElement).getPropertyValue('--graph-selected').trim() || '#f97316'; size = Math.max(size, 2.25); }
+      if (_neighborEdgeIds.has(e)) { color = colNeighbor; size = Math.max(size, 1.75); }
+      if (_pathEdges.has(e)) { color = colPath; size = Math.max(size, 2); }
+      if (_selEdge && e===_selEdge) { color = colSelected; size = Math.max(size, 2.25); }
       g.setEdgeAttribute(e,'color',color); g.setEdgeAttribute(e,'size',size);
     });
   }

@@ -15,10 +15,8 @@ const searchFor = async (page: Page, name: string) => {
   const search = page.getByPlaceholder('Search nodes...');
   await expect(search).toBeVisible();
   await search.fill(name);
-  await page.waitForTimeout(200);
-  const result = page.getByRole('button', { name: new RegExp(`${name}`, 'i') }).first();
-  await expect(result).toBeVisible({ timeout: 15000 });
-  await result.click();
+  await page.getByTestId('search-results').waitFor({ state: 'visible' });
+  await page.getByTestId('search-results').getByRole('option', { name: new RegExp(`${name}`, 'i') }).first().click();
 };
 
 test('Svelte explorer — core interactions', async ({ page }) => {
@@ -49,8 +47,8 @@ test('Svelte explorer — core interactions', async ({ page }) => {
   const mechValue = (await mechBtn.textContent())?.trim();
   await mechBtn.click();
   if (mechValue) {
-    const select = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Mechanic Filter' }) }).locator('select');
-    await expect(select).toHaveValue(mechValue);
+    const combo = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Mechanic Filter' }) }).locator('input[role="combobox"]');
+    await expect(combo).toHaveValue(mechValue);
   }
 });
 

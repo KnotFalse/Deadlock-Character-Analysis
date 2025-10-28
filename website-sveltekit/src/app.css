@@ -100,3 +100,22 @@ p { margin: 0 0 var(--gap-md); }
 .metric-row { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
 .metric-value { color: var(--muted); }
 .metric-caption { margin: 0 0 0.25rem; color: var(--muted); font-size: var(--fs-sm); }
+
+/* Sidebar density */
+.sidebar { position: sticky; top: var(--gap-md); height: calc(100vh - 2*var(--gap-lg)); overflow-y: auto; display: grid; gap: var(--gap-md); }
+.section { display: grid; gap: var(--gap-sm); }
+.list-reset { list-style: none; padding: 0; margin: 0; }
+.scroll-y { max-height: 240px; overflow-y: auto; }
+
+/* Checkbox rows */
+.checkbox-row { display: flex; align-items: center; gap: 8px; min-height: 40px; cursor: pointer; }
+input[type="checkbox"] { accent-color: var(--primary); }
+
+/* Combobox */
+.cbx { position: relative; }
+.cbx-input { position: relative; }
+.cbx-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: transparent; border: none; color: var(--muted); cursor: pointer; }
+.cbx-clear:hover { color: var(--text); }
+.cbx-list { position: absolute; left: 0; right: 0; top: calc(100% + 4px); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow-1); max-height: 220px; overflow-y: auto; z-index: 30; }
+.cbx-option { width: 100%; text-align: left; background: transparent; color: var(--text); border: none; padding: 0.5rem 0.65rem; cursor: pointer; }
+.cbx-option[aria-selected="true"], .cbx-option:hover { background: color-mix(in oklab, var(--surface), #ffffff 6%); }
