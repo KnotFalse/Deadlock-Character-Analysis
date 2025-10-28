@@ -31,7 +31,7 @@
     query = '';
     currentValue = '';
     activeIndex = -1;
-    onSelect?.('', undefined);
+    props.onSelect?.('', undefined);
     inputEl?.focus();
   }
   function onInput(e: Event) {
