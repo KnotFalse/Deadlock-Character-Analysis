@@ -1,5 +1,9 @@
 # Agent Implementation Plan: Deadlock Character Graph Database (v3 - Final)
 
+> Addendum (2025-10-27): Web App UX/A11y Next Steps
+>
+> See docs/NEXT-STEPS-UI-UX.md for the current, focused plan to finalize the SvelteKit explorer (bugs, a11y, mobile, and readability). Data pipeline aggregation and strict validation are complete; the remaining work targets UI/UX.
+
 ## 0. User Pre-Flight (Manual Steps)
 
 **Objective:** To be executed by the _human user_ before handing off to the agent. This resolves the agent's lack of shell access.
