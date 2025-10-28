@@ -6,10 +6,10 @@
   import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults, visibleNodeIds, filteredEdges } from '$lib/stores/graph';
   import { tick } from 'svelte';
   const { data } = $props<{ data: GraphData | null }>();
-  let container: HTMLDivElement;
+  let container = $state<HTMLDivElement | undefined>(undefined);
   let sigma: Sigma | null = null;
 
-  let lightMode = false;
+  let lightMode = $state(false);
 
   // Local mirrors of store values for highlighting
   let _neighborIds = new Set<string>();

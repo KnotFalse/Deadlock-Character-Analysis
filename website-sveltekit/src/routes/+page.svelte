@@ -7,11 +7,10 @@
   import { initGraph, graphData } from '$lib/stores/graph';
   import type { GraphData } from '$lib/types';
   const props = $props<{ data: { graph: GraphData } }>();
-  let data: GraphData | null = null;
+  const graph = $derived(() => props.data?.graph as GraphData | undefined);
   $effect(() => {
-    const g = props.data?.graph as GraphData | undefined;
+    const g = graph;
     if (g) {
-      data = g;
       initGraph(g);
       if (typeof window !== 'undefined') (window as any).__GRAPH_DATA__ = g;
     }
@@ -27,7 +26,7 @@
     <div class="grid-2">
       <Sidebar />
       <section>
-        <div class="card graph-card"><GraphView {data} /></div>
+        <div class="card graph-card"><GraphView data={graph ?? null} /></div>
         <div class="card" style="margin-top:var(--gap-md); display:grid; gap:var(--gap-md)">
           <PathTools />
           <details>

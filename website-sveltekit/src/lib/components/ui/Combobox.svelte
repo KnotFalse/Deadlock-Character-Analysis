@@ -90,7 +90,7 @@
   {#if open}
     <ul id={listId} class="cbx-list" role="listbox" data-testid={props.testIdList}>
       {#each filtered as it, i}
-        <li id={`${listId}-opt-${uid}-${i}`} class="cbx-option" role="option" aria-selected={i===activeIndex ? 'true' : 'false'} onclick={() => selectAt(i)}>
+        <li id={`${listId}-opt-${uid}-${i}`} class="cbx-option" role="option" aria-selected={i===activeIndex ? 'true' : 'false'} onclick={() => selectAt(i)} onkeydown={(e) => { if (e.key==='Enter' || e.key===' ') { e.preventDefault(); selectAt(i); } }} tabindex="0">
           {it.label}
         </li>
       {/each}
