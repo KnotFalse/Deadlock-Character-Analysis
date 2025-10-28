@@ -26,6 +26,8 @@
     open = false;
     activeIndex = -1;
     props.onSelect?.(it.value, it);
+    // Keep keyboard focus in the input for faster repeated actions
+    inputEl?.focus();
   }
   function clear() {
     query = '';

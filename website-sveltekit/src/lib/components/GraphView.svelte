@@ -3,7 +3,7 @@
   import Sigma from 'sigma';
   import Graph from 'graphology';
   import type { GraphData } from '$lib/types';
-  import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults } from '$lib/stores/graph';
+  import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults, visibleNodeIds, filteredEdges } from '$lib/stores/graph';
   import { tick } from 'svelte';
   export let data: GraphData | null = null;
   let container: HTMLDivElement;
@@ -21,6 +21,8 @@
   let _searchIds = new Set<string>();
   let _selNode: string | null = null;
   let _selEdge: string | null = null;
+  let _visibleNodes = new Set<string>();
+  let _visibleEdgeIds = new Set<string>();
 
   let rafScheduled = false;
   function applyHighlightsNow(){
@@ -39,6 +41,19 @@
       }
     }
     const g = sigma.getGraph();
+    // 1) Apply visibility from filters
+    if (_visibleNodes.size > 0) {
+      g.forEachNode((n) => {
+        const show = _visibleNodes.has(n);
+        g.setNodeAttribute(n, 'hidden', !show);
+      });
+    }
+    if (_visibleEdgeIds.size > 0) {
+      g.forEachEdge((e) => {
+        const show = _visibleEdgeIds.has(e);
+        g.setEdgeAttribute(e, 'hidden', !show);
+      });
+    }
     // Read CSS vars once per run to avoid repeated style recalcs
     const docStyles = typeof document !== 'undefined' ? getComputedStyle(document.documentElement) : ({} as any);
     const colSearch = (docStyles.getPropertyValue?.('--graph-search')?.trim?.() || '#60a5fa');
@@ -46,10 +61,12 @@
     const colNeighbor = (docStyles.getPropertyValue?.('--graph-neighbor')?.trim?.() || '#34d399');
     const colPath = (docStyles.getPropertyValue?.('--graph-path')?.trim?.() || '#facc15');
     const colSelected = (docStyles.getPropertyValue?.('--graph-selected')?.trim?.() || '#f97316');
+    // 2) Apply color/size styling (always compute from baseSize)
     g.forEachNode((n)=>{
-      const base = g.getNodeAttribute(n,'color') as string;
-      let color = _metricColors.get(n) ?? base;
-      let size = _metricSizes.get(n) ?? (g.getNodeAttribute(n,'size') as number);
+      const baseColor = g.getNodeAttribute(n,'color') as string;
+      let color = _metricColors.get(n) ?? baseColor;
+      const baseSize = (g.getNodeAttribute(n,'baseSize') as number) ?? (g.getNodeAttribute(n,'size') as number);
+      let size = _metricSizes.get(n) ?? baseSize;
       if (_searchIds.size>0) color = _searchIds.has(n) ? colSearch : colDeemph;
       if (_neighborIds.has(n)) { color = colNeighbor; size = size + 0.9; }
       if (_path.has(n)) { color = colPath; size = size + 1.1; }
@@ -80,6 +97,7 @@
         x: n.x ?? Math.random() * 10,
         y: n.y ?? Math.random() * 10,
         size: n.size,
+        baseSize: n.size,
         color: getComputedStyle(document.documentElement).getPropertyValue('--graph-node').trim() || '#334155',
         raw: n,
       });
@@ -119,6 +137,8 @@
       searchResults.subscribe(v=>{ _searchIds = new Set((v||[]).map((n:any)=>n.id)); scheduleApply(); }),
       selectedNodeId.subscribe(v=>{ _selNode = v; scheduleApply(); }),
       selectedEdgeId.subscribe(v=>{ _selEdge = v; scheduleApply(); }),
+      visibleNodeIds.subscribe(v=>{ _visibleNodes = new Set(v as any); scheduleApply(); }),
+      filteredEdges.subscribe(v=>{ _visibleEdgeIds = new Set((v as any[]).map((e:any)=>e.id)); scheduleApply(); }),
     ];
     // Initial paint after mount
     tick().then(scheduleApply);

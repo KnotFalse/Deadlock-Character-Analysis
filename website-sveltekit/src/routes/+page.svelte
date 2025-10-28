@@ -28,9 +28,12 @@
       <Sidebar />
       <section>
         <div class="card graph-card"><GraphView {data} /></div>
-        <div class="card" style="margin-top:var(--gap-md)">
+        <div class="card" style="margin-top:var(--gap-md); display:grid; gap:var(--gap-md)">
           <PathTools />
-          <RelationshipPanel />
+          <details>
+            <summary class="link-button" style="list-style:none;cursor:pointer">Relationship Panel</summary>
+            <div style="margin-top:0.5rem"><RelationshipPanel /></div>
+          </details>
           <AnalyticsPanel />
         </div>
       </section>

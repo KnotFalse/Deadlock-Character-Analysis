@@ -10,9 +10,13 @@ test('No-path message appears for identical start/end', async ({ page }) => {
   await page.getByTestId('search-results').waitFor({ state: 'visible' });
   await page.getByTestId('search-results').getByRole('option', { name: /Abrams/i }).first().click();
 
-  // Set both start and end to the same node id
-  await page.selectOption('#start', 'character:Abrams');
-  await page.selectOption('#end', 'character:Abrams');
+  // Set both start and end to the same node via comboboxes
+  const start = page.getByTestId('path-start');
+  await start.fill('Abrams');
+  await page.getByRole('option', { name: /Abrams/i }).first().click();
+  const end = page.getByTestId('path-end');
+  await end.fill('Abrams');
+  await page.getByRole('option', { name: /Abrams/i }).first().click();
 
   await expect(page.getByTestId('no-path')).toBeVisible();
 });

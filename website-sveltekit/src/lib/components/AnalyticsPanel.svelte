@@ -1,5 +1,12 @@
 <script lang="ts">
   import { metricMode, characterRankings, mechanicUsageRanking, selectedNodeId, mechanicFilter } from '../stores/graph';
+  import { graphData } from '$lib/stores/graph';
+  function nameFor(id: string): string {
+    const gd = $graphData as any;
+    if (!gd) return id;
+    const n = gd.nodes.find((x:any)=>x.id===id);
+    return (n?.properties?.['name'] as string) ?? id;
+  }
   import { get } from 'svelte/store';
   const OPTIONS = [
     { value: 'default', label: 'Default', desc: 'Static layout sizes; label-based colors.' },
@@ -27,7 +34,7 @@
         {#each $characterRankings.outDegree.slice(0,10) as r}
           <li>
             <div class="metric-row">
-              <button class="link-button" on:click={() => selectedNodeId.set(r.id)}>{r.id}</button>
+              <button class="link-button" on:click={() => selectedNodeId.set(r.id)}>{nameFor(r.id)}</button>
               <span class="metric-value">{r.value}</span>
             </div>
           </li>
@@ -40,7 +47,7 @@
         {#each $characterRankings.strongCount.slice(0,10) as r}
           <li>
             <div class="metric-row">
-              <button class="link-button" on:click={() => selectedNodeId.set(r.id)}>{r.id}</button>
+              <button class="link-button" on:click={() => selectedNodeId.set(r.id)}>{nameFor(r.id)}</button>
               <span class="metric-value">{r.value}</span>
             </div>
           </li>
