@@ -23,12 +23,12 @@
   {#if !$graphData}
     <p>Loading graph data…</p>
   {:else}
-    <p>Generated: {new Date($graphData.meta.generated_at).toLocaleString()} • Nodes: {$graphData.meta.node_count} • Edges: {$graphData.meta.edge_count}</p>
-    <div style="display:grid;grid-template-columns:320px 1fr;gap:1rem">
+    <p class="muted small">Generated: {new Date($graphData.meta.generated_at).toLocaleString()} • Nodes: {$graphData.meta.node_count} • Edges: {$graphData.meta.edge_count}</p>
+    <div class="grid-2">
       <Sidebar />
       <section>
-        <GraphView {data} />
-        <div class="details" style="background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1rem;margin-top:1rem">
+        <div class="card graph-card"><GraphView {data} /></div>
+        <div class="card" style="margin-top:var(--gap-md)">
           <PathTools />
           <RelationshipPanel />
           <AnalyticsPanel />
