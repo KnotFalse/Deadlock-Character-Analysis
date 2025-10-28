@@ -10,16 +10,17 @@
   let rootEl: HTMLDivElement;
   let inputEl: HTMLInputElement;
   const listId = props.listId ?? 'cbx-list';
+  let uid = $state(Math.random().toString(36).slice(2));
 
-  function filtered(): Item[] {
+  const filtered = $derived((): Item[] => {
     const list = props.items ?? [];
     const q = query.trim().toLowerCase();
     const limit = props.maxItems ?? 10;
     if (!q) return list.slice(0, limit);
     return list.filter(i => i.label.toLowerCase().includes(q)).slice(0, limit);
-  }
+  });
   function selectAt(idx: number) {
-    const list = filtered();
+    const list = filtered;
     if (idx < 0 || idx >= list.length) return;
     const it = list[idx];
     currentValue = it.label;
@@ -46,7 +47,7 @@
   }
   function onKey(e: KeyboardEvent) {
     if (!open && (e.key === 'ArrowDown' || e.key === 'Enter')) { open = true; }
-    const list = filtered();
+    const list = filtered;
     if (e.key === 'ArrowDown') {
       activeIndex = (activeIndex < 0) ? 0 : Math.min(activeIndex + 1, list.length - 1);
       e.preventDefault();
@@ -81,21 +82,19 @@
 <div class="cbx" bind:this={rootEl}>
   <div class="cbx-input">
     <input class="input" placeholder={props.placeholder ?? ''} bind:this={inputEl} value={currentValue} oninput={onInput} onkeydown={onKey} onfocus={() => (open = true)} onblur={onBlur}
-      role="combobox" aria-expanded={open ? 'true' : 'false'} aria-autocomplete="list" aria-controls={listId} data-testid={props.testIdInput} />
+      role="combobox" aria-expanded={open ? 'true' : 'false'} aria-autocomplete="list" aria-controls={listId} aria-activedescendant={open && activeIndex>=0 ? `${listId}-opt-${uid}-${activeIndex}` : undefined} data-testid={props.testIdInput} />
     {#if currentValue}
       <button class="cbx-clear" title="Clear" onclick={clear} aria-label="Clear">×</button>
     {/if}
   </div>
   {#if open}
     <ul id={listId} class="cbx-list" role="listbox" data-testid={props.testIdList}>
-      {#each filtered() as it, i}
-        <li>
-          <button class="cbx-option" role="option" aria-selected={i===activeIndex ? 'true' : 'false'} onclick={() => selectAt(i)}>
-            {it.label}
-          </button>
+      {#each filtered as it, i}
+        <li id={`${listId}-opt-${uid}-${i}`} class="cbx-option" role="option" aria-selected={i===activeIndex ? 'true' : 'false'} onclick={() => selectAt(i)}>
+          {it.label}
         </li>
       {/each}
-      {#if filtered().length === 0}
+      {#if filtered.length === 0}
         <li><div class="muted" style="padding:0.5rem 0.65rem">No matches</div></li>
       {/if}
     </ul>

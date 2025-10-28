@@ -5,7 +5,7 @@
   import type { GraphData } from '$lib/types';
   import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults, visibleNodeIds, filteredEdges } from '$lib/stores/graph';
   import { tick } from 'svelte';
-  export let data: GraphData | null = null;
+  const { data } = $props<{ data: GraphData | null }>();
   let container: HTMLDivElement;
   let sigma: Sigma | null = null;
 
@@ -122,7 +122,22 @@
         raw: e,
       });
     });
-    sigma = new Sigma(g, container, { renderLabels: true });
+    const drawHover = (ctx: CanvasRenderingContext2D, data: any, settings: any) => {
+      const label = data?.label as string | undefined;
+      if (!label) return;
+      const size = (data?.size as number) ?? 0;
+      const x = (data?.x as number) ?? 0;
+      const y = (data?.y as number) ?? 0;
+      const weight = settings?.labelWeight || 'normal';
+      const font = settings?.labelFont || 'Inter, system-ui, sans-serif';
+      const px = settings?.labelSize || 12;
+      ctx.font = `${weight} ${px}px ${font}`;
+      ctx.textBaseline = 'middle';
+      const col = (data?.labelColor as string) || (settings?.labelColor?.color) || '#e5e7eb';
+      ctx.fillStyle = col;
+      ctx.fillText(label, Math.round(x + size + 4), Math.round(y));
+    };
+    sigma = new Sigma(g, container, { renderLabels: true, labelColor: { attribute: 'labelColor' }, defaultDrawNodeHover: drawHover });
     sigma.on('clickNode', (e) => { selectedNodeId.set(e.node as string); selectedEdgeId.set(null); });
     sigma.on('clickEdge', (e) => { selectedEdgeId.set(e.edge as string); });
     // Clear selection when clicking the empty stage

@@ -2,7 +2,7 @@ import { writable, derived, get } from 'svelte/store';
 import Fuse from 'fuse.js';
 import Graph from 'graphology';
 import { bidirectional } from 'graphology-shortest-path';
-import type { GraphData, GraphNode, GraphEdge } from '/types';
+import type { GraphData, GraphNode, GraphEdge } from '$lib/types';
 
 // Core graph data
 export const graphData = writable<GraphData | null>(null);

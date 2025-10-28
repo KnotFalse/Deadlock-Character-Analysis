@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
   import GraphView from '$lib/components/GraphView.svelte';
   import Sidebar from '$lib/components/Sidebar.svelte';
   import PathTools from '$lib/components/PathTools.svelte';
@@ -7,14 +6,15 @@
   import AnalyticsPanel from '$lib/components/AnalyticsPanel.svelte';
   import { initGraph, graphData } from '$lib/stores/graph';
   import type { GraphData } from '$lib/types';
-
+  const props = $props<{ data: { graph: GraphData } }>();
   let data: GraphData | null = null;
-  onMount(async () => {
-    const res = await fetch('graph.json', { cache: 'no-store' });
-    const d = (await res.json()) as GraphData;
-    initGraph(d);
-    data = d;
-    (window as any).__GRAPH_DATA__ = d;
+  $effect(() => {
+    const g = props.data?.graph as GraphData | undefined;
+    if (g) {
+      data = g;
+      initGraph(g);
+      if (typeof window !== 'undefined') (window as any).__GRAPH_DATA__ = g;
+    }
   });
 </script>
 

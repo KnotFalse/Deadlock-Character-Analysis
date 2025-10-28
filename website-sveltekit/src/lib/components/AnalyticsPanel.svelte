@@ -22,7 +22,7 @@
     <h3>Analytics</h3>
     <div class="metric-toggle" data-testid="metric-toggle">
       {#each OPTIONS as o}
-        <button class="toggle-button" data-testid={`metric-${o.value}`} class:active={$metricMode===o.value} on:click={() => setMode(o.value)} aria-pressed={$metricMode===o.value}>{o.label}</button>
+        <button class="toggle-button" data-testid={`metric-${o.value}`} class:active={$metricMode===o.value} onclick={() => setMode(o.value)} aria-pressed={$metricMode===o.value}>{o.label}</button>
       {/each}
     </div>
   </div>
@@ -34,7 +34,7 @@
         {#each $characterRankings.outDegree.slice(0,10) as r}
           <li>
             <div class="metric-row">
-              <button class="link-button" on:click={() => selectedNodeId.set(r.id)}>{nameFor(r.id)}</button>
+              <button class="link-button" onclick={() => selectedNodeId.set(r.id)}>{nameFor(r.id)}</button>
               <span class="metric-value">{r.value}</span>
             </div>
           </li>
@@ -47,7 +47,7 @@
         {#each $characterRankings.strongCount.slice(0,10) as r}
           <li>
             <div class="metric-row">
-              <button class="link-button" on:click={() => selectedNodeId.set(r.id)}>{nameFor(r.id)}</button>
+              <button class="link-button" onclick={() => selectedNodeId.set(r.id)}>{nameFor(r.id)}</button>
               <span class="metric-value">{r.value}</span>
             </div>
           </li>
@@ -60,7 +60,7 @@
         {#each $mechanicUsageRanking.slice(0,10) as m}
           <li>
             <div class="metric-row">
-              <button class="link-button" on:click={() => mechanicFilter.set(m.name)}>{m.name}</button>
+              <button class="link-button" onclick={() => mechanicFilter.set(m.name)}>{m.name}</button>
               <span class="metric-value">{m.usage}</span>
             </div>
             <p class="metric-caption">Counters: {m.counter}</p>
