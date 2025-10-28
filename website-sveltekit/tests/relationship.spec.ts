@@ -13,7 +13,8 @@ const waitForApp = async (page) => {
 const searchFor = async (page, name) => {
   const search = page.getByTestId('search');
   await search.fill(name);
-  await page.getByRole('button', { name: new RegExp(name, 'i') }).first().click();
+  await expect(page.getByTestId('search-results')).toBeVisible();
+  await page.getByTestId('search-results').getByRole('option', { name: new RegExp(name, 'i') }).first().click();
 };
 
 test('Relationship detail drawer opens and clears', async ({ page }) => {

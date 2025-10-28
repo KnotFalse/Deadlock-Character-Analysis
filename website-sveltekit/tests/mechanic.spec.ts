@@ -17,8 +17,11 @@ test('Mechanic filter reduces visible nodes', async ({ page }) => {
   await waitForApp(page);
 
   const before = await getFilteredCount(page);
-  const select = page.locator('section:has(> h2:text("Mechanic Filter")) select');
-  await select.selectOption({ index: 1 }); // choose first mechanic option
+  const combo = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Mechanic Filter' }) }).locator('input[role="combobox"]');
+  await combo.fill('Barrier');
+  const list = page.locator('ul[role="listbox"]');
+  await expect(list).toBeVisible();
+  await page.getByRole('option').first().click();
   await page.waitForTimeout(150);
   const after = await getFilteredCount(page);
 

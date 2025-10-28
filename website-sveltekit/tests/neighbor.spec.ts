@@ -18,8 +18,8 @@ test('Neighbor mode toggles highlight state', async ({ page }) => {
   // pick a deterministic node via search
   const search = page.getByTestId('search');
   await search.fill('Abrams');
-  const result = page.getByRole('button', { name: /Abrams/i }).first();
-  await result.click();
+  await expect(page.getByTestId('search-results')).toBeVisible();
+  await page.getByTestId('search-results').getByRole('option', { name: /Abrams/i }).first().click();
 
   // toggle neighbor mode on
   const toggle = page.getByTestId('neighbor-toggle');

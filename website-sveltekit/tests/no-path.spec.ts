@@ -7,7 +7,8 @@ test('No-path message appears for identical start/end', async ({ page }) => {
 
   // Choose a deterministic character
   await page.getByTestId('search').fill('Abrams');
-  await page.getByRole('button', { name: /Abrams/i }).first().click();
+  await page.getByTestId('search-results').waitFor({ state: 'visible' });
+  await page.getByTestId('search-results').getByRole('option', { name: /Abrams/i }).first().click();
 
   // Set both start and end to the same node id
   await page.selectOption('#start', 'character:Abrams');
