@@ -56,13 +56,20 @@ Acceptance (minimum)
 
 Addendum 2025-10-28 — Runes/Kit Idioms Migration
 
-- Events → runes props: replace `on:*` with `onclick`, `onchange`, `oninput`, etc.
-- Props → `$props`: migrate `export let` in Svelte 5 components (e.g., GraphView).
-- Local state → `$state`/`$derived` where template uses values (e.g., Combobox `filtered`).
-- Imports: fix `'/types'` to `$lib/types` and normalize `$lib/**` imports.
-- Data load: consider moving `graph.json` fetch to `+page.ts` `load` to keep SSR path open.
-- Combobox a11y: add `aria-activedescendant` and option `id`s; simplify option roles.
+- Events → runes props: replace `on:*` with `onclick`, `onchange`, `oninput`, etc. (Svelte 5 runes style). Ref: Svelte overview uses `onclick` — svelte.dev/docs/svelte
+- Props → `$props`: migrate `export let` → `$props` in Svelte 5 components (e.g., GraphView). Ref: svelte.dev/docs/svelte/%24props
+- Local state → `$state`/`$derived` wherever template depends on it (e.g., Combobox `filtered`). Refs: svelte.dev/docs/svelte/%24state, /%24derived
+- Imports: fix `'/types'` → `$lib/types`; normalize `$lib/**` imports. Ref: svelte.dev/docs/kit/%24lib
+- Data load: move `graph.json` fetch to `+page.ts` `load` (keeping `ssr=false`); improves alignment with Kit data model. Ref: svelte.dev/docs/kit/load
+- Combobox a11y: add `aria-activedescendant` and option `id`s; apply role=option on the item; maintain `aria-selected`.
 - Labels legibility: finalize Sigma hover label background removal via renderer options.
+
+Acceptance (runes/Kit migration)
+- No usages of `on:*` remain under `website-sveltekit/src/**` (except third‑party code). All handlers use property style.
+- No `export let` in Svelte 5 components that render in our app; props declared via `$props`.
+- Combobox input sets `aria-activedescendant` while open and options have stable `id`s and correct roles.
+- All imports under `src/lib/**` use `$lib/...` (and `'/types'` is removed).
+- `+page.ts` has a `load` that fetches `graph.json`, and `+page.svelte` consumes the data.
 
 ---
 
