@@ -107,5 +107,4 @@ npx vite preview --host
   ```
 - CI runs `npm run test:e2e:ci` (headless Chromium, list reporter). Tests exercise search, neighbor highlighting, path selection, relationship detail, and analytics toggles. During Playwright runs the app automatically enables a “light” graph mode (no WebGL canvas) to avoid headless GPU noise; interactive rendering still loads normally in user builds.
 
-- Svelte (SPA exploration): see `website-svelte/` for local tests.
-- SvelteKit (target): `website-sveltekit/tests/` and CI. Validate `graph.json` via `npm run validate:graph` inside `website-sveltekit/`.
+- SvelteKit: `website-sveltekit/tests/` and CI. Validate `graph.json` via `npm run validate:graph` inside `website-sveltekit/`.
