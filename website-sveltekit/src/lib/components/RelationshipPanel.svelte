@@ -1,4 +1,5 @@
 <script lang="ts">
+  function selectedName(gd, sel){ if (!gd || !sel) return ''; return label(gd, sel); }
   import { graphData, selectedNodeId, selectedEdgeId } from '$lib/stores/graph';
   import type { GraphEdge } from '$lib/types';
   const REL = ['STRONG_AGAINST','WEAK_AGAINST','EVEN_AGAINST'];
@@ -33,15 +34,16 @@
   {#if $selectedNodeId}
     <section class="relationship-summary" aria-label="Matchup Relationships">
       <h3>Matchup Relationships</h3>
+      <div class="rel-grid">
       {#each REL as type}
         {#if group($graphData,$selectedNodeId)[type].length}
           <div class="relationship-group" data-testid={`rel-group-${type.toLowerCase()}`} role="list" aria-label={type.replace('_',' ')}>
-            <p class="muted">{type.replace('_',' ')}</p>
-            <ul>
+            <h4 class="rel-heading">{type.replace('_',' ')} {selectedName($graphData,$selectedNodeId)}</h4>
+            <ul class="rel-list">
               {#each group($graphData,$selectedNodeId)[type] as e}
                 {#key e.id}
-                <li role="listitem">
-                  <button class="link-button relationship" class:active={$selectedEdgeId===e.id} on:click={() => selectedEdgeId.set(e.id)}>
+                <li role="listitem" class="rel-item">
+                  <button class="link-button relationship" class:active={$selectedEdgeId===e.id} onclick={() => selectedEdgeId.set(e.id)}>
                     {(e.source===$selectedNodeId? '→ ' : '← ') + label($graphData, e.source=== $selectedNodeId ? e.target : e.source)}
                     {#if evidence(e) !== 0}<span class="muted"> • {evidence(e)}</span>{/if}
                   </button>
@@ -52,10 +54,11 @@
           </div>
         {/if}
       {/each}
+      </div>
       {#if $selectedEdgeId}
         {#each $graphData.edges.filter(e=>e.id===$selectedEdgeId) as e}
           <div class="edge-summary">
-            <div class="edge-summary__header"><h3>Relationship Detail</h3><button on:click={() => selectedEdgeId.set(null)}>Clear</button></div>
+            <div class="edge-summary__header"><h3>Relationship Detail</h3><button onclick={() => selectedEdgeId.set(null)}>Clear</button></div>
             <p class="muted">{e.type.replace('_',' ')} • {label($graphData,e.source)} → {label($graphData,e.target)}</p>
             {#if reason(e)}<p>{reason(e)}</p>{:else}<p class="muted">No narrative reason provided.</p>{/if}
             <dl class="edge-meta">

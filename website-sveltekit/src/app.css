@@ -20,6 +20,7 @@
   --graph-selected: #f97316;
   --graph-deemph: #64748b;
   --graph-bg: #0f172a;
+  --graph-label: #e5e7eb;
 
   /* Label colors */
   --label-character: #60a5fa;
@@ -52,6 +53,7 @@
   --graph-selected: #f97316;
   --graph-deemph: #cbd5f5;
   --graph-bg: #f1f5f9;
+  --graph-label: #0f172a;
 }
 
 /* Base & layout */
@@ -101,6 +103,21 @@ p { margin: 0 0 var(--gap-md); }
 .metric-value { color: var(--muted); }
 .metric-caption { margin: 0 0 0.25rem; color: var(--muted); font-size: var(--fs-sm); }
 
+/* Relationship panel layout */
+.rel-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: var(--gap-md); }
+.rel-heading { margin: 0 0 0.5rem; color: var(--muted); font-size: var(--fs-md); }
+.rel-list { list-style: none; padding: 0; margin: 0; }
+.rel-item { padding: 0.25rem 0; border-top: 1px solid color-mix(in oklab, var(--surface), #ffffff 6%); }
+.rel-item:first-child { border-top: none; }
+
+/* Mobile polish */
+@media (max-width: 800px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; }
+  .rel-grid { grid-template-columns: 1fr; }
+  .cbx-list { max-height: min(60vh, 320px); }
+}
+
 /* Sidebar density */
 .sidebar { position: sticky; top: var(--gap-md); height: calc(100vh - 2*var(--gap-lg)); overflow-y: auto; display: grid; gap: var(--gap-md); }
 .section { display: grid; gap: var(--gap-sm); }
@@ -117,5 +134,13 @@ input[type="checkbox"] { accent-color: var(--primary); }
 .cbx-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: transparent; border: none; color: var(--muted); cursor: pointer; }
 .cbx-clear:hover { color: var(--text); }
 .cbx-list { position: absolute; left: 0; right: 0; top: calc(100% + 4px); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow-1); max-height: 220px; overflow-y: auto; z-index: 30; }
+.cbx-list { list-style: none; margin: 0; padding: 4px 0; }
 .cbx-option { width: 100%; text-align: left; background: transparent; color: var(--text); border: none; padding: 0.5rem 0.65rem; cursor: pointer; }
 .cbx-option[aria-selected="true"], .cbx-option:hover { background: color-mix(in oklab, var(--surface), #ffffff 6%); }
+
+/* Sidebar density tweaks */
+.sidebar.card { padding: calc(var(--gap-sm) + 2px); }
+.sidebar .section { gap: 0.4rem; }
+
+/* Path tools combobox list height */
+.path-tools .cbx-list { max-height: min(60vh, 320px); }

@@ -53,14 +53,14 @@
 
   <section class="section">
     <h2>Neighbor Mode</h2>
-    <label class="checkbox-row"><input data-testid="neighbor-toggle" type="checkbox" checked={$neighborMode} on:change={() => { if (typeof window!=='undefined' && (window as any).__PERF_LOG__) { performance.mark('neighbor-toggle'); (window as any).__PERF_SIMPLE_MARK__='neighbor-toggle'; } neighborMode.set(!$neighborMode); }} /> Highlight neighbors of selection</label>
+    <label class="checkbox-row"><input data-testid="neighbor-toggle" type="checkbox" checked={$neighborMode} onchange={() => { if (typeof window!=='undefined' && (window as any).__PERF_LOG__) { performance.mark('neighbor-toggle'); (window as any).__PERF_SIMPLE_MARK__='neighbor-toggle'; } neighborMode.set(!$neighborMode); }} /> Highlight neighbors of selection</label>
   </section>
 
   <section class="section">
     <h2>Node Labels</h2>
     <ul class="legend list-reset">
       {#each $labelOptions as label}
-        <li><label class="checkbox-row"><input type="checkbox" checked={$activeLabels.has(label)} on:change={() => toggleInSet(activeLabels, label)} /> <span class="legend-dot" style={`background:${labelColor(label)}`}></span>{label}</label></li>
+        <li><label class="checkbox-row"><input type="checkbox" checked={$activeLabels.has(label)} onchange={() => toggleInSet(activeLabels, label)} /> <span class="legend-dot" style={`background:${labelColor(label)}`}></span>{label}</label></li>
       {/each}
     </ul>
   </section>
@@ -70,7 +70,7 @@
     <div class="scroll-y">
     <ul class="list-reset">
       {#each $archetypeOptions as a}
-        <li><label class="checkbox-row"><input type="checkbox" checked={$activeArchetypes.has(a)} on:change={() => toggleInSet(activeArchetypes, a)} /> {a}</label></li>
+        <li><label class="checkbox-row"><input type="checkbox" checked={$activeArchetypes.has(a)} onchange={() => toggleInSet(activeArchetypes, a)} /> {a}</label></li>
       {/each}
     </ul>
     </div>
@@ -80,7 +80,7 @@
     <h2>Relationships</h2>
     <ul class="list-reset">
       {#each REL_OPTIONS as r}
-        <li><label class="checkbox-row"><input type="checkbox" checked={$relationshipFilters.has(r)} on:change={() => toggleInSet(relationshipFilters, r)} /> {r.replace('_',' ')}</label></li>
+        <li><label class="checkbox-row"><input type="checkbox" checked={$relationshipFilters.has(r)} onchange={() => toggleInSet(relationshipFilters, r)} /> {r.replace('_',' ')}</label></li>
       {/each}
     </ul>
   </section>

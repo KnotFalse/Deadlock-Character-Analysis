@@ -1,14 +1,11 @@
 import { test, expect } from '@playwright/test';
+import { waitForApp } from './utils/app';
 
 const initLightMode = async (page) => {
   await page.addInitScript(() => { (window).__GRAPH_LIGHT_MODE__ = true; });
 };
 
-const waitForApp = async (page) => {
-  await page.goto('/');
-  await page.waitForLoadState('networkidle');
-  await expect(page.getByTestId('search')).toBeVisible();
-};
+// waitForApp imported
 
 const getFilteredCount = async (page) => page.evaluate(() => (window).__GRAPH_FILTERED_NODE_COUNT__ ?? null);
 

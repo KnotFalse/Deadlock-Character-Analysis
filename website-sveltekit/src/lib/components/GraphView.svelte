@@ -3,13 +3,13 @@
   import Sigma from 'sigma';
   import Graph from 'graphology';
   import type { GraphData } from '$lib/types';
-  import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults } from '$lib/stores/graph';
+  import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults, visibleNodeIds, filteredEdges } from '$lib/stores/graph';
   import { tick } from 'svelte';
-  export let data: GraphData | null = null;
-  let container: HTMLDivElement;
+  const { data } = $props<{ data: GraphData | null }>();
+  let container = $state<HTMLDivElement | undefined>(undefined);
   let sigma: Sigma | null = null;
 
-  let lightMode = false;
+  let lightMode = $state(false);
 
   // Local mirrors of store values for highlighting
   let _neighborIds = new Set<string>();
@@ -21,6 +21,8 @@
   let _searchIds = new Set<string>();
   let _selNode: string | null = null;
   let _selEdge: string | null = null;
+  let _visibleNodes = new Set<string>();
+  let _visibleEdgeIds = new Set<string>();
 
   let rafScheduled = false;
   function applyHighlightsNow(){
@@ -39,6 +41,19 @@
       }
     }
     const g = sigma.getGraph();
+    // 1) Apply visibility from filters
+    if (_visibleNodes.size > 0) {
+      g.forEachNode((n) => {
+        const show = _visibleNodes.has(n);
+        g.setNodeAttribute(n, 'hidden', !show);
+      });
+    }
+    if (_visibleEdgeIds.size > 0) {
+      g.forEachEdge((e) => {
+        const show = _visibleEdgeIds.has(e);
+        g.setEdgeAttribute(e, 'hidden', !show);
+      });
+    }
     // Read CSS vars once per run to avoid repeated style recalcs
     const docStyles = typeof document !== 'undefined' ? getComputedStyle(document.documentElement) : ({} as any);
     const colSearch = (docStyles.getPropertyValue?.('--graph-search')?.trim?.() || '#60a5fa');
@@ -46,10 +61,12 @@
     const colNeighbor = (docStyles.getPropertyValue?.('--graph-neighbor')?.trim?.() || '#34d399');
     const colPath = (docStyles.getPropertyValue?.('--graph-path')?.trim?.() || '#facc15');
     const colSelected = (docStyles.getPropertyValue?.('--graph-selected')?.trim?.() || '#f97316');
+    // 2) Apply color/size styling (always compute from baseSize)
     g.forEachNode((n)=>{
-      const base = g.getNodeAttribute(n,'color') as string;
-      let color = _metricColors.get(n) ?? base;
-      let size = _metricSizes.get(n) ?? (g.getNodeAttribute(n,'size') as number);
+      const baseColor = g.getNodeAttribute(n,'color') as string;
+      let color = _metricColors.get(n) ?? baseColor;
+      const baseSize = (g.getNodeAttribute(n,'baseSize') as number) ?? (g.getNodeAttribute(n,'size') as number);
+      let size = _metricSizes.get(n) ?? baseSize;
       if (_searchIds.size>0) color = _searchIds.has(n) ? colSearch : colDeemph;
       if (_neighborIds.has(n)) { color = colNeighbor; size = size + 0.9; }
       if (_path.has(n)) { color = colPath; size = size + 1.1; }
@@ -74,13 +91,17 @@
     if (lightMode) return;
     if (!data) return;
     const g = new Graph({ type: 'undirected', allowSelfLoops: true });
+    const css = getComputedStyle(document.documentElement);
+    const labelCol = css.getPropertyValue('--graph-label')?.trim?.() || css.getPropertyValue('--text')?.trim?.() || '#e5e7eb';
     data.nodes.forEach((n) => {
       g.addNode(n.id, {
         label: (n.properties?.name as string) ?? n.id,
         x: n.x ?? Math.random() * 10,
         y: n.y ?? Math.random() * 10,
         size: n.size,
+        baseSize: n.size,
         color: getComputedStyle(document.documentElement).getPropertyValue('--graph-node').trim() || '#334155',
+        labelColor: labelCol,
         raw: n,
       });
     });
@@ -101,7 +122,22 @@
         raw: e,
       });
     });
-    sigma = new Sigma(g, container, { renderLabels: true });
+    const drawHover = (ctx: CanvasRenderingContext2D, data: any, settings: any) => {
+      const label = data?.label as string | undefined;
+      if (!label) return;
+      const size = (data?.size as number) ?? 0;
+      const x = (data?.x as number) ?? 0;
+      const y = (data?.y as number) ?? 0;
+      const weight = settings?.labelWeight || 'normal';
+      const font = settings?.labelFont || 'Inter, system-ui, sans-serif';
+      const px = settings?.labelSize || 12;
+      ctx.font = `${weight} ${px}px ${font}`;
+      ctx.textBaseline = 'middle';
+      const col = (data?.labelColor as string) || (settings?.labelColor?.color) || '#e5e7eb';
+      ctx.fillStyle = col;
+      ctx.fillText(label, Math.round(x + size + 4), Math.round(y));
+    };
+    sigma = new Sigma(g, container, { renderLabels: true, labelColor: { attribute: 'labelColor' }, defaultDrawNodeHover: drawHover });
     sigma.on('clickNode', (e) => { selectedNodeId.set(e.node as string); selectedEdgeId.set(null); });
     sigma.on('clickEdge', (e) => { selectedEdgeId.set(e.edge as string); });
     // Clear selection when clicking the empty stage
@@ -119,6 +155,8 @@
       searchResults.subscribe(v=>{ _searchIds = new Set((v||[]).map((n:any)=>n.id)); scheduleApply(); }),
       selectedNodeId.subscribe(v=>{ _selNode = v; scheduleApply(); }),
       selectedEdgeId.subscribe(v=>{ _selEdge = v; scheduleApply(); }),
+      visibleNodeIds.subscribe(v=>{ _visibleNodes = new Set(v as any); scheduleApply(); }),
+      filteredEdges.subscribe(v=>{ _visibleEdgeIds = new Set((v as any[]).map((e:any)=>e.id)); scheduleApply(); }),
     ];
     // Initial paint after mount
     tick().then(scheduleApply);
