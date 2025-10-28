@@ -20,6 +20,7 @@
   --graph-selected: #f97316;
   --graph-deemph: #64748b;
   --graph-bg: #0f172a;
+  --graph-label: #e5e7eb;
 
   /* Label colors */
   --label-character: #60a5fa;
@@ -52,6 +53,7 @@
   --graph-selected: #f97316;
   --graph-deemph: #cbd5f5;
   --graph-bg: #f1f5f9;
+  --graph-label: #0f172a;
 }
 
 /* Base & layout */
@@ -107,6 +109,14 @@ p { margin: 0 0 var(--gap-md); }
 .rel-list { list-style: none; padding: 0; margin: 0; }
 .rel-item { padding: 0.25rem 0; border-top: 1px solid color-mix(in oklab, var(--surface), #ffffff 6%); }
 .rel-item:first-child { border-top: none; }
+
+/* Mobile polish */
+@media (max-width: 800px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; }
+  .rel-grid { grid-template-columns: 1fr; }
+  .cbx-list { max-height: min(60vh, 320px); }
+}
 
 /* Sidebar density */
 .sidebar { position: sticky; top: var(--gap-md); height: calc(100vh - 2*var(--gap-lg)); overflow-y: auto; display: grid; gap: var(--gap-md); }

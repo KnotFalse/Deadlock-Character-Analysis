@@ -91,6 +91,8 @@
     if (lightMode) return;
     if (!data) return;
     const g = new Graph({ type: 'undirected', allowSelfLoops: true });
+    const css = getComputedStyle(document.documentElement);
+    const labelCol = css.getPropertyValue('--graph-label')?.trim?.() || css.getPropertyValue('--text')?.trim?.() || '#e5e7eb';
     data.nodes.forEach((n) => {
       g.addNode(n.id, {
         label: (n.properties?.name as string) ?? n.id,
@@ -99,6 +101,7 @@
         size: n.size,
         baseSize: n.size,
         color: getComputedStyle(document.documentElement).getPropertyValue('--graph-node').trim() || '#334155',
+        labelColor: labelCol,
         raw: n,
       });
     });
