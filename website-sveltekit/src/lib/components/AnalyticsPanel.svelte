@@ -1,7 +1,5 @@
 <script lang="ts">
-  import { metricMode, characterRankings, mechanicUsageRanking, selectedNodeId, mechanicFilter, graphData } from '/stores/graph';
-
-  import { graphData } from '$lib/stores/graph';
+    import { graphData } from '$lib/stores/graph';
   function nameFor(id: string): string {
     const gd = $graphData as any;
     if (!gd) return id;
@@ -71,6 +69,7 @@
     </div>
   </div>
 </section>
+
 
 
 
