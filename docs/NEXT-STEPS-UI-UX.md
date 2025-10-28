@@ -52,3 +52,11 @@ Acceptance (minimum)
 - Dark-mode labels readable, no white label bg on hover.
 - All Playwright tests (desktop + mobile) green in CI.
 
+---
+
+Progress 2025-10-27
+- Phase 1: Implemented baseSize sizing and filter-driven visibility (nodes/edges) in GraphView.
+- Phase 2: Sidebar density tightened; Combobox UX polish (no bullets, focus retention).
+- Phase 3: Relationship panel laid out as 3-column grid with headings; mobile stack pending.
+- Phase 4: Analytics lists now show human names; Sigma label styling still pending.
+- Phase 6: Path Tools converted to Combobox with scroll; tests updated accordingly.
