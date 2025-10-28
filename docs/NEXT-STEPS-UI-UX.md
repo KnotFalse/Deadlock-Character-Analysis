@@ -46,11 +46,23 @@ Delivery Strategy
 
 Acceptance (minimum)
 - No size inflation after toggles; filters hide/show nodes immediately.
-- Search input behaves predictably; mechanic clear doesn’t error.
+- Search input behaves predictably; mechanic clear doesn't error.
 - Relationship panel shows 3 columns with headings on desktop.
 - Analytics pills materially change node sizes in graph.
 - Dark-mode labels readable, no white label bg on hover.
 - All Playwright tests (desktop + mobile) green in CI.
+
+---
+
+Addendum 2025-10-28 — Runes/Kit Idioms Migration
+
+- Events → runes props: replace `on:*` with `onclick`, `onchange`, `oninput`, etc.
+- Props → `$props`: migrate `export let` in Svelte 5 components (e.g., GraphView).
+- Local state → `$state`/`$derived` where template uses values (e.g., Combobox `filtered`).
+- Imports: fix `'/types'` to `$lib/types` and normalize `$lib/**` imports.
+- Data load: consider moving `graph.json` fetch to `+page.ts` `load` to keep SSR path open.
+- Combobox a11y: add `aria-activedescendant` and option `id`s; simplify option roles.
+- Labels legibility: finalize Sigma hover label background removal via renderer options.
 
 ---
 
