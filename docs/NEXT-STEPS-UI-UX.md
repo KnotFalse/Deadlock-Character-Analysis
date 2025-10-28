@@ -79,3 +79,31 @@ Progress 2025-10-27
 - Phase 3: Relationship panel laid out as 3-column grid with headings; mobile stack pending.
 - Phase 4: Analytics lists now show human names; Sigma label styling still pending.
 - Phase 6: Path Tools converted to Combobox with scroll; tests updated accordingly.
+
+---
+
+Addendum 2025-10-28 — E2E Readiness Fix Plan (no E2E-only codepaths)
+
+- Shell + Sidebar always render
+  - In +page.svelte, render the outer grid and <Sidebar /> unconditionally.
+  - Gate only the right-hand panels (header, GraphView, PathTools, RelationshipPanel, Analytics) behind $appReady.
+
+- Deterministic sentinel
+  - Store: ppReady flips to true at the end of initGraph(data).
+  - UI: render <div data-testid="app-ready" /> when $appReady is true.
+  - Script: set window.__GRAPH_READY__ = true on $appReady flip.
+
+- Hydration safety
+  - Components must not iterate undefined arrays during early mount.
+  - RelationshipPanel: guard gd.edges; label() and gd.nodes access use optional chaining.
+  - GraphView: iterate (props.data?.nodes ?? []) / (props.data?.edges ?? []); keep light-mode early return.
+  - Stores: derived values short-circuit on !g and use optional chaining for indexes.
+
+- Test helpers (deterministic read)
+  - waitForApp: goto → networkidle → fast-fail on data-testid=load-error → wait for pp-ready or window.__GRAPH_READY__/__GRAPH_DATA__ → last resort: require data-testid=search visible.
+  - All specs import and use waitForApp + searchFor (no bespoke waits/placeholder selectors).
+
+- Acceptance (E2E readiness)
+  - pp-ready sentinel appears and tests proceed without relying on “Generated:” header.
+  - No pageerrors related to props or orEach on undefined during test runs.
+  - Entire Playwright suite passes locally and in CI without disabling or skipping tests.

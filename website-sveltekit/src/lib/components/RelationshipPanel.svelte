@@ -5,12 +5,12 @@
   const REL = ['STRONG_AGAINST','WEAK_AGAINST','EVEN_AGAINST'];
   function group(gd, sel){
     const out: Record<string, GraphEdge[]> = { STRONG_AGAINST:[], WEAK_AGAINST:[], EVEN_AGAINST:[] } as any;
-    if (!gd || !sel) return out;
-    gd.edges.forEach((e)=>{
+    if (!gd || !sel || !gd.edges) return out;
+    (gd.edges ?? []).forEach((e: GraphEdge)=>{
       if (!REL.includes(e.type)) return;
       if (e.source===sel || e.target===sel) out[e.type].push(e);
     });
-    Object.keys(out).forEach(t => out[t].sort((a,b)=>{
+    Object.keys(out).forEach(t => out[t].sort((a: GraphEdge,b: GraphEdge)=>{
       const oa = a.source===sel ? a.target : a.source; const ob = b.source===sel ? b.target : b.source;
       const la = label(gd, oa); const lb = label(gd, ob); return la.localeCompare(lb);
     }));

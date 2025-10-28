@@ -116,7 +116,7 @@ export const neighborIds = derived([graphData, selectedNodeId, neighborMode], ([
   const s = new Set<string>();
   if (!g || !sel || !on) return s;
   s.add(sel);
-  const neigh = g.indexes.neighbors[sel] ?? [];
+  const neigh = g.indexes?.neighbors?.[sel] ?? [];
   neigh.forEach(id => s.add(id));
   return s;
 });

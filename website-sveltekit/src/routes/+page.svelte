@@ -7,9 +7,9 @@
   import { initGraph, graphData, appReady } from '$lib/stores/graph';
   import type { GraphData } from '$lib/types';
   const props = $props<{ data: { graph: GraphData|null; loadError?: string } }>();
-  const graph = $derived(() => props.data?.graph as GraphData | undefined);
+  const graph = $derived(() => (props.data?.graph ?? null) as GraphData | null | undefined);
   $effect(() => {
-    const g = graph;
+    const g = graph as GraphData | null | undefined;
     if (g) {
       initGraph(g);
       if (typeof window !== 'undefined') (window as any).__GRAPH_DATA__ = g;
@@ -22,13 +22,11 @@
 
 <div id="app" class="app">
   <h1>Deadlock Graph Explorer (SvelteKit)</h1>
-  {#if !$graphData}
-    <p>Loading graph data.</p>
-  {:else}
-    <p class="muted small">Generated: {new Date($graphData.meta.generated_at).toLocaleString()} · Nodes: {$graphData.meta.node_count} · Edges: {$graphData.meta.edge_count}</p>
     <div class="grid-2">
-      <Sidebar />
-      <section>
+    <Sidebar />
+    <section>
+      {#if $appReady}
+        <p class="muted small">Generated: {new Date($graphData.meta.generated_at).toLocaleString()} · Nodes: {$graphData.meta.node_count} · Edges: {$graphData.meta.edge_count}</p>
         <div class="card graph-card"><GraphView data={graph ?? null} /></div>
         <div class="card" style="margin-top:var(--gap-md); display:grid; gap:var(--gap-md)">
           <PathTools />
@@ -38,14 +36,16 @@
           </details>
           <AnalyticsPanel />
         </div>
-      </section>
-    </div>
-  {/if}
-  {#if (props.data as any)?.loadError}
+      {:else}
+        <p>Loading graph data.</p>
+      {/if}
+    </section>
+  </div>{#if (props.data as any)?.loadError}
     <p class="muted small" data-testid="load-error">Load error: {(props.data as any).loadError}</p>
   {/if}
   {#if $appReady}
     <div data-testid="app-ready" style="display:none"></div>
   {/if}
 </div>
+
 

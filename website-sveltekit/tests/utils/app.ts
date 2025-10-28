@@ -1,9 +1,19 @@
 import { Page, expect } from '@playwright/test';
 
 export async function waitForApp(page: Page) {
+  page.on('pageerror', (e) => console.log(`[pageerror] ${e?.message}\n${e?.stack ?? ''}`));
+  page.on('console', (m) => console.log(`[browser:${m.type()}] ${m.text()}`));
   await page.goto('/');
   await page.waitForLoadState('networkidle');
-  await page.waitForSelector('#app', { state: 'attached', timeout: 10000 });
+  const scriptReady = await page.waitForFunction(() => {
+    const w = window as any;
+    return Boolean(w.__GRAPH_READY__ || w.__GRAPH_DATA__ || w.__GRAPH_LOAD_ERROR__);
+  }, { timeout: 10000 }).catch(() => null);
+  if (!scriptReady) {
+    // Attempt UI-based checks if no script flags yet
+    const hdr = page.locator('.muted.small', { hasText: 'Generated:' });
+    try { await expect(hdr).toBeVisible({ timeout: 3000 }); return; } catch {}
+  }
   const loadErr = page.getByTestId('load-error');
   if (await loadErr.isVisible({ timeout: 200 }).catch(() => false)) {
     const msg = await loadErr.textContent();

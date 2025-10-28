@@ -5,7 +5,7 @@
   import type { GraphData } from '$lib/types';
   import { selectedNodeId, selectedEdgeId, neighborIds, neighborEdgeIds, shortestPath, pathEdgeIds, metricSizes, metricColors, searchResults, visibleNodeIds, filteredEdges } from '$lib/stores/graph';
   import { tick } from 'svelte';
-  const { data } = $props<{ data: GraphData | null }>();
+  const props = $props<{ data: GraphData | null }>();
   let container = $state<HTMLDivElement | undefined>(undefined);
   let sigma: Sigma | null = null;
 
@@ -93,7 +93,7 @@
     const g = new Graph({ type: 'undirected', allowSelfLoops: true });
     const css = getComputedStyle(document.documentElement);
     const labelCol = css.getPropertyValue('--graph-label')?.trim?.() || css.getPropertyValue('--text')?.trim?.() || '#e5e7eb';
-    data.nodes.forEach((n) => {
+    (props.data?.nodes ?? []).forEach((n) => {
       g.addNode(n.id, {
         label: (n.properties?.name as string) ?? n.id,
         x: n.x ?? Math.random() * 10,
@@ -107,7 +107,7 @@
     });
     // Guard against duplicate edges in data (by id and by node pair)
     const seenPairs = new Set<string>();
-    data.edges.forEach((e) => {
+    (props.data?.edges ?? []).forEach((e) => {
       const { source, target } = e;
       if (!g.hasNode(source) || !g.hasNode(target)) return;
       // Pair-level dedupe for simple graphs (normalize order for undirected drawing)
